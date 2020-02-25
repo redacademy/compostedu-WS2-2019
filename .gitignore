@@ -29,18 +29,18 @@ access_log
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #
 plugins/*
-!plugins/[YOUR-FUNCTIONALITY-PLUGIN-NAME]/
+!plugins/compostedu-functionality/
 
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #
 themes/*
-!themes/[YOUR-THEME-NAME]/
+!themes/compostedu/
 
 # Ignore npm packages #
 # =================== #
-themes/[YOUR-THEME-NAME]/node_modules/*
+themes/compostedu/node_modules/*
 
 # Ignore build files #
 # ================== #
-themes/[YOUR-THEME-NAME]/gulpfile.js
-themes/[YOUR-THEME-NAME]/build/*
+themes/compostedu/gulpfile.js
+themes/compostedu/build/*
