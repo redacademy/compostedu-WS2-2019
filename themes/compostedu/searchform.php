@@ -6,7 +6,7 @@
 		<input type="submit" class="screen-reader-text" value="<?php echo esc_html( 'Search' ); ?>">
 
 		<a href="#" id="search-submit" class="search-submit" aria-hidden="true">
-			<img src="<?php echo get_template_directory_uri() ?>/images/path.svg" alt="Search Icon" class="search-icon">
+			<img src="<?php echo get_template_directory_uri() ?>/images/search.svg" alt="Search Icon" class="search-icon">
 		</a>
 	</fieldset>
 </form>
