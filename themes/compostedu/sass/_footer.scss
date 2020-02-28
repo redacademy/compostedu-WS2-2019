@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     background-color: #355a46;
-    padding-left:16px;
+    @include default-padding;
 
     h4 {
         color:#fffdf7;
