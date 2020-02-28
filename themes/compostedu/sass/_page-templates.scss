@@ -51,6 +51,7 @@
         }
     }
 
+    // Classes used with function.js
     .hide-form {
         display: none;
     }
@@ -61,6 +62,32 @@
 
     .show {
         display: block;
+    }
+
+    .full-input-form {
+        width: 100%;
+
+        .search-form {
+            width: 100%;
+
+            .search-form-fieldset {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .search-form-input {
+                    width: 85%;
+
+                    .search-field {
+                        width: 100%;
+                    }
+                }
+
+                .search-submit {
+                    width: 13%;
+                }
+            }
+        }
     }
 }
 

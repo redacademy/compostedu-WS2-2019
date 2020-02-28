@@ -34,7 +34,7 @@
 					</a>
 				</div><!-- .site-branding -->
 
-				<div class="search-form-wrapper">
+				<div id="form-wrapper" class="search-form-wrapper">
 					<?php echo get_search_form(); ?>
 				</div>
 			</header><!-- #masthead -->
