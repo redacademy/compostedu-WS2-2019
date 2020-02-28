@@ -50,11 +50,11 @@
 		</div>
 
 		<div class='social-icons-main-container'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/assets/fb.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/assets/twtr.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/assets/insta.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/assets/Mail.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/assets/YT.svg' alt='social-media-icon'>
+			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/fb.svg' alt='social-media-icon'>
+			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/twtr.svg' alt='social-media-icon'>
+			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/insta.svg' alt='social-media-icon'>
+			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Mail.svg' alt='social-media-icon'>
+			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/YT.svg' alt='social-media-icon'>
 		</div>
 
 		<div class='contact-main-container'>

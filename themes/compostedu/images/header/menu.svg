@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fffdf7}
+        </style>
+    </defs>
+    <g id="prefix__Group_845" data-name="Group 845" transform="translate(-22 -107)">
+        <path id="prefix__Op_component_1" d="M0 0H16V1.667H0z" class="prefix__cls-1" data-name="Op component 1" transform="translate(22 119.333)"/>
+        <path id="prefix__Op_component_2" d="M0 0H16V1.667H0z" class="prefix__cls-1" data-name="Op component 2" transform="translate(22 113.166)"/>
+        <path id="prefix__Op_component_3" d="M0 0H16V1.667H0z" class="prefix__cls-1" data-name="Op component 3" transform="translate(22 107)"/>
+    </g>
+</svg>
