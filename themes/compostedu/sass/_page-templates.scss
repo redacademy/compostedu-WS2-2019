@@ -2,4 +2,66 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* Header */
+.site-header {
+    background-color: #355a46;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu {
+        .menu-button {
+            background-color: transparent;
+            border: none;
+            color: transparent;
+            box-shadow: none;
+
+            img {
+                padding: 21px 22px;
+            }
+        }
+    }
+
+    .site-branding  {
+        display: flex;
+    }
+
+    .search-form-wrapper {
+        display: flex;
+
+        .search-form {
+            display: flex;
+        }
+
+        .search-form-fieldset {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            .search-submit {
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .hide-form {
+        display: none;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+}
+
 /* Front page */

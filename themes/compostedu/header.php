@@ -12,6 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<script></script>
 
 	<?php wp_head(); ?>
 	</head>
@@ -21,15 +22,21 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+				<div id="menu-icon" class="menu show">
+					<a href="#" class="menu-button">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="Hamburger Menu">
+					</a>
+				</div>
+
+				<div id="logo" class="site-branding show">
+					<a href="<?php echo get_home_url() ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
+					</a>
 				</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+				<div class="search-form-wrapper">
+					<?php echo get_search_form(); ?>
+				</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
