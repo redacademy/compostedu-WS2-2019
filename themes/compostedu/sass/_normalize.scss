@@ -50,6 +50,13 @@ a:hover {
 	outline: 0;
 }
 
+p {
+	font-family: $font_block;
+	line-height: 1.5;
+	letter-spacing: normal;
+  	text-align: left;
+}
+
 abbr[title] {
 	border-bottom: 1px dotted;
 }
@@ -64,8 +71,11 @@ dfn {
 }
 
 h1 {
+	color: $color_titles;
+	text-align: left;	
 	font-size: 2em;
 	margin: 0.67em 0;
+	font-weight: 600;
 }
 
 mark {
