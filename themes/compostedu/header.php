@@ -24,13 +24,13 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div id="menu-icon" class="menu show">
 					<a href="#" class="menu-button">
-						<img class="menu-icon" src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="Hamburger Menu">
+						<img class="menu-icon" src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Hamburger Menu">
 					</a>
 				</div>
 
 				<div id="logo" class="site-branding show">
 					<a href="<?php echo get_home_url() ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/header/logo.png" alt="Logo">
 					</a>
 				</div><!-- .site-branding -->
 

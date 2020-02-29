@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#fffdf7}
+        </style>
+    </defs>
+    <g id="prefix__Group_224" data-name="Group 224" transform="translate(-1490 -4269)">
+        <g id="prefix__Twitter" transform="translate(1490 4269)">
+            <path id="prefix__Oval-1" d="M15 30A15 15 0 100 15a15 15 0 0015 15zm0-1.8A13.2 13.2 0 101.8 15 13.2 13.2 0 0015 28.2z" style="fill-rule:evenodd;fill:#fffdf7"/>
+        </g>
+        <g id="prefix__mail" transform="translate(1497 4214)">
+            <g id="prefix__Group_223" data-name="Group 223" transform="translate(0 64)">
+                <g id="prefix__Group_222" data-name="Group 222">
+                    <path id="prefix__Path_21" d="M7.032 64.974c2.2 1.86 6.051 5.133 7.183 6.153a.669.669 0 00.968 0c1.134-1.021 4.988-4.294 7.184-6.155a.333.333 0 00.047-.46A1.324 1.324 0 0021.368 64H8.031a1.324 1.324 0 00-1.046.514.333.333 0 00.047.46z" class="prefix__cls-2" data-name="Path 21" transform="translate(-6.698 -64)"/>
+                    <path id="prefix__Path_22" d="M15.811 126.443a.332.332 0 00-.356.048c-2.436 2.065-5.545 4.712-6.523 5.593a1.35 1.35 0 01-1.861 0c-1.043-.939-4.534-3.907-6.522-5.593a.333.333 0 00-.549.254v8.385a1.335 1.335 0 001.334 1.334H14.67A1.335 1.335 0 0016 135.13v-8.385a.333.333 0 00-.189-.302z" class="prefix__cls-2" data-name="Path 22" transform="translate(0 -124.461)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

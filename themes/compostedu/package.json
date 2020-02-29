@@ -3,7 +3,9 @@
   "version": "1.1.0",
   "description": "A starter theme for RED students, based on Underscores.",
   "author": "yourname",
-  "dependencies": {},
+  "dependencies": {
+    "all": "0.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
