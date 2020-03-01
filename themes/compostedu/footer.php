@@ -13,19 +13,13 @@
 	<section class='main-footer-container'>
 		<div>
 			<div class='footer-links'>
-				<h4>Activities</h4>
-				<p>Adult Workshops</p>
-				<p>Community Workshops</p>
-				<p>School Programs</p>
-				<p>Healing City Soils</p>
+				 <h4>Activities</h4>
+				<?php wp_nav_menu( array( 'theme_location' => 'activities-menu', 'container_class' => 'p' ) ); ?>
 			</div>	
 
 			<div class='footer-links'>
 				<h4>Resources</h4>
-				<p>Fact Sheets</p>
-				<p>Teaching Garden</p>
-				<p>Third-Party Resources</p>
-				<p>Products</p>
+				<?php wp_nav_menu( array( 'theme_location' => 'resources-menu', 'container_class' => 'p') ); ?>
 			</div>
 		</div> 
 
@@ -33,26 +27,21 @@
 
 			<div class='footer-links'>
 				<h4>Get Involved</h4>
-				<p>Membership</p>
-				<p>Donate</p>
-				<p>Volunteer</p>
+				<?php wp_nav_menu( array( 'theme_location' => 'get-involved-menu', 'container_class' => 'p' ) ); ?>
+				<br>
 				<br>
 			</div>	
 
 			<div class='footer-links'>
 				<h4>About Us</h4>
-				<p>Who We Are</p>
-				<p>News</p>
-				<p>People</p>
-				<p>Annual Reports</p>
-				<p>Funders</p>
+				<?php wp_nav_menu( array( 'theme_location' => 'about-us-menu', 'container_class' => 'p' ) ); ?>
 			</div>
 		</div>
 
 		<div class='social-icons-main-container'>
 			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/fb.svg' alt='social-media-icon'>
 			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/twtr.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/insta.svg' alt='social-media-icon'>
+			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Insta.svg' alt='social-media-icon'>
 			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Mail.svg' alt='social-media-icon'>
 			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/YT.svg' alt='social-media-icon'>
 		</div>
