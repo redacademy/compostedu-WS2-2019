@@ -4,12 +4,12 @@
 
 /* Header */
 .site-header {
-    background-color: #355a46;
-    width: 100%;
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .first-sight-header {
+        background-color: #355a46;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .menu {
         .menu-button {
@@ -50,19 +50,15 @@
                 box-shadow: none;
 
                 .search-icon {
-                    padding-top: 6px;
-                    padding-right: 20px;
+                    height: 20px;
                 }
             }
         }
     }
 
-    // Classes used with function.js
-    .hide-form {
-        display: none;
-    }
 
-    .hide {
+    // Classes used with function.js
+    .hide, .hide-form, .hide-menu {
         display: none;
     }
 
@@ -70,6 +66,7 @@
         display: block;
     }
 
+    // Style for search input
     .full-input-form {
         width: 100%;
 
@@ -78,11 +75,12 @@
 
             .search-form-fieldset {
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 9fr 1fr;
+                grid-gap: 1fr;
 
                 .search-form-input {
-                    width: 85%;
+                    grid-column: 1;
 
                     .search-field {
                         width: 100%;
@@ -90,12 +88,25 @@
                 }
 
                 .search-submit {
-                    width: 13%;
+                    grid-column: 2;
+                }
+            }
+        }
+    }
 
-                    .search-icon {
-                        padding-left: 15px;
-                        padding-top: 6px;
-                    }
+    // Style for menu items
+    .menu-bar {
+        background-color: #192b21;
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                color: #fffdf7;
+                a {
+                    text-decoration: none;
                 }
             }
         }
