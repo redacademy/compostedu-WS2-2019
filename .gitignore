@@ -44,3 +44,7 @@ themes/compostedu/node_modules/*
 # ================== #
 themes/compostedu/gulpfile.js
 themes/compostedu/build/*
+
+# Ignore nohup files #
+# ================== #
+*nohup.out
