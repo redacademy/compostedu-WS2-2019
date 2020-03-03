@@ -9,7 +9,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="front-page-header">
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<div class="front-page-header-btns">
+				<button class="btn-red">Browse our workshops</button>
+				<button class="btn-white">Learn about composting</button>
+			<div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
