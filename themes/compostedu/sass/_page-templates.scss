@@ -4,10 +4,12 @@
 
 /* Header */
 .site-header {
-    background-color: #355a46;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .first-sight-header {
+        background-color: #355a46;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .menu {
         .menu-button {
@@ -54,12 +56,9 @@
         }
     }
 
-    // Classes used with function.js
-    .hide-form {
-        display: none;
-    }
 
-    .hide {
+    // Classes used with function.js
+    .hide, .hide-form, .hide-menu {
         display: none;
     }
 
@@ -67,6 +66,7 @@
         display: block;
     }
 
+    // Style for search input
     .full-input-form {
         width: 100%;
 
@@ -89,6 +89,24 @@
 
                 .search-submit {
                     grid-column: 2;
+                }
+            }
+        }
+    }
+
+    // Style for menu items
+    .menu-bar {
+        background-color: #192b21;
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                color: #fffdf7;
+                a {
+                    text-decoration: none;
                 }
             }
         }

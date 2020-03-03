@@ -22,20 +22,26 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-				<div id="menu-icon" class="menu show">
-					<a href="#" class="menu-button">
-						<img class="menu-icon" src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Hamburger Menu">
-					</a>
+				<div class="first-sight-header">
+					<div id="menu-icon" class="menu show">
+						<a href="#" class="menu-button">
+							<img class="menu-icon" src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Hamburger Menu">
+						</a>
+					</div>
+					
+					<div id="logo" class="site-branding show">
+						<a href="<?php echo get_home_url() ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/header/logo.png" alt="Logo">
+						</a>
+					</div><!-- .site-branding -->
+					
+					<div id="form-wrapper" class="search-form-wrapper">
+						<?php echo get_search_form(); ?>
+					</div>
 				</div>
 
-				<div id="logo" class="site-branding show">
-					<a href="<?php echo get_home_url() ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/header/logo.png" alt="Logo">
-					</a>
-				</div><!-- .site-branding -->
-
-				<div id="form-wrapper" class="search-form-wrapper">
-					<?php echo get_search_form(); ?>
+				<div id="menu-bar" class="menu-bar hide-menu">
+					<?php wp_nav_menu() ?>
 				</div>
 			</header><!-- #masthead -->
 
