@@ -41,7 +41,7 @@
 				</div>
 
 				<div id="menu-bar" class="menu-bar hide-menu">
-					<?php wp_nav_menu() ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'primary_menu' ) ) ?>
 				</div>
 			</header><!-- #masthead -->
 

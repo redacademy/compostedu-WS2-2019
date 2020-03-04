@@ -98,17 +98,44 @@
     .menu-bar {
         background-color: #192b21;
         
+        // Primary Menu
         ul {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            margin: 0 15px;
 
-            li {
+            // Page's links
+            a {
                 color: #fffdf7;
+                text-decoration: none;
+            }
+
+            // Primary Menu's Items
+            li {
+                list-style: none;
+                padding: 12px 0;
+
+                // Style for Items that have a sub menu
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            // Style for donate section
+            :last-child {
                 a {
-                    text-decoration: none;
+                    margin-top: 20px;
+                    padding: 7px 24px;
+                    border: 1px solid #aa443a;
+                    background-color: #aa443a;
                 }
             }
+        }
+
+        // Style to hide sub menus
+        .sub-menu {
+            display: none;
         }
     }
 }
@@ -148,4 +175,3 @@
             }
     }
 }
-    
