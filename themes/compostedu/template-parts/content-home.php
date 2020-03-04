@@ -11,8 +11,8 @@
 	<header class="front-page-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="front-page-header-btns">
-				<button class="btn-red">Browse our workshops</button>
-				<button class="btn-white">Learn about composting</button>
+				<a href="<?php echo get_permalink( get_page_by_title( 'Adult Workshops' ) ); ?>" class="btn-red">Browse our workshops</a>
+				<a class="btn-white">Learn about composting</a>
 			<div>
 	</header><!-- .entry-header -->
 
