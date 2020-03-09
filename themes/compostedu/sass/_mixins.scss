@@ -28,6 +28,7 @@
 
 @mixin default-a-btn {
 	@include default-btn;
+	text-align: center;
 	text-decoration: none;
 	padding: 1em 1em;
 }

@@ -26,10 +26,10 @@
 		<div>
 			<?php $date_string = get_field('date'); ?>
 			<?php if( !empty( $date_string  ) ): ?>
-				<?php echo $date_string; ?>
+				<i class="far fa-calendar"></i> <?php echo $date_string; ?>
 			<?php endif; ?>
 		</div>
-		<div>$ <?php the_field('price'); ?></div>
+		<div><i class="fas fa-dollar-sign"></i> <?php the_field('price'); ?></div>
 		<div>
 			<?php
 				$start = get_field('start');
