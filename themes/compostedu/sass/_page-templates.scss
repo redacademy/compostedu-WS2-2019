@@ -149,4 +149,78 @@
             }
     }
 }
-    
+
+/* Adult Worshops */ 
+
+.post-type-archive-adult_workshop {
+    .content-area {
+        @include default-padding;
+    }
+}
+
+.aw-information-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 1rem;
+
+    div {
+        font-size: 0.9rem; 
+        font-weight: 600;
+        text-align: left;
+    }
+}
+
+.view-link, .view-link:visited {
+    color: $dull_red;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Search Pagination */ 
+
+.search-pagination {
+    margin-bottom: 2rem;
+
+    .current {
+       display: inline-block; 
+       padding-left: 15px;
+       padding-top: 8px;
+       border-radius: 15%;
+       font-weight: 600;
+       width: 40px;
+       height: 40px;
+       background-color: $pine;
+       color: $white;
+       box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2); 
+    }
+    .page-numbers {
+       display: inline-block; 
+       padding-left: 15px;
+       padding-top: 8px;
+       border-radius: 15%;
+       font-weight: 600;
+       width: 40px;
+       height: 40px;
+       border: solid 1px rgba(53, 90, 70, 0.5);
+       box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .next {
+        padding-left: 8px;
+        padding-top: 8px;
+        width: 52px;
+    }
+
+    .prev {
+        padding-left: 8px;
+        padding-top: 8px;
+        width: 85px;
+    }
+
+
+    a, a:visited {
+       color: $pine;
+       text-decoration: none;
+    }
+}

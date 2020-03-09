@@ -11,7 +11,7 @@
 	<header class="front-page-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="front-page-header-btns">
-				<a href="<?php echo get_permalink( get_page_by_title( 'Adult Workshops' ) ); ?>" class="btn-red">Browse our workshops</a>
+				<a href="<?php echo get_post_type_archive_link( 'adult_workshop' ) ?>" class="btn-red">Browse our workshops</a>
 				<a href="<?php echo get_permalink( get_page_by_title( 'Fact Sheets' ) ); ?>" class="btn-white">Learn about composting</a>
 			<div>
 	</header><!-- .entry-header -->
