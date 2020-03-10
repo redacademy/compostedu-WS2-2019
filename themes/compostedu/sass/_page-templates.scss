@@ -158,6 +158,12 @@
     }
 }
 
+.single {
+    .entry-content {
+        margin-bottom: 1rem;
+    }
+}
+
 .aw-information-container {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -182,6 +188,13 @@
         font-weight: 600;
         text-align: left;
     }
+}
+
+.aw-about {
+    @include default-padding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $very-light-pink;
 }
 
 .view-link, .view-link:visited {
@@ -230,7 +243,6 @@
         padding-top: 8px;
         width: 85px;
     }
-
 
     a, a:visited {
        color: $pine;

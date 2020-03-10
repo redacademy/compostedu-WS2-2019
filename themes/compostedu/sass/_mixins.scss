@@ -24,11 +24,11 @@
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1.19;
+	padding: 1em 1em;
 }
 
 @mixin default-a-btn {
 	@include default-btn;
 	text-align: center;
 	text-decoration: none;
-	padding: 1em 1em;
 }

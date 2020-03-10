@@ -8,20 +8,17 @@ button {
 	@include default-btn;
 }
 
-.btn-red {
+.btn-red, .btn-red:visited {
 	background-color: $dull_red;
 	color: $white;
 }
 
-.btn-red:visited {
-	color: $white;
-}
-
-.btn-white {
+.btn-white, .btn-white:visited {
 	background-color: $white;
 	color: $pine;
 }
 
-.btn-white:visited {
-	color: $pine;
+.btn-pine, .btn-pine:visited {
+	background-color: $pine;
+	color: $white;
 }

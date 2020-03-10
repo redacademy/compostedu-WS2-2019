@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>">
 	<header class="adult-workshop-single-header">
 		<?php $image = get_field('image'); ?>
 		<?php if( !empty( $image ) ): ?>
@@ -34,7 +34,13 @@
 			<div><?php the_field('price'); ?></div>
 		</div>
 
+		<button class="btn-pine">Register for this event</button>
 	</section><!-- .entry-content -->
+
+	<div class="aw-about">
+		<h1>About This event</h1>
+		<?php the_content(); ?>
+	</div>
 
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>
