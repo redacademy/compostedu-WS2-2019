@@ -29,7 +29,7 @@
 				<i class="far fa-calendar"></i> <?php echo $date_string; ?>
 			<?php endif; ?>
 		</div>
-		<div><i class="fas fa-dollar-sign"></i> <?php the_field('price'); ?></div>
+		<div><i class="fas fa-dollar-sign"></i><?php the_field('price'); ?></div>
 		<div>
 			<?php
 				$start = get_field('start');
@@ -39,7 +39,7 @@
 		</div>
 	</div>
 
-	<a class="view-link" href="<?php echo esc_url( get_permalink()) ?>">View event →</a>
+	<a class="view-link" href="<?php echo esc_url( get_permalink()) ?>">View event <i class="fas fa-arrow-right"></i></a>
 
 	<hr/>
 </article><!-- #post-## -->

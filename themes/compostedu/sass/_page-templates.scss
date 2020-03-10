@@ -115,7 +115,7 @@
 
 /* Front page */
 
-.page-home { 
+.page-home, .single { 
     .entry-content {
         @include default-padding;
     }
@@ -161,6 +161,19 @@
 .aw-information-container {
     display: grid;
     grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 1rem;
+
+    div {
+        font-size: 0.9rem; 
+        font-weight: 600;
+        text-align: left;
+    }
+}
+
+.aw-single-information-container {
+    display: grid;
+    grid-template-columns: 8% 92%;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 1rem;
 
@@ -223,8 +236,4 @@
        color: $pine;
        text-decoration: none;
     }
-}
-
-.testee {
-    line-height: 125px;
 }
