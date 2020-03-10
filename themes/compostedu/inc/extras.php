@@ -25,3 +25,10 @@ function red_starter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyCOCEqNtcHcd5yQpwRYCJOYeq_Euc48gbc');
+}
+
+add_action('acf/init', 'my_acf_init');

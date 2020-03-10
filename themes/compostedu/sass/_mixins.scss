@@ -15,3 +15,20 @@
 	padding-left: 16px;
 	padding-right: 16px;
 }
+
+@mixin default-btn {
+	border: 0px;
+	height: 48px;
+	border-radius: 6%;
+	font-family: $font__main;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.19;
+	padding: 1em 1em;
+}
+
+@mixin default-a-btn {
+	@include default-btn;
+	text-align: center;
+	text-decoration: none;
+}
