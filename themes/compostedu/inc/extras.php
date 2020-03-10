@@ -32,3 +32,9 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+function enqueue_load_fa() {
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.10.1/css/all.css' );
+}
+  
+add_action('wp_enqueue_scripts', 'enqueue_load_fa');
