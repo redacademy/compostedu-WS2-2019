@@ -5,21 +5,24 @@
 /* Header */
 .site-header {
     .first-sight-header {
-        background-color: #355a46;
+        background-color: $pine;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .menu {
-        .menu-button {
-            background-color: transparent;
-            border: none;
-            color: transparent;
-            box-shadow: none;
+        .main-navigation {
 
-            .menu-icon {
-                padding: 21px 22px;
+            .menu-button {
+                background-color: transparent;
+                border: none;
+                color: transparent;
+                box-shadow: none;
+                
+                .menu-icon {
+                    padding: 21px 22px;
+                }
             }
         }
     }
@@ -91,51 +94,6 @@
                     grid-column: 2;
                 }
             }
-        }
-    }
-
-    // Style for menu items
-    .menu-bar {
-        background-color: #192b21;
-        
-        // Primary Menu
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin: 0 15px;
-
-            // Page's links
-            a {
-                color: #fffdf7;
-                text-decoration: none;
-            }
-
-            // Primary Menu's Items
-            li {
-                list-style: none;
-                padding: 12px 0;
-
-                // Style for Items that have a sub menu
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            // Style for donate section
-            :last-child {
-                a {
-                    margin-top: 20px;
-                    padding: 7px 24px;
-                    border: 1px solid #aa443a;
-                    background-color: #aa443a;
-                }
-            }
-        }
-
-        // Style to hide sub menus
-        .sub-menu {
-            display: none;
         }
     }
 }
