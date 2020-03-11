@@ -43,7 +43,7 @@ function adult_workshops_post_type() {
 		'label'                 => __( 'Adult Workshop', 'text_domain' ),
 		'description'           => __( 'Adult Workshops information pages.', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields' ),
+		'supports' 				=> array( 'title','editor'),
 		'taxonomies'            => array( ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -54,9 +54,12 @@ function adult_workshops_post_type() {
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
 		'has_archive'           => true,
+		'public' 				=> true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'adult_workshop', $args );
 
@@ -113,6 +116,8 @@ function community_workshops_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'community_workshop', $args );
 
@@ -169,6 +174,8 @@ function composting_for_kids_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'composting_for_kids', $args );
 
@@ -224,6 +231,8 @@ function intermediate_program_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'intermediate_program', $args );
 
@@ -279,6 +288,8 @@ function high_school_program_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'high_school_program', $args );
 
@@ -334,6 +345,8 @@ function thirty_party_resource_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( '3rd_party_resource', $args );
 
@@ -389,6 +402,8 @@ function products_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'product', $args );
 
@@ -444,6 +459,8 @@ function people_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+        'template_lock'         => 'all'
 	);
 	register_post_type( 'people', $args );
 
