@@ -51,7 +51,6 @@ a:hover {
 }
 
 p {
-	font-family: $font_block;
 	line-height: 1.5;
 	letter-spacing: normal;
   	text-align: left;
@@ -71,6 +70,7 @@ dfn {
 }
 
 h1 {
+	font-family: $font_secundary;
 	color: $pine;
 	text-align: left;	
 	font-size: 1.4em;
@@ -79,6 +79,7 @@ h1 {
 }
 
 h2 {
+	font-family: $font_secundary;	
 	color: $greyish-brown;
 	text-align: left;
 	font-weight: 600;
