@@ -4,6 +4,12 @@ $base__space-unit: 1.0rem;
 
 // Colors
 
+$dull_red: #aa443a;
+$white: #ffffff;
+$pine: #355a46;
+$greyish-brown: #464646;
+$very-light-pink: #d3d3d3;
+
 $color__background-body: #fffdf7;
 $color__text-main: #404040;
 
@@ -15,15 +21,9 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-
-$dull_red: #aa443a;
-$white: #ffffff;
-$pine: #355a46;
-$greyish-brown: #464646;
-$very-light-pink: #d3d3d3;
+$color__link: $dull_red;
+$color__link-visited: $dull_red;
+$color__link-hover: $dull_red;
 
 // Typography
 

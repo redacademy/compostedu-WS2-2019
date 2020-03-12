@@ -226,6 +226,40 @@
     }
 }
 
+/* Fact Sheets */
+
+.page-fact-sheets { 
+    .entry-content {
+        @include default-padding;
+    }
+}
+
+.page-fact-sheets {
+    .entry-header {
+        .entry-title {
+            text-align: center;
+        }
+    }
+    .entry-content {
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.topic-fs {
+    font-weight: bold;
+    font-family: $font_block;
+}
+
+.type-fs-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+}
+
 /* Search Pagination */ 
 
 .search-pagination {
