@@ -47,6 +47,10 @@
 						<?php echo get_search_form(); ?>
 					</div>
 				</div>
+
+				<div id="menu-bar" class="menu-bar hide-menu">
+					<?php wp_nav_menu() ?>
+				</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

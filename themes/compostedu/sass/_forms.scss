@@ -5,22 +5,20 @@
 /* Buttons */
 
 button {
-	border: 0px;
-	height: 48px;
-	border-radius: 6%;
-	font-family: $font__main;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 1.19;
-
+	@include default-btn;
 }
 
-.btn-red {
+.btn-red, .btn-red:visited {
 	background-color: $dull_red;
 	color: $white;
 }
 
-.btn-white {
+.btn-white, .btn-white:visited {
 	background-color: $white;
 	color: $pine;
+}
+
+.btn-pine, .btn-pine:visited {
+	background-color: $pine;
+	color: $white;
 }

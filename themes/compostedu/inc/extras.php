@@ -25,3 +25,16 @@ function red_starter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyCOCEqNtcHcd5yQpwRYCJOYeq_Euc48gbc');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+function enqueue_load_fa() {
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.10.1/css/all.css' );
+}
+  
+add_action('wp_enqueue_scripts', 'enqueue_load_fa');
