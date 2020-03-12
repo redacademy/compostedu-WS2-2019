@@ -107,3 +107,6 @@
     }
   })(container);
 })();
+
+// Remove href from 'li's to change them to titles
+jQuery('li ul').siblings('a').removeAttr('href')

@@ -28,7 +28,12 @@
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 								<img src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Menu Icon">
 							</button>
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+							<?php wp_nav_menu( 
+								array( 
+									'theme_location' => 'primary',
+									'menu_id' => 'primary-menu' 
+								) 
+							); ?>
 						</nav><!-- #site-navigation -->
 					</div>
 					
