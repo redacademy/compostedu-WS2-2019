@@ -115,7 +115,7 @@
 
 /* Front page */
 
-.page-home, .single { 
+.page-home, .single, .contact-us-site-main { 
     .entry-content {
         @include default-padding;
     }
@@ -273,6 +273,118 @@
 
     p {
         color: #fffdf7;
-     }
+    }
 
+}
+
+// Main Content
+
+.contact-us-site-main {
+
+    h2 {
+        color: #355a46;
+        margin-bottom: 8px;
+    }
+
+    .entry-content {
+        .about-text {
+            color: #464646;
+            background-color: rgba(211, 211, 211,0.4);
+            padding: 24px;
+            margin-bottom: 24px;
+            border-radius: 5px;
+
+        }
+
+        //Google Maps
+        iframe {
+            border-radius: 5px;
+            height: 220px;
+            margin-bottom: 24px;
+        }
+    }
+
+    //Contact Form 
+    .wpcf7-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    //Contact Form inside content
+    .wp-block-group__inner-container {
+        background-color: #a3714e;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 32px;
+        
+        .contact-form-title {
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        p {
+            display: flex;
+            justify-content: start;
+            color: white;
+        }
+
+        input {
+            width: 294px;
+            height: 40px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        textarea {
+            width: 294px ;
+            height: 276px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        //Submit Button
+        .wpcf7-submit  {
+            background-color: #fffcf5;
+            width: 98px;
+            font-weight: 700;
+            color: #794d2f;
+        }
+    }
+
+
+
+}
+
+//Hardcoded  Newsletter Subscription box
+.subscribe-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    .newsletter-subscription-form {
+        background-color: rgba(211, 211, 211, 0.4);
+        padding: 25px;
+        width: 341px;
+        display: flex;
+        border-radius: 5px;
+        flex-direction: column;
+
+    }
+
+   .subscribe-input {
+       width: 294px;
+       height: 40px;
+       border: 0;
+        border-radius: 5px;
+       margin-bottom: 16px;
+
+    }
+
+    .subscribe-btn {
+        border-radius: 5px;
+        margin: 16px 0px;
+        color: white;
+        width: 110px;
+        background-color: #355a46;
+    }
 }
