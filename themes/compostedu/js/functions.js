@@ -42,24 +42,3 @@
         }
     };
 }());
-
-
-// Function to toggle menu list when menu icon is clicked
-(function() {
-    let menuIcon = document.getElementById('menu-icon');
-    menuIcon.onclick = function(toggle_menu) {
-        toggle_menu.preventDefault();
-        let menuItems = document.getElementById('menu-bar');
-
-        if(document.querySelector('.hide-menu')) {
-            menuItems.classList.remove('hide-menu');
-            menuItems.classList.add('show');
-            // JS to display menu items
-        }
-        else {
-            menuItems.classList.remove('show');
-            menuItems.classList.add('hide-menu');
-            // JS to hide menu items
-        }
-    }
-}());

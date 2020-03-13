@@ -5,16 +5,7 @@
 /* Links */
 
 a {
-	color: $color__link;
-
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
+	color: $color__background-body;
 	&:focus {
 		outline: thin dotted;
 	}
@@ -22,6 +13,7 @@ a {
 	&:active {
 		outline: 0;
 	}
+	text-decoration: none;
 }
 
 /* Menus */
@@ -32,73 +24,71 @@ a {
 	float: left;
 	width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+	.menu-toggle {
+		display: flex;
+		justify-content: center;
+		background-color: transparent;
+		border: none;
+	}
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+	div {
+		.nav-menu {
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
 			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
-			}
+			top: 48px;
+			width: 100vw;
+			align-items: flex-start;
 
 			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
+				width: 100%;
+
+				.sub-menu {
+					display: none;
+					list-style: none;
+					padding-left: 30px;
+					
+					li {
+						width: 100%;
+
+						.sub-menu {
+							display: none;
+							list-style: none;
+							padding-left: 30px;
+						}
+					}
+
+					li:hover > ul,
+					li.focus > ul {
+						display: block;
+					}
 				}
+				
 			}
-
-			a {
-				width: 200px;
+			
+			li:hover > ul,
+			li.focus > ul {
+				display: block;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
+		margin: 10px;
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	background-color: #192b21;
 }
 
 @media screen and (min-width: 768px) {

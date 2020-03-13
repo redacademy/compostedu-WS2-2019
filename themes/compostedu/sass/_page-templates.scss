@@ -25,21 +25,24 @@
 /* Header */
 .site-header {
     .first-sight-header {
-        background-color: #355a46;
+        background-color: $pine;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .menu {
-        .menu-button {
-            background-color: transparent;
-            border: none;
-            color: transparent;
-            box-shadow: none;
+        .main-navigation {
 
-            .menu-icon {
-                padding: 21px 22px;
+            .menu-button {
+                background-color: transparent;
+                border: none;
+                color: transparent;
+                box-shadow: none;
+                
+                .menu-icon {
+                    padding: 21px 22px;
+                }
             }
         }
     }
@@ -109,24 +112,6 @@
 
                 .search-submit {
                     grid-column: 2;
-                }
-            }
-        }
-    }
-
-    // Style for menu items
-    .menu-bar {
-        background-color: #192b21;
-        
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            li {
-                color: #fffdf7;
-                a {
-                    text-decoration: none;
                 }
             }
         }
@@ -411,3 +396,4 @@
         background-color: #355a46;
     }
 }
+
