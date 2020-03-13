@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 (function() {
-  let container, button, menu, links, i, len;
+  let container, button, menu;
 
   container = document.getElementById('site-navigation');
   if (!container) {
@@ -53,11 +53,11 @@
   /**
    * Sets or removes .focus class on an element.
    */
-  function toggleFocus() {
-    let self = this;
+  // function toggleFocus() {
+  //   let self = this;
 
     // Move up through the ancestors of the current link until we hit .nav-menu.
-    while (-1 === self.className.indexOf('nav-menu')) {
+    // while (-1 === self.className.indexOf('nav-menu')) {
       // On li elements toggle the class .focus.
       
       // if ('li' === self.tagName.toLowerCase()) {
@@ -68,9 +68,9 @@
       //   }
       // }
 
-      self = self.parentElement;
-    }
-  }
+      // self = self.parentElement;
+    // }
+  // }
 
   /**
    * Toggles `focus` class to allow submenu access on tablets.
