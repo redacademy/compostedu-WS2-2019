@@ -229,7 +229,7 @@
 /* Fact Sheets */
 
 .page-fact-sheets { 
-    .entry-content {
+    .entry-content, .entry-content-fs {
         @include default-padding;
     }
 }
@@ -240,7 +240,7 @@
             text-align: center;
         }
     }
-    .entry-content {
+    .entry-content-fs {
         p {
             text-align: center;
             font-size: 0.8rem; 
@@ -256,7 +256,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 85%;
+}
+
+.box-fs {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(70, 70, 70, 0.25);
+    border-radius: 5%;
+    margin-bottom: 1rem;
+    @include default-padding;
 }
 
 /* Search Pagination */ 
