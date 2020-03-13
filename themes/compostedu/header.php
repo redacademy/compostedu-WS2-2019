@@ -24,9 +24,17 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="first-sight-header">
 					<div id="menu-icon" class="menu show">
-						<a href="#" class="menu-button">
-							<img class="menu-icon" src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Hamburger Menu">
-						</a>
+						<nav id="site-navigation" class="main-navigation menu-bar" role="navigation">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Menu Icon">
+							</button>
+							<?php wp_nav_menu( 
+								array( 
+									'theme_location' => 'primary',
+									'menu_id' => 'primary-menu' 
+								) 
+							); ?>
+						</nav><!-- #site-navigation -->
 					</div>
 					
 					<div id="logo" class="site-branding show">
@@ -43,10 +51,6 @@
 				<div id="menu-bar" class="menu-bar hide-menu">
 					<?php wp_nav_menu() ?>
 				</div>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

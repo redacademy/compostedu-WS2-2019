@@ -87,6 +87,7 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function scripts() {
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery' );
@@ -99,6 +100,10 @@ function scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_localize_script( 'navigation', 'compostedu_vars', array(
+		'directory' => get_template_directory_uri(),
+	));
 }
 add_action( 'wp_enqueue_scripts', 'scripts' );
 
