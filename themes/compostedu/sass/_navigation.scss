@@ -43,27 +43,20 @@ a {
 			align-items: flex-start;
 
 			li {
-				a {
-					margin: 10px;
-					display: flex;
-					justify-content: flex-start;
-				}
+				width: 100%;
+
 				.sub-menu {
 					display: none;
 					list-style: none;
 					padding-left: 30px;
-
-					a {
-						margin: 10px;
-					}
 					
-					.sub-menu {
-						display: none;
-						list-style: none;
-						padding-left: 30px;
+					li {
+						width: 100%;
 
-						a { 
-							margin: 10px;
+						.sub-menu {
+							display: none;
+							list-style: none;
+							padding-left: 30px;
 						}
 					}
 
@@ -84,6 +77,9 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
+		margin: 10px;
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
