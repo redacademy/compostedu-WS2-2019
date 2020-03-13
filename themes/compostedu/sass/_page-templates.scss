@@ -2,6 +2,26 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* General */
+
+.archive {
+    .content-area {
+        @include default-padding;
+    }
+}
+
+.page-home, .single, .contact-us-site-main { 
+    .entry-content {
+        @include default-padding;
+    }
+}
+
+.single {
+    .entry-content {
+        margin-bottom: 1rem;
+    }
+}
+
 /* Header */
 .site-header {
     .first-sight-header {
@@ -115,12 +135,6 @@
 
 /* Front page */
 
-.page-home, .single, .contact-us-site-main { 
-    .entry-content {
-        @include default-padding;
-    }
-}
-
 .front-page-header {
     display: flex;
     flex-direction: column;
@@ -151,18 +165,6 @@
 }
 
 /* Adult Worshops */ 
-
-.post-type-archive-adult_workshop {
-    .content-area {
-        @include default-padding;
-    }
-}
-
-.single {
-    .entry-content {
-        margin-bottom: 1rem;
-    }
-}
 
 .aw-information-container {
     display: grid;
@@ -201,6 +203,27 @@
     color: $dull_red;
     font-weight: 600;
     text-decoration: none;
+}
+
+/* Community Worshops */
+
+.post-type-archive-community_workshop {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.community_workshop {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 /* Search Pagination */ 
