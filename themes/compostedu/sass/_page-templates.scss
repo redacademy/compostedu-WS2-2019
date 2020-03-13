@@ -231,6 +231,9 @@
             font-size: 0.8rem; 
         }
     }
+    .hentry {
+        margin-bottom: 0;
+    }
 }
 
 .topic-fs {
@@ -250,6 +253,28 @@
     border-radius: 5%;
     margin-bottom: 1rem;
     @include default-padding;
+
+    h2 {
+        margin-top: 1rem;
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}
+
+.page > .type-box-fs-content:nth-of-type(even) {
+    background-color: $very-light-pink;
+}
+
+.type-box-fs-content {
+    //background-color: yellow;
+    //margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    //border: solid;
+    margin-top: 0;
 }
 
 /* Search Pagination */ 
