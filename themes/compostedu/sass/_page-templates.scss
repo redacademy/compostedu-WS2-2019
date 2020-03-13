@@ -10,7 +10,7 @@
     }
 }
 
-.page-home, .single { 
+.page-home, .single, .contact-us-site-main { 
     .entry-content {
         @include default-padding;
     }
@@ -270,5 +270,144 @@
     a, a:visited {
        color: $pine;
        text-decoration: none;
+    }
+}
+
+/* Contact Us Page */ 
+
+.contact-us-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/Contact-us/contact-us.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: $color__background-body;
+        font-weight: 600;
+        line-height: 0.43;
+        font-size: 7.3vw;
+        padding-top: 65px;
+
+    }
+
+    p {
+        color: #fffdf7;
+    }
+
+}
+
+// Main Content
+
+.contact-us-site-main {
+
+    h2 {
+        color: #355a46;
+        margin-bottom: 8px;
+    }
+
+    .entry-content {
+        .about-text {
+            color: #464646;
+            background-color: rgba(211, 211, 211,0.4);
+            padding: 24px;
+            margin-bottom: 24px;
+            border-radius: 5px;
+
+        }
+
+        //Google Maps
+        iframe {
+            border-radius: 5px;
+            height: 220px;
+            margin-bottom: 24px;
+        }
+    }
+
+    //Contact Form 
+    .wpcf7-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    //Contact Form inside content
+    .wp-block-group__inner-container {
+        background-color: #a3714e;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 32px;
+        
+        .contact-form-title {
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        p {
+            display: flex;
+            justify-content: start;
+            color: white;
+        }
+
+        input {
+            width: 294px;
+            height: 40px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        textarea {
+            width: 294px ;
+            height: 276px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        //Submit Button
+        .wpcf7-submit  {
+            background-color: #fffcf5;
+            width: 98px;
+            font-weight: 700;
+            color: #794d2f;
+        }
+    }
+
+
+
+}
+
+//Hardcoded  Newsletter Subscription box
+.subscribe-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    .newsletter-subscription-form {
+        background-color: rgba(211, 211, 211, 0.4);
+        padding: 25px;
+        width: 341px;
+        display: flex;
+        border-radius: 5px;
+        flex-direction: column;
+
+    }
+
+   .subscribe-input {
+       width: 294px;
+       height: 40px;
+       border: 0;
+        border-radius: 5px;
+       margin-bottom: 16px;
+
+    }
+
+    .subscribe-btn {
+        border-radius: 5px;
+        margin: 16px 0px;
+        color: white;
+        width: 110px;
+        background-color: #355a46;
     }
 }
