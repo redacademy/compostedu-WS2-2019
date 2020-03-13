@@ -16,7 +16,16 @@
                 }
             });
         }
-        
+
+
+        if( $('body.page-fact-sheets').length) {
+            $('.type-fs-content a').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $(this).attr('href') ).offset().top
+                }, 500);
+                return false;
+            });
+        }
     });
 
 })( jQuery );
