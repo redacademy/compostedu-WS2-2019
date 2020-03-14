@@ -24,6 +24,7 @@
 
 	<div class="entry-content-fs">
 		<?php the_content(); ?>
+		<p>If you don't find the information you're looking for please call us at 250-386-WORM (96-76) or email us at office@compost.bc.ca with your questions.</p>
 	</div><!-- .entry-content -->
 
 	<div class="entry-content">
