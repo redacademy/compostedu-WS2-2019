@@ -79,7 +79,62 @@
 			<hr>
 		</article>
 
+		<div class="mocha-content">
+			<h1>Schedule & Hours</h1>
+
+			<p>Workshops are offered <strong>Wednesday</strong> to <strong>Friday</strong> during school hours.</p>
+
+			<p>Programs range from <strong>one to two hours</strong> and may be delivered at our demonstration site or at your facility</p>
+
+			<p>Spring time and summer time camps can book any of our workshops and we are happy to discuss stratefies that suit both camp and educator's needs</p>
+		</div>
+
+		<div class="mocha-content">
+			<h1>Booking</h1>
+
+			<p>To book a program call our Education Coordinator at 386-WORM (9676) during our regular office hours or contact us using the form below.</p>
+		</div>
+
+		//TODO CONTACT-US
+
+		<h1>Teaching Resources</h1>
 		
+		<div class="teaching-resources-content">
+
+			<?php if( have_rows('teaching_resources') ): ?>
+
+				<?php while( have_rows('teaching_resources') ): the_row(); 
+				
+				// vars
+				$image = get_sub_field('image');
+				$title = get_sub_field('title');
+				$pdf = get_sub_field('pdf');
+
+				?>
+
+				<section class="hentry teaching-resources-item">
+					<?php if( !empty( $image ) ): ?>
+						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>
+			
+					<header class="entry-header">
+						<h2 class="entry-title"><?php echo $title?></h2>
+					</header><!-- .entry-header -->
+
+					<?php
+						if( $pdf ): ?>
+							<a class="view-link" href="<?php echo $pdf['url']; ?>" target="_blank">Download PDF <i class="fas fa-arrow-right"></i></a>
+						<?php endif; 
+					?>
+
+					<hr>
+				</section>
+
+				<?php endwhile; ?>
+
+			<?php endif; ?>
+
+		</div>
 
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
