@@ -616,3 +616,78 @@
     }
 }
 
+/* Victoria Soil Quality Map Page */ 
+
+.victoria-soil-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/victoria-soil-quality-map/victoria-header-medium.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: #fffdf7;
+        font-size: 26px;
+    }
+
+    .victoria-soil-header-description {
+        color: #fffdf7;
+        text-align: center;
+    }
+
+
+}
+
+//Main Content Victoria Soil
+
+.victoria-soil-site-main {
+
+    h2 {
+        color: #355a46;
+        font-size: 22px;
+    }
+
+    .entry-content {
+    @include  default-padding;
+    }
+
+
+    //Open Applications section
+
+    .wp-block-group__inner-container {
+
+        background-color: #a3714e;
+        padding: 30px;
+        border-radius: 5px;
+        margin-bottom: 32px;
+        color: #fffcf7;
+
+        h2 {
+            color: #fffdf7;
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .victoria-apply-button {
+            background-color: white;
+            color: #794d2f;
+            padding: 10px;
+            width: 117px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 700;
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.33);
+        }
+
+    }
+
+
+}
+
