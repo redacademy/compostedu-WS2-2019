@@ -22,6 +22,20 @@
     }
 }
 
+.mocha-content {
+    background-color: $mocha;
+    border-radius: 5px;
+    @include default-padding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $white;
+    margin-bottom: 1rem;
+
+    h1 {
+        color: $white;
+    }
+}
+
 /* Header */
 .site-header {
     .first-sight-header {
@@ -250,7 +264,7 @@
 .box-fs {
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px rgba(70, 70, 70, 0.25);
-    border-radius: 5%;
+    border-radius: 5px;
     margin-bottom: 1rem;
     @include default-padding;
 
@@ -272,6 +286,59 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-top: 0;
+}
+
+/* About School Programs */
+
+.page-about-school-programs { 
+    .entry-content {
+        @include default-padding;
+    }
+}
+
+.about-school-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/about-school-programs/about-school-programs.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: $color__background-body;
+        font-weight: 600;
+        line-height: 0.43;
+        font-size: 7.3vw;
+        padding-top: 65px;
+    }
+
+    p {
+        color: #fffdf7;
+        text-align: center;
+    }
+
+}
+
+.images-school-programs {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: solid 1px rgba(70, 70, 70, 0.3);
+}
+
+.image-school-programs-content {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hentry {
+        p {
+            font-size: 0.94rem;
+        }
+    }
 }
 
 /* Composting for Kids */
