@@ -654,6 +654,27 @@
     @include  default-padding;
     }
 
+     //Google interactive soil map
+     iframe {
+        height: 336px;
+        margin-bottom: 5px;
+    }
+
+    //Map Link to new page
+
+    .map-link {
+        color: #aa443a;
+        font-weight: 700;
+
+    }
+
+    //Font awesome arrow
+    .map-link::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+    }
+
 
     //Open Applications section
 
