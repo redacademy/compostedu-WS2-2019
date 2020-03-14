@@ -295,6 +295,27 @@
     }
 }
 
+/* Intermediate Programs */
+
+.post-type-archive-intermediate_program {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.intermediate_program {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 /* Search Pagination */ 
 
 .search-pagination {
