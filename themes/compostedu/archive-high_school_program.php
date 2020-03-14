@@ -13,20 +13,20 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"> Composting For Kids</h1>
-				<p>Workshops are available Wednesday-Friday, 9 am - 4 pm. Workshops may be delivered in our straw bale teaching building or at your facility, while site tours take place in the Compost Education Centre demonstration gardens. For Prescribed Learning Outcomes (PLO). click <a href="#">HERE</a>.</p>
+				<h1 class="page-title">High School Programs</h1>
+				<p>Workshops are available Wednesday-Friday, 9 am - 4 pm. Workshops may be delivered in our straw bale teaching building or at your facility, while site tours take place in the Compost Education Centre demonstration gardens.</p>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content', 'composting-for-kids' );
+					get_template_part( 'template-parts/content', 'high-school-programs' );
 				?>
 
 			<?php endwhile; ?>
 
-			<?php red_starter_numbered_pagination(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

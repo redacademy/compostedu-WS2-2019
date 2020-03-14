@@ -4,7 +4,9 @@
 
         if( $('body.post-type-archive-community_workshop').length 
             || $('body.post-type-archive-composting_for_kids').length
-            || $('body.post-type-archive-intermediate_program').length){
+            || $('body.post-type-archive-intermediate_program').length
+            || $('body.post-type-archive-high_school_program').length
+            ){
             let viewCw = $('.view-cw');
             viewCw.click(function(e){
                 e.preventDefault();
