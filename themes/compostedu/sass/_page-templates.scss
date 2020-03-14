@@ -269,12 +269,30 @@
 }
 
 .type-box-fs-content {
-    //background-color: yellow;
-    //margin-bottom: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    //border: solid;
     margin-top: 0;
+}
+
+/* Composting for Kids */
+
+.post-type-archive-composting_for_kids {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.composting_for_kids {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 /* Search Pagination */ 
