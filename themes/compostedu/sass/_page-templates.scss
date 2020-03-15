@@ -416,9 +416,9 @@
         }
     }
     .entry-content {
-        &:first-child{
-            border: none;
+        divp:first-child{
             margin: 0;
+            border: none;
         }
 
         .wp-block-group {
@@ -426,6 +426,7 @@
             margin-bottom: 4%;
             padding: 24px;
             border: 1px solid #d3d3d3;
+            border-radius: 5px;
             
             .main-title {
                 color: $pine;
@@ -436,8 +437,14 @@
             .description {
                 padding: 24px;
                 border: 1px solid #d3d3d3;
+                border-radius: 5px;
                 background-color: #d3d3d3;
             }
+        }
+
+        iframe {
+            height: 192px;
+            border-radius: 5px;
         }
     }
 }
