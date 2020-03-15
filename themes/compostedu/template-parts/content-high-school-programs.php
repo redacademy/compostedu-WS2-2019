@@ -17,9 +17,9 @@
 		<h2 class="entry-title"><?php the_title()?> (<?php the_field('duration')?>, <?php the_field('cost_information')?>)</h2>
 	</header><!-- .entry-header -->
 
-	<a class="view-link view-cw" href="#">Read more</a>
+	<a class="view-link view-click" href="#">Read more</a>
 
-	<div class="entry-content" style="display: none;">
+	<div class="entry-content displayed-content" style="display: none;">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
