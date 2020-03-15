@@ -416,7 +416,7 @@
         }
     }
     .entry-content {
-        divp:first-child{
+        div:first-child{
             margin: 0;
             border: none;
         }
@@ -442,9 +442,12 @@
             }
         }
 
-        iframe {
-            height: 192px;
-            border-radius: 5px;
+        .wp-block-embed__wrapper {
+            
+            iframe {
+                height: 192px;
+                border-radius: 5px;
+            }
         }
     }
 }
