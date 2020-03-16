@@ -544,6 +544,50 @@
      color: $dull_red;
  }
 
+ /* People */
+
+.post-type-archive-people {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.post-type-archive-people {
+    .content-area {
+        padding-left: initial;
+        padding-right: initial;
+    }
+}
+
+.people-type-content {
+    @include default-padding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.people-type-content:first-of-type {
+    padding-top: initial;
+}
+
+.site-main > .people-type-content:nth-of-type(even) {
+    background-color: $very-light-pink;
+}
+
+ .people-type-content:first-of-type {
+     .entry-header {
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+ }
+
 /* Search Pagination */ 
 
 .search-pagination {
