@@ -391,6 +391,7 @@ function people_post_type() {
 		'description'           => __( 'People information pages.', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields' ),
+		'taxonomies'            => array( 'People Terms' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
