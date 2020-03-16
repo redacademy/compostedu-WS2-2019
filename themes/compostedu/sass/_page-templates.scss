@@ -491,6 +491,57 @@
     }
 }
 
+/* Products */
+
+.post-type-archive-product {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.post-type-archive-product {
+    .content-area {
+        padding-left: initial;
+        padding-right: initial;
+    }
+}
+
+.product-type-content {
+    @include default-padding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.product-type-content:first-of-type {
+    padding-top: initial;
+}
+
+.site-main > .product-type-content:nth-of-type(even) {
+    background-color: $very-light-pink;
+}
+
+ .product {
+     .entry-header {
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+ }
+
+ .product-cost-information {
+    display: inline-block;
+ }
+
+ .product-extra-information {
+     display: inline-block;
+     color: $dull_red;
+ }
+
 /* Search Pagination */ 
 
 .search-pagination {

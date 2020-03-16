@@ -7,6 +7,7 @@
             || $('body.post-type-archive-intermediate_program').length
             || $('body.post-type-archive-high_school_program').length
             || $('body.page-third-party-resources').length
+            || $('body.post-type-archive-product').length
             ){
             let view = $('.view-click');
             view.click(function(e) {
