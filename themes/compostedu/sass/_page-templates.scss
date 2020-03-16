@@ -491,6 +491,27 @@
     }
 }
 
+/* Products */
+
+.post-type-archive-product {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.community_workshop {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 /* Search Pagination */ 
 
 .search-pagination {
