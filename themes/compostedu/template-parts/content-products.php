@@ -8,21 +8,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php $image = get_field('image'); ?>
+	<?php if( !empty( $image ) ): ?>
+		<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+	<?php endif; ?>
+
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
-
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<h2><?php the_title() ?></h2>
+		<h2 class="product-cost-information"><?php echo get_field('cost_information'); ?></h2>
+		<?php $extra_information = get_field('extra_information'); ?>
+		<?php if( !empty( $extra_information ) ): ?>
+			<h2 class="product-extra-information">[<?php echo $extra_information; ?>]<h2>
+		<?php endif; ?>	
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_excerpt(); ?>
+	<a class="view-link view-click" href="#">Read more</a>
+
+	<div class="entry-content displayed-content" style="display: none;">
+		<?php the_content(); ?>
 	</div><!-- .entry-content -->
+
+	<hr/>
 </article><!-- #post-## -->
