@@ -19,39 +19,43 @@ get_header(); ?>
 
 			<?php foreach($product_taxonomies as $product_taxonomy): ?>
 
-				<h1><?php echo $product_taxonomy->name?></h1>
+				<section class="product-type-content">
 
-				<?php $products = new WP_Query(
-					array(
-						'post_type'=>'product', 
-						'post_status'=>'publish', 
-						'posts_per_page'=>-1,
-						'tax_query' => array(
-							array(
-								'taxonomy' => $product_taxonomy->taxonomy,
-								'terms' => $product_taxonomy->slug,
-								'field' => 'slug'
+					<h1><?php echo $product_taxonomy->name?></h1>
+
+					<?php $products = new WP_Query(
+						array(
+							'post_type'=>'product', 
+							'post_status'=>'publish', 
+							'posts_per_page'=>-1,
+							'tax_query' => array(
+								array(
+									'taxonomy' => $product_taxonomy->taxonomy,
+									'terms' => $product_taxonomy->slug,
+									'field' => 'slug'
+								)
 							)
-					)
-					)); 
-				?>
-					
-				<?php if ( $products->have_posts() ) : ?>
+						)); 
+					?>
+						
+					<?php if ( $products->have_posts() ) : ?>
 
-					<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+						<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-						<?php
-							get_template_part( 'template-parts/content' );
-						?>
+							<?php
+								get_template_part( 'template-parts/content', 'products' );
+							?>
 
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
 
-				<?php else : ?>
+					<?php else : ?>
 
-					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-				<?php endif; ?>
+					<?php endif; ?>
+
+				</section>
 
 			<?php endforeach; ?>
 

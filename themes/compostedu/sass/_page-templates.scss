@@ -505,11 +505,25 @@
     }
 }
 
-.community_workshop {
-    .entry-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
+.post-type-archive-product {
+    .content-area {
+        padding-left: initial;
+        padding-right: initial;
     }
+}
+
+.product-type-content {
+    @include default-padding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.product-type-content:first-of-type {
+    padding-top: initial;
+}
+
+.site-main > .product-type-content:nth-of-type(even) {
+    background-color: $very-light-pink;
 }
 
 /* Search Pagination */ 
