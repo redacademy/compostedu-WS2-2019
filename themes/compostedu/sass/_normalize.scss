@@ -45,13 +45,32 @@ a {
 	background-color: transparent;
 }
 
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
 a:active,
 a:hover {
 	outline: 0;
 }
 
 p {
-	font-family: $font_block;
 	line-height: 1.5;
 	letter-spacing: normal;
   	text-align: left;
@@ -71,6 +90,7 @@ dfn {
 }
 
 h1 {
+	font-family: $font_secundary;
 	color: $pine;
 	text-align: left;	
 	font-size: 1.4em;
@@ -79,6 +99,7 @@ h1 {
 }
 
 h2 {
+	font-family: $font_secundary;	
 	color: $greyish-brown;
 	text-align: left;
 	font-weight: 600;

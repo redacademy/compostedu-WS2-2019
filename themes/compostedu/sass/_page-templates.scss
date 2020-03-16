@@ -22,6 +22,20 @@
     }
 }
 
+.mocha-content {
+    background-color: $mocha;
+    border-radius: 5px;
+    @include default-padding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $white;
+    margin-bottom: 1rem;
+
+    h1 {
+        color: $white;
+    }
+}
+
 /* Header */
 .site-header {
     .first-sight-header {
@@ -149,6 +163,32 @@
     }
 }
 
+.page-home {
+    .mocha-content {
+        img {
+            margin-bottom: 10px;
+        }
+
+        padding-top: 31px;
+        padding-bottom: 31px;
+    }
+}
+
+.fp-image-content {
+    margin-bottom: 1rem;
+}
+
+.fp-image {
+    width: 100%;
+    height: 182px;
+    border-radius: 5px;
+}
+
+.fp-icon {
+    width: 42.9px;
+    height: 56px;
+}
+
 /* Adult Worshops */ 
 
 .aw-information-container {
@@ -205,6 +245,246 @@
 }
 
 .community_workshop {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Fact Sheets */
+
+.page-fact-sheets { 
+    .entry-content, .entry-content-fs {
+        @include default-padding;
+    }
+}
+
+.page-fact-sheets {
+    .entry-header {
+        .entry-title {
+            text-align: center;
+        }
+    }
+    .entry-content-fs {
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+    .hentry {
+        margin-bottom: 0;
+    }
+}
+
+.topic-fs {
+    font-weight: bold;
+}
+
+.type-fs-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.box-fs {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(70, 70, 70, 0.25);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    @include default-padding;
+
+    h2 {
+        margin-top: 1rem;
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}
+
+.page > .type-box-fs-content:nth-of-type(even) {
+    background-color: $very-light-pink;
+}
+
+.type-box-fs-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0;
+}
+
+/* Third Party Resources */
+
+.page-third-party-resources { 
+    .entry-content {
+        @include default-padding;
+    }
+}
+
+.page-third-party-resources {
+    .entry-header {
+        .entry-title {
+            text-align: center;
+        }
+    }
+    .hentry {
+        margin-bottom: 0;
+    }
+}
+
+.topic-tps {
+    font-weight: bold;
+}
+
+.page > .type-box-tps-content:nth-of-type(even) {
+    background-color: $very-light-pink;
+}
+
+.type-tps-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    width: 96%;
+}
+
+.box-tps {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(70, 70, 70, 0.25);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    @include default-padding;
+
+    h2 {
+        margin-top: 1rem;
+    }
+
+    .view-link {
+        display: inline-block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.type-box-tps-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0;
+}
+
+/* About School Programs */
+
+.page-about-school-programs { 
+    .entry-content {
+        @include default-padding;
+    }
+}
+
+.about-school-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/about-school-programs/about-school-programs.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: $color__background-body;
+        font-weight: 600;
+        line-height: 0.43;
+        font-size: 7.3vw;
+        padding-top: 65px;
+    }
+
+    p {
+        color: #fffdf7;
+        text-align: center;
+    }
+
+}
+
+.images-school-programs {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: solid 1px rgba(70, 70, 70, 0.3);
+}
+
+.image-school-programs-content {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hentry {
+        p {
+            font-size: 0.94rem;
+        }
+    }
+}
+
+/* Composting for Kids */
+
+.post-type-archive-composting_for_kids {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.composting_for_kids {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Intermediate Programs */
+
+.post-type-archive-intermediate_program {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.intermediate_program {
+    .entry-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* High School Programs */
+
+.post-type-archive-high_school_program {
+    .page-header {
+        .page-title {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem; 
+        }
+    }
+}
+
+.high_school_program {
     .entry-header {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -397,6 +677,102 @@
     }
 }
 
+/* Victoria Soil Quality Map Page */ 
+
+.victoria-soil-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/victoria-soil-quality-map/victoria-header-medium.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: #fffdf7;
+        font-size: 26px;
+    }
+
+    .victoria-soil-header-description {
+        color: #fffdf7;
+        text-align: center;
+    }
+
+
+}
+
+//Main Content Victoria Soil
+
+.victoria-soil-site-main {
+
+    h2 {
+        color: #355a46;
+        font-size: 22px;
+    }
+
+    .entry-content {
+    @include  default-padding;
+    }
+
+     //Google interactive soil map
+     iframe {
+        height: 640px;
+        margin-bottom: 5px;
+    }
+
+    //Map Link to new page
+
+    .map-link {
+        color: #aa443a;
+        font-weight: 700;
+
+    }
+
+    //Font awesome arrow
+    .map-link::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+    }
+
+
+    //Open Applications section
+
+    .wp-block-group__inner-container {
+
+        background-color: #a3714e;
+        padding: 30px;
+        border-radius: 5px;
+        margin-bottom: 32px;
+        color: #fffcf7;
+
+        h2 {
+            color: #fffdf7;
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .victoria-apply-button {
+            background-color: white;
+            color: #794d2f;
+            padding: 10px;
+            width: 117px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 700;
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.33);
+        }
+
+    }
+
+
+}
+
 /* Who We Are */
 .who-we-are-site-main {
     header {
@@ -451,3 +827,4 @@
         }
     }
 }
+

@@ -18,5 +18,50 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+
+		<section class="fp-image-content">
+			<img src="<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited.jpg' ?>"
+				srcset="<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited@2x.jpg' ?> 2x,
+				<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited@3x.jpg' ?> 3x"
+				class="fp-image">
+		</section>
+
+		<section>
+			<div class="mocha-content">
+				<img src="<?php echo get_template_directory_uri() . '/images/front-page/paper.png' ?>" srcset="<?php echo get_template_directory_uri() . '/images/front-page/paper@2x.png' ?> 2x, <?php echo get_template_directory_uri() . '/images/front-page/paper@3x.png' ?> 3x" class="fp-icon">
+
+				<h1>Fact Sheets</h1>
+				<?php
+					$fact_sheet_page = new WP_Query( 'pagename=fact-sheets' );
+					while ( $fact_sheet_page->have_posts() ) : $fact_sheet_page->the_post();
+						the_content();
+					endwhile;
+					wp_reset_postdata();
+				?>
+
+			</div>
+
+			<div class="mocha-content">
+				<img src="<?php echo get_template_directory_uri() . '/images/front-page/school-program.png' ?>" srcset="<?php echo get_template_directory_uri() . '/images/front-page/school-program@2x.png' ?> 2x, <?php echo get_template_directory_uri() . '/images/front-page/school-program@3x.png' ?> 3x" class="fp-icon">
+
+				<h1>School Programs</h1>
+				<?php
+					$school_program_page = new WP_Query( 'pagename=about-school-programs' );
+					while ( $school_program_page->have_posts() ) : $school_program_page->the_post();
+						the_content();
+					endwhile;
+					wp_reset_postdata();
+				?>
+			</div>
+
+			<div class="mocha-content">
+				<img src="<?php echo get_template_directory_uri() . '/images/front-page/workshops.png' ?>" srcset="<?php echo get_template_directory_uri() . '/images/front-page/workshops@2x.png' ?> 2x, <?php echo get_template_directory_uri() . '/images/front-page/workshops@3x.png' ?> 3x" class="fp-icon">
+
+				<h1>Workshops</h1>
+				<p>We are pleased to offer a broad range of workshops on composting, organic gardening, and sustainable living topics every year. Check out what's coming up at the Centre on our calendar.</p>
+			</div>
+
+		</section>
+
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

@@ -3,17 +3,18 @@
 --------------------------------------------------------------*/
 
 /* Links */
-
-a {
-	color: $color__background-body;
-	&:focus {
-		outline: thin dotted;
+.menu-menu-container {
+	a {
+		color: $color__background-body;
+		&:focus {
+			outline: thin dotted;
+		}
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+		text-decoration: none;
 	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-	text-decoration: none;
 }
 
 /* Menus */

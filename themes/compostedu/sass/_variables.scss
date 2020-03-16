@@ -4,6 +4,13 @@ $base__space-unit: 1.0rem;
 
 // Colors
 
+$dull_red: #aa443a;
+$white: #ffffff;
+$pine: #355a46;
+$greyish-brown: #464646;
+$very-light-pink: hsla(0,0%,83%,.4);
+$mocha: #a3714e;
+
 $color__background-body: #fffdf7;
 $color__text-main: #404040;
 
@@ -15,20 +22,14 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-
-$dull_red: #aa443a;
-$white: #ffffff;
-$pine: #355a46;
-$greyish-brown: #464646;
-$very-light-pink: #d3d3d3;
+$color__link: $dull_red;
+$color__link-visited: $dull_red;
+$color__link-hover: $dull_red;
 
 // Typography
 
-$font__main: "canada-type-gibson", sans-serif;
-$font_block: "dolly-new", sans-serif;
+$font__main: "dolly-new", sans-serif;
+$font_secundary: "canada-type-gibson", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
