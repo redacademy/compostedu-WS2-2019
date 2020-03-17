@@ -911,6 +911,12 @@
             margin: 4% 0;
         }
 
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -925,6 +931,9 @@
 
                 label {
                     width: 100%;
+                    background-color: $mocha;
+                    border-radius: 5px;
+
                     
                     span {
                         width: 100%;
@@ -933,15 +942,10 @@
                             width: 100%;
                         }
                     }
-
-                    .ajax-loader {
-                        background-color: transparent;
-                    }
                 }
-
             }
 
-            form:nth-child(6) {
+            .submit {
                 display: flex;
                 justify-content: center;
             }
@@ -951,13 +955,17 @@
                 align-items: center;
                 background-color: #fffcf5;
                 width: 98px;
+                input {
+                    color: $dirt-brown;
+                }
             }
 
             input {
                 width: 294px;
                 height: 40px;
-                border-radius: 5px;
                 border: none;
+                border-radius: 5px;
+
             }
         }
     }
