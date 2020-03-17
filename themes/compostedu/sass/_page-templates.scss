@@ -897,7 +897,6 @@
 /* Who We Are */
 .who-we-are-site-main {
     header {
-        height: 230px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1037,6 +1036,97 @@
         color: #794d2f;
         width: 110px;
         background-color: #fffcf5;
+    }
+}
+
+/* Teaching Garden */
+.teaching-garden-site-main {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/teaching-garden/teaching-garden-hero-edited.jpg) no-repeat top;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 320px;
+
+        h1 {
+            color: $white;
+        }
+
+        .header-description {
+            color: $white;
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+    .entry-content {
+        margin: 4% 6%;
+
+        h2 {
+            color: $pine;
+            margin: 4% 0;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $white;
+            padding: 30px;
+            background-color: $mocha;
+            border-radius: 5px;
+
+            p {
+                width: 100%;
+
+                label {
+                    width: 100%;
+                    background-color: $mocha;
+                    border-radius: 5px;
+
+                    
+                    span {
+                        width: 100%;
+                        
+                        textarea {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .submit {
+                display: flex;
+                justify-content: center;
+            }
+
+            .submit-button {
+                display: flex;
+                align-items: center;
+                background-color: #fffcf5;
+                width: 98px;
+                input {
+                    color: $dirt-brown;
+                }
+            }
+
+            input {
+                width: 294px;
+                height: 40px;
+                border: none;
+                border-radius: 5px;
+
+            }
+        }
     }
 }
 
