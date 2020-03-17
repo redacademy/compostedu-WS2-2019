@@ -949,3 +949,95 @@
     }
 }
 
+/* Volunteer Page*/
+
+
+.volunteer-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/volunteer/Volunteer-medium.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: #fffdf7;
+        font-size: 26px;
+    }
+
+    .volunteer-header-description {
+        color: #fffdf7;
+        text-align: center;
+    }
+
+}
+
+//Main Content
+
+.volunteer-site-main {
+    
+
+    h2 {
+        color: #355a46;
+         font-size: 22px;
+    }
+    
+    .entry-content {
+        @include  default-padding;
+     }
+    
+}
+
+// Sign up box section
+
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    color:white;
+
+  
+
+    .sign-up-title {
+        font-size: 21px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .sign-up-form {
+        background-color: #a3714e;
+        padding: 25px;
+        width: 341px;
+        display: flex;
+        border-radius: 5px;
+        flex-direction: column;
+
+    }
+
+    .submit-btn-container {
+        display: flex;
+        justify-content: center;
+    }
+
+   .submit-input {
+       width: 294px;
+       height: 40px;
+       border: 0;
+        border-radius: 5px;
+       margin-bottom: 16px;
+
+    }
+
+    .submit-btn {
+        border-radius: 5px;
+        margin: 16px 0px;
+        color: #794d2f;
+        width: 110px;
+        background-color: #fffcf5;
+    }
+}
+
+
