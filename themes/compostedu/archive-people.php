@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php foreach($people_terms as $people_term): ?>
 
-				<section class="product-type-content">
+				<section class="people-type-content">
 
 					<h1><?php echo $people_term->name?></h1>
 
@@ -43,7 +43,7 @@ get_header(); ?>
 						<?php while ( $people->have_posts() ) : $people->the_post(); ?>
 
 							<?php
-								get_template_part( 'template-parts/content' );
+								get_template_part( 'template-parts/content', 'people' );
 							?>
 
 						<?php endwhile; ?>
