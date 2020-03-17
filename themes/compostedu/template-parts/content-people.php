@@ -10,9 +10,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php $image = get_field('image'); ?>
 	<?php if( !empty( $image ) ): ?>
-		<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		<img class="people-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 	<?php else : ?>
-		<img src="<?php echo get_template_directory_uri() . '/images/people/default-people.png' ?>" alt="empty image" />
+		<img class="people-img" src="<?php echo get_template_directory_uri() . '/images/people/default-people.png' ?>" alt="empty image" />
 	<?php endif; ?>
 
 	<header class="entry-header">

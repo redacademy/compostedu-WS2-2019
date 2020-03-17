@@ -36,6 +36,15 @@
     }
 }
 
+.grey-content {
+    background-color: $very-light-pink;
+    border-radius: 5px;
+    @include default-padding;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 1rem;
+}
+
 /* Header */
 .site-header {
     .first-sight-header {
@@ -546,6 +555,13 @@
 
  /* People */
 
+ .people-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: solid 1px rgba(70, 70, 70, 0.3);
+  }
+
 .post-type-archive-people {
     .page-header {
         .page-title {
@@ -581,7 +597,7 @@
     background-color: $very-light-pink;
 }
 
- .people-type-content:first-of-type {
+ .people-type-content {
      .entry-header {
          margin-top: 10px;
          margin-bottom: 10px;

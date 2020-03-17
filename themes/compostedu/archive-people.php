@@ -40,6 +40,14 @@ get_header(); ?>
 						
 					<?php if ( $people->have_posts() ) : ?>
 
+						<?php if( !empty( $people_term->name == 'Board of Directors' ) ): ?>
+							<article class="grey-content">
+								<h2>Board of Directors Election</h2>
+
+								<p>The current board of directors were elected at our las Annual General Meeting in June 2019. Terms run for two years. Elections are scheduled for our next Annual General Meeting in June 2020. To discuss opportunities with the Board of Directors, please <a href="<?php echo get_permalink( get_page_by_title( 'Contact Us' ) ); ?>">contact us</a>.</p>
+							</article>
+						<?php endif; ?>
+
 						<?php while ( $people->have_posts() ) : $people->the_post(); ?>
 
 							<?php
