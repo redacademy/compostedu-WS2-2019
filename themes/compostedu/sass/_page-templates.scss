@@ -614,6 +614,16 @@
 
 /* News */
 
+.single-post {
+    .content-area {
+        @include default-padding;
+    }
+    .entry-content {
+        padding-left: initial;
+        padding-right: initial;
+    }
+}
+
 .news-img {
     width: 100%;
     height: 250px;
@@ -641,6 +651,23 @@
     }
 }
 
+.news-nav-links-content {
+    margin-bottom: 1rem;
+}
+
+.news-information {
+    font-size: 0.9rem;
+}
+
+.news-author-information {
+    font-weight: bold;
+
+    .author {
+        color: $pine;
+        font-style: italic;
+        font-weight: initial;
+    }
+}
 
 /* Search Pagination */ 
 

@@ -45,9 +45,7 @@
 		</div>
 		<div><i class="far fa-calendar"></i></div>
 		<div>
-			<?php $updated_date = get_the_modified_time('l, jS F Y'); 
-			echo $updated_date;
-			?>
+			<?php echo get_the_modified_time('l, jS F Y');  ?>
 		</div>
 	</div>
 
