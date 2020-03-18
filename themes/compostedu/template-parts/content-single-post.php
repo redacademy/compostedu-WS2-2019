@@ -41,4 +41,6 @@
 	<?php if( !empty( $image ) ): ?>
 		<img class="news-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 	<?php endif; ?>
+
+	<hr/>
 </article><!-- #post-## -->

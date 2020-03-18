@@ -651,12 +651,30 @@
     }
 }
 
-.news-nav-links-content {
+.news-nav-links {
+    color: $dull_red;
     margin-bottom: 1rem;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 93%;
+        display: inline-block;
+    }
 }
 
 .news-information {
     font-size: 0.9rem;
+}
+
+.news-nav-link-content {
+    .fa-arrow-left, .fa-arrow-right {
+        position: relative;
+        bottom: 8px;
+    }
 }
 
 .news-author-information {
