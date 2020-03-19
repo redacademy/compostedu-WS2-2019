@@ -1198,7 +1198,7 @@
 
     //Links on each Card with respective font awesome arrow
     .card-links {
-    color: #aa443a;
+        color: #aa443a;
 
     }
 
@@ -1206,8 +1206,35 @@
         content: '\f061';
         font-family: 'Font Awesome 5 free';
         font-weight: 900;
-        margin-left: 14px;
+        margin-left: 5px;
     }
+
+    .bequest-description {
+        color: #464646;
+
+    }
+
+    //Logos  main container
+
+    .logos-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    //Single grid container for each logo
+
+    .grid-container {
+        text-align: center;
+
+        p {
+            text-align: center;
+            color: #464646;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+
 
 
 
