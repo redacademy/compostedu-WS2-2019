@@ -11,8 +11,39 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<section class="news-short-content">
-				
-							
+
+			<?php $news = new WP_Query(
+				array(
+					'post_type'=>'post', 
+					'post_status'=>'publish', 
+					'posts_per_page'=>1
+				)); 
+			?>
+
+			<?php if ( $news->have_posts() ) : ?>
+
+			<?php while ( $news->have_posts() ) : $news->the_post(); ?>
+
+				<?php
+					get_template_part( 'template-parts/content' );
+				?>
+
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
+				<?php $next = get_next_post();
+						//var_dump($next);
+
+					  $previous = get_previous_post();
+					  var_dump($previous);	
+
+				?>
+
+			<?php else : ?>
+
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+			<?php endif; ?>
 
 		</section>
 
