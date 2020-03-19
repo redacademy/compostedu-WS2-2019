@@ -9,10 +9,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
-
 		<h1><?php the_title()?></h1>
 		<div class="news-information">
 			<div class="news-author-information">
@@ -23,7 +19,7 @@
 			</div>
 			<div>
 				<i class="far fa-folder"></i>
-				<?php $categories = get_categories(); ?>
+				<?php $categories = get_the_category($post_id); ?>
 				<?php $category_names = [] ?>
 				<?php foreach($categories as $category): ?>
 					<?php array_push($category_names, $category->name); ?>
