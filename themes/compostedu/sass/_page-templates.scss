@@ -1194,10 +1194,22 @@
             
             margin: 24px;
         }
-       
 
+        
+        
     }
+    
+        //Last card with different style
 
+        .charity-card {
+            box-shadow: none;
+            border: none;
+            background-color:#d3d3d3;
+            margin-bottom: 16px;
+            border-radius: 5px;
+
+
+        }
 
     //Links on each Card with respective font awesome arrow
     .card-links {
@@ -1211,6 +1223,7 @@
         font-weight: 900;
         margin-left: 5px;
     }
+
 
     .bequest-description {
         color: #464646;
