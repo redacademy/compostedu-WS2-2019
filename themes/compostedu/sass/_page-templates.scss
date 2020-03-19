@@ -1189,12 +1189,15 @@
         background-color: #fffcf5;
         margin-bottom: 16px;
         border-radius: 5px;
-
+        
         .wp-block-group__inner-container {
+            
             margin: 24px;
         }
+       
 
     }
+
 
     //Links on each Card with respective font awesome arrow
     .card-links {
@@ -1216,23 +1219,31 @@
 
     //Logos  main container
 
-    .logos-container {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
+    .images-container {
+        box-shadow:none;
+        border: none;
 
-    //Single grid container for each logo
+        // Inside logos conatiner
+        
+        .wp-block-group__inner-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0;
 
-    .grid-container {
-        text-align: center;
+            img {
+                width: 60px;
+            }
 
-        p {
-            text-align: center;
-            color: #464646;
-            font-size: 18px;
-            font-weight: 700;
+            figcaption {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
         }
+        
     }
+
+
 
 
 
