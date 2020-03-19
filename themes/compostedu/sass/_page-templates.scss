@@ -1175,17 +1175,16 @@
             }
         }
 
-        div {
-            &:nth-child(2) {
-                background-color: #d3d3d3;
-                padding: 15px 0;
-                
-                .wp-block-group__inner-container {
-                    .wp-block-group {
-                        border: 1px solid $pine;
-                        form {
-                            padding: 0;
-                        }
+        .purchase-membership {
+            background-color: #d3d3d3;
+            padding: 15px 0;
+            
+            .wp-block-group__inner-container {
+                .wp-block-group {
+                    background-color: transparent;
+                    border: 1px solid $pine;
+                    form {
+                        padding: 0;
                     }
                 }
             }
