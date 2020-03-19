@@ -19,7 +19,7 @@
 			</div>
 			<div>
 				<i class="far fa-folder"></i>
-				<?php $categories = get_the_category($post_id); ?>
+				<?php $categories = get_the_category(); ?>
 				<?php $category_names = [] ?>
 				<?php foreach($categories as $category): ?>
 					<?php array_push($category_names, $category->name); ?>

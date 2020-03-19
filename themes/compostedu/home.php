@@ -12,38 +12,33 @@ get_header(); ?>
 
 		<section class="news-short-content">
 
-			<?php $news = new WP_Query(
-				array(
-					'post_type'=>'post', 
-					'post_status'=>'publish', 
-					'posts_per_page'=>1
-				)); 
-			?>
+			<article class="article-news-top">
+				<img class="news-img-top" src="//localhost/wp-content/uploads/2020/03/COVID-19-768x768-1.jpg" alt="">
 
-			<?php if ( $news->have_posts() ) : ?>
+				<header class="entry-header">
+					<h1 class="entry-title">CEC, COVID-19 Preparedness and Flattening the Curve</h1> </header>
+				<!-- .entry-header -->
 
-			<?php while ( $news->have_posts() ) : $news->the_post(); ?>
+				<div class="entry-content">
+					<p>The Compost Education Centre is currently doing its part to respond to COVID 19 concerns and working to “flatten the curve” of the outbreak. Although policies and events are evolving rapidly we are currently: Maintaining a healthy work environment with posted information about how to stop the spread of illness. Encouraging employees, visitors and workshop […]</p>
+				</div>
+				<!-- .entry-content -->
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<div class="news-information-container">
+					<div><i class="far fa-folder"></i></div>
+					<div>
+						News 
+					</div>
+					<div><i class="far fa-calendar"></i></div>
+					<div>
+						Wednesday, 18th March 2020 
+					</div>
+				</div>
+			</article>
 
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-
-				<?php $next = get_next_post();
-						//var_dump($next);
-
-					  $previous = get_previous_post();
-					  var_dump($previous);	
-
-				?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-			<?php endif; ?>
+			<button type="button" id="new-next-button">Next</button>
+			<button type="button" id="new-red-more-button">Read more</button>
+			<button type="button" id="new-previous-button">Previous</button>
 
 		</section>
 

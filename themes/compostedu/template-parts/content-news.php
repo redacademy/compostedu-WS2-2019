@@ -31,12 +31,10 @@
 		<?php endif;?>
 	</div><!-- .entry-content -->
 
-	<?php $categories = get_categories(); ?>
-
 	<div class="news-information-container">
 		<div><i class="far fa-folder"></i></div>
 		<div>
-			<?php $categories = get_the_category($post_id); ?>
+			<?php $categories = get_the_category(); ?>
 			<?php $category_names = [] ?>
 			<?php foreach($categories as $category): ?>
 				<?php array_push($category_names, $category->name); ?>
