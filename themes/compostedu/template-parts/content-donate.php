@@ -18,22 +18,19 @@ Thank you so much! </p>
 	<div class="entry-content">
 		<?php the_content(); ?>
 
-		<?php 
+	<?php	$rows = get_field('donate_field'); ?>
 
-			$rows = get_field('donate_field');
-			if($rows)
-			{
-				echo '<ul>';
+	<?php foreach($rows as $row): ?>
+		<div class="custom-fields-container">
+			<?php $image = $row['image']; ?>
+			<?php if( !empty( $image ) ): ?>
+				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+			<?php endif; ?>
+			<h3 class="donate-fields-title"><?php echo $row['title']?></h3>
+			<p class="donate-field-description"> <?php echo $row['description'] ?></p>
+		</div>
+	<?php endforeach; ?>
 
-				foreach($rows as $row)
-				{
-						echo '<h3 class=donate-field-title>' . $row['title'] . '</h3>';
-						echo '<p class=donate-field-description>' . $row['description'] . '</p>';
-				}
-
-				echo '</ul>';
-			}
-			?>
 
 
 </div><!-- .entry-content -->
