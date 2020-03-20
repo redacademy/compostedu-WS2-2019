@@ -9,8 +9,10 @@
                 context: document.body
             }).done(function(data) {
                 if (typeof data !== 'undefined' && data.length > 0) {
-                    let news = data[0];
-                    $('.article-news-top').attr('id', `post-${news.id}-top`);
+                    //let news = data[0];
+                    //$('.article-news-top').attr('id', `post-${news.id}-top`);
+                    updateNewsImage(data[0].id);
+                    updateNewsInformation(data[0]);
                 }
             });
 
@@ -47,7 +49,6 @@
             })
             
         });
-        
 
         function updateNewsImage(newsId) {
             $.ajax({
@@ -61,6 +62,25 @@
         function updateNewsInformation(data) {
             console.log('update information');
             $('.article-news-top').attr('id', `post-${data.id}-top`);
+
+            console.log(data);
+            $('.entry-title-top').text(data.title.rendered);
+            $('.entry-content-top p').remove();
+
+            let content = data.excerpt.rendered;
+            if (content) {
+                if (content.length > 153) {
+                    content = content.substring(0, 150);
+                    content = content.concat('...</p>');
+                    console.log(content);
+                }
+            } else {
+                content = '<p>For more information click Read more.</p>'
+            }
+
+            $('.entry-content-top').append(content);
+
+            updateNewsCategories(data.categories);
         }
 
         function getPost(id, callback) {
@@ -69,6 +89,20 @@
                 context: document.body
             }).done(function(data) {
                 callback(data);
+            });
+        }
+
+        function updateNewsCategories(categoryIds) {
+            $.ajax({
+                url: restVars.rest_url + `wp/v2/categories?include=${categoryIds.join(',')}`,
+                context: document.body
+            }).done(function(data) {
+                let categories = [];
+                data.forEach(function(category) {
+                    categories.push(category.name);
+                });
+                $('.news-categories-top').empty();
+                $('.news-categories-top').append(categories.join(' / '));
             });
         }
 
