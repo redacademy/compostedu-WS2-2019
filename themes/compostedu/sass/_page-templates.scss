@@ -1203,8 +1203,8 @@
 
         .charity-card {
             box-shadow: none;
-            border: none;
-            background-color:#d3d3d3;
+             border: solid .5px rgba(70, 70, 70, 0.25);
+            background-color:rgba(211, 211, 211, 0.4);
             margin-bottom: 16px;
             border-radius: 5px;
 
@@ -1254,6 +1254,17 @@
 
         }
         
+    }
+
+    // Custom fields for donate 
+
+    ul {
+        margin: 0;
+    }
+
+    .donate-field-description {
+        border-bottom: 2px solid rgb(211, 211, 211);
+        padding-bottom: 15px;
     }
 
 

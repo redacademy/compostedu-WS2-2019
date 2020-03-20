@@ -17,5 +17,24 @@ Thank you so much! </p>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+
+		<?php 
+
+			$rows = get_field('donate_field');
+			if($rows)
+			{
+				echo '<ul>';
+
+				foreach($rows as $row)
+				{
+						echo '<h3 class=donate-field-title>' . $row['title'] . '</h3>';
+						echo '<p class=donate-field-description>' . $row['description'] . '</p>';
+				}
+
+				echo '</ul>';
+			}
+			?>
+
+
 </div><!-- .entry-content -->
 </article><!-- #post-## -->
