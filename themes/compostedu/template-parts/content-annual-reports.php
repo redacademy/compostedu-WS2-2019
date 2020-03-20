@@ -14,10 +14,6 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-
 	<?php foreach($annual_reports as $annual_report): ?>
 		<div class="reports">
 			<?php $image = $annual_report['image']; ?>
@@ -25,7 +21,7 @@
 				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 			<?php endif; ?>
 			<h2 class="report-title"><?php echo $annual_report['title']?></h2>
-			<a class="report-pdf" href="<?php echo $annual_report['link'] ?>">View report on ISSUU </a>
+			<a class="report-pdf" href="<?php echo $annual_report['link'] ?>">View report on ISSUU</a>
 		</div>
 	<?php endforeach; ?>
 	
