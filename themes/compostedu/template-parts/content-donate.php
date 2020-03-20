@@ -18,7 +18,7 @@ Thank you so much! </p>
 	<div class="entry-content">
 		<?php the_content(); ?>
 
-	<?php	$rows = get_field('donate_field'); ?>
+	<?php	$rows = get_field('donate_fields'); ?>
 
 	<?php foreach($rows as $row): ?>
 		<div class="custom-fields-container">
