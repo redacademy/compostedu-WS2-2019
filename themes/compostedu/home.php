@@ -26,13 +26,9 @@ get_header(); ?>
 
 				<div class="news-information-container">
 					<div><i class="far fa-folder"></i></div>
-					<div class="news-categories-top">
-						
-					</div>
+					<div class="news-categories-top"></div>
 					<div><i class="far fa-calendar"></i></div>
-					<div>
-						Wednesday, 18th March 2020 
-					</div>
+					<div class="news-date-top"></div>
 				</div>
 			</article>
 

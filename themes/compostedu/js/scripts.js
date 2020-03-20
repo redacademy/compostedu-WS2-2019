@@ -9,8 +9,6 @@
                 context: document.body
             }).done(function(data) {
                 if (typeof data !== 'undefined' && data.length > 0) {
-                    //let news = data[0];
-                    //$('.article-news-top').attr('id', `post-${news.id}-top`);
                     updateNewsImage(data[0].id);
                     updateNewsInformation(data[0]);
                 }
@@ -28,7 +26,7 @@
                     updateNewsImage(news.next.id);
                     getPost(news.next.id, updateNewsInformation);
                 } else {
-                    console.log('no next');
+                    // to do 
                 }
             })
 
@@ -44,7 +42,7 @@
                     updateNewsImage(news.previous.id);
                     getPost(news.previous.id, updateNewsInformation);
                 } else {
-                    console.log('no previous');
+                    // to do
                 }
             })
             
@@ -60,10 +58,8 @@
         }
 
         function updateNewsInformation(data) {
-            console.log('update information');
             $('.article-news-top').attr('id', `post-${data.id}-top`);
 
-            console.log(data);
             $('.entry-title-top').text(data.title.rendered);
             $('.entry-content-top p').remove();
 
@@ -72,7 +68,6 @@
                 if (content.length > 153) {
                     content = content.substring(0, 150);
                     content = content.concat('...</p>');
-                    console.log(content);
                 }
             } else {
                 content = '<p>For more information click Read more.</p>'
@@ -81,6 +76,58 @@
             $('.entry-content-top').append(content);
 
             updateNewsCategories(data.categories);
+
+            let dateString = formatDate(new Date(data.modified));
+
+            let dateDiv = $('.news-date-top');
+            dateDiv.empty();
+            dateDiv.append(dateString);
+
+        }
+
+        function formatDate(date) {
+
+            const months = [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December'
+            ];
+
+            const days = [
+                'Sunday',
+                'Monday',
+                'Tueday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday'
+            ];
+
+            const ordinalDate = english_ordinal_suffix(date);
+
+            const monthIndex = date.getMonth();
+            const monthName = months[monthIndex];
+
+            const year = date.getFullYear();
+
+            const dayIndex = date.getDay();
+            const dayName = days[dayIndex];
+
+            return dayName + ', ' + ordinalDate + ' ' + monthName + ' ' + year;
+
+        }
+
+        function english_ordinal_suffix(dt) {
+            return dt.getDate()+(dt.getDate() % 10 == 1 && dt.getDate() != 11 ? 'st' : (dt.getDate() % 10 == 2 && dt.getDate() != 12 ? 'nd' : (dt.getDate() % 10 == 3 && dt.getDate() != 13 ? 'rd' : 'th'))); 
         }
 
         function getPost(id, callback) {
@@ -101,8 +148,9 @@
                 data.forEach(function(category) {
                     categories.push(category.name);
                 });
-                $('.news-categories-top').empty();
-                $('.news-categories-top').append(categories.join(' / '));
+                let categoriesDiv = $('.news-categories-top');
+                categoriesDiv.empty();
+                categoriesDiv.append(categories.join(' / '));
             });
         }
 
