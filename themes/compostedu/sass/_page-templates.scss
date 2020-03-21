@@ -638,6 +638,7 @@
 
 .news-read-more {
     width: 125px;
+    @include default-a-btn;
 }
 
 .news-buttons-content {

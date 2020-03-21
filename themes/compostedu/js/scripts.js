@@ -84,6 +84,8 @@
             dateDiv.append(dateString);
 
             updateButtonsStyle(data);
+
+            $('.news-read-more').attr('href', data.link);
         }
 
         function updateButtonsStyle(news) {
