@@ -1607,3 +1607,43 @@
         }
     }
 }
+
+/* Funders */
+
+// Header
+
+.funders-page-header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .entry-title {
+        color: $pine;
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    .funders-header-description {
+        color: #464646;
+        text-align: center;
+        margin: 0px 10px;
+    }
+
+
+}
+
+// Main Content
+
+.funders-site-main {
+
+    .entry-content {
+        @include default-padding;
+    }
+
+}
+
+
+
