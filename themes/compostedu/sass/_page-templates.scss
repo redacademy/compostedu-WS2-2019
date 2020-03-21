@@ -16,6 +16,20 @@
     }
 }
 
+@include desktop {
+    .archive {
+        .content-area {
+            @include default-padding-desktop;
+        }
+    }
+    
+    .page-home, .single, .contact-us-site-main { 
+        .entry-content {
+            @include default-padding-desktop;
+        }
+    }
+}
+
 .single {
     .entry-content {
         margin-bottom: 1rem;
@@ -143,15 +157,6 @@
 
 /* Front page */
 
-@include tablet {
-
-
-}
-
-@include desktop {
-
-}
-
 .front-page-header {
     display: flex;
     flex-direction: column;
@@ -205,6 +210,84 @@
 .fp-icon {
     width: 42.9px;
     height: 56px;
+}
+
+.fp-about-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fp-about-link {
+    display: block;
+    @include default-a-btn;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+@include tablet {
+    .front-page-header {
+        height: 425px;
+    }
+
+    .fp-image {
+        height: 322px;
+    }
+}
+
+@include desktop {
+
+    .front-page-header {
+        justify-content: center;
+        height: 798px;
+
+        .entry-title {
+            font-size: 5.3vw;
+            padding-top: 186px;
+            padding-bottom: 44px;
+        }
+
+        .front-page-header-btns {
+            flex-direction: row;
+            width: auto;
+        }
+    }
+
+    .fp-image-content {
+        margin-bottom: 3rem;
+    }
+
+    .fp-image-content {
+        display: grid;
+        grid-template-columns: 34% 66%;
+        grid-template-rows: 350px;
+
+        .fp-content  {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 100%;
+
+            p {
+                width: 65%;
+            }
+        }
+    }
+
+    .fp-image {
+        width: 100%;
+        height: 344px;
+        border-radius: 5px;
+    }
+
+    .highlight-mocha-contents {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+    }
+
 }
 
 /* Adult Worshops */ 
