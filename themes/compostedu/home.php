@@ -34,7 +34,7 @@ get_header(); ?>
 			
 			<div class="news-buttons-content">
 				<button id="new-next-button" class="news-slider-button slider-next" type="button"><i class="fas fa-chevron-left"></i></button>
-				<button id="new-red-more-button" class="btn-pine news-read-more" type="button">Read more</button>
+				<a id="new-red-more-button" class="btn-pine news-read-more" type="button">Read more</a>
 				<button id="new-previous-button" class="news-slider-button slider-previous" type="button"><i class="fas fa-chevron-right"></i></button>
 			</div>
 
