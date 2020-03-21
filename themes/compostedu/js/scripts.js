@@ -19,14 +19,14 @@
         $('#new-next-button').click(function() {
 
             let articleId = $('.article-news-top').attr('id');
-            let postId = articleId.split("-")[1];
+            let postId = articleId.split('-')[1];
 
             getPost(postId, function(news) {
                 if (news.next) {
                     updateNewsImage(news.next.id);
                     getPost(news.next.id, updateNewsInformation);
                 } else {
-                    // to do 
+                    // to do
                 }
             })
 
@@ -35,7 +35,7 @@
         $('#new-previous-button').click(function() {
 
             let articleId = $('.article-news-top').attr('id');
-            let postId = articleId.split("-")[1];
+            let postId = articleId.split('-')[1];
 
             getPost(postId, function(news) {
                 if (news.previous) {
@@ -53,7 +53,7 @@
                 url: restVars.rest_url + `acf/v3/posts/${newsId}/image`,
                 context: document.body
             }).done(function(data) {
-                $('.news-img-top').attr("src",data.image.url);
+                $('.news-img-top').attr('src',data.image.url);
             });
         }
 
@@ -83,6 +83,21 @@
             dateDiv.empty();
             dateDiv.append(dateString);
 
+            updateButtonsStyle(data);
+        }
+
+        function updateButtonsStyle(news) {
+            if (news.next) {
+                $('.slider-next').prop('disabled', false);
+            } else {
+                $('.slider-next').prop('disabled', true);
+            }
+
+            if (news.previous) {
+                $('.slider-previous').prop('disabled', false);
+            } else {
+                $('.slider-previous').prop('disabled', true);
+            }
         }
 
         function formatDate(date) {
@@ -112,7 +127,7 @@
                 'Saturday'
             ];
 
-            const ordinalDate = english_ordinal_suffix(date);
+            const ordinalDate = englishOrdinalSuffix(date);
 
             const monthIndex = date.getMonth();
             const monthName = months[monthIndex];
@@ -126,8 +141,8 @@
 
         }
 
-        function english_ordinal_suffix(dt) {
-            return dt.getDate()+(dt.getDate() % 10 == 1 && dt.getDate() != 11 ? 'st' : (dt.getDate() % 10 == 2 && dt.getDate() != 12 ? 'nd' : (dt.getDate() % 10 == 3 && dt.getDate() != 13 ? 'rd' : 'th'))); 
+        function englishOrdinalSuffix(dt) {
+            return dt.getDate()+(dt.getDate() % 10 === 1 && dt.getDate() !== 11 ? 'st' : (dt.getDate() % 10 === 2 && dt.getDate() !== 12 ? 'nd' : (dt.getDate() % 10 === 3 && dt.getDate() !== 13 ? 'rd' : 'th'))); 
         }
 
         function getPost(id, callback) {
@@ -165,13 +180,13 @@
             let view = $('.view-click');
             view.click(function(e) {
                 e.preventDefault();
-                let content = $(this).siblings(".displayed-content");
-                if (content.is(":visible")) {
+                let content = $(this).siblings('.displayed-content');
+                if (content.is(':visible')) {
                     $(this).text('Read more');
-                    $(this).siblings(".displayed-content").hide('slow');
+                    $(this).siblings('.displayed-content').hide('slow');
                 } else {
                     $(this).text('Read less');
-                    $(this).siblings(".displayed-content").show('slow');
+                    $(this).siblings('.displayed-content').show('slow');
                 }
             });
         }
