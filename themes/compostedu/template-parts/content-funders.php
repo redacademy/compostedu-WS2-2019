@@ -26,7 +26,7 @@
 				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 			<?php endif; ?>
 			<h3 class="funders-fields-title"><?php echo $row['title']?></h3>
-            <p class="funders-field-description"> <?php echo $row['description'] ?></p>
+            <pclass="funders-field-description"> <?php echo $row['description'] ?></p>
 			<a class="funders-links" href="<?php echo $row['url'] ?>">View Website</a>
             
 		</div>

@@ -1643,11 +1643,36 @@
         @include default-padding;
     }
 
-    h3 {
+    //Each funder title
 
+    h3 {
         color: #464646;
         font-size: 20px;
         font-weight: 700;
+        margin-bottom: 8px;
+
+    }
+
+    //Each container including image, title and URL
+    .custom-fields-container {
+        border-bottom: 2px solid rgb(211, 211, 211);
+        margin-bottom: 15px;
+        padding-bottom: 15px ;
+    }
+
+    //Website links with respective font awesome
+    .funders-links {
+        text-decoration: none;
+        color:#aa443a ;
+        font-weight: 700;
+
+    }
+
+    .funders-links::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        margin-left: 5px;
 
     }
 
