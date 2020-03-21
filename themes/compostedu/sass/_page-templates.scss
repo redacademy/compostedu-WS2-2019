@@ -1607,3 +1607,78 @@
         }
     }
 }
+
+/* Funders */
+
+// Header
+
+.funders-page-header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .entry-title {
+        color: $pine;
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    .funders-header-description {
+        color: #464646;
+        text-align: center;
+        margin: 0px 10px;
+    }
+
+
+}
+
+// Main Content
+
+.funders-site-main {
+
+    .entry-content {
+        @include default-padding;
+    }
+
+    //Each funder title
+
+    h3 {
+        color: #464646;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+
+    }
+
+    //Each container including image, title and URL
+    .custom-fields-container {
+        border-bottom: 2px solid rgb(211, 211, 211);
+        margin-bottom: 15px;
+        padding-bottom: 15px ;
+    }
+
+    //Website links with respective font awesome
+    .funders-links {
+        text-decoration: none;
+        color:#aa443a ;
+        font-weight: 700;
+
+    }
+
+    .funders-links::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        margin-left: 5px;
+
+    }
+
+
+
+}
+
+
+
