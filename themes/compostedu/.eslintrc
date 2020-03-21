@@ -19,7 +19,8 @@
     "jQuery": false,
     "$": false,
     "_": false,
-    "compostedu_vars": false
+    "compostedu_vars": false,
+    "restVars": false
   },
   "env": {
     "es6": true,

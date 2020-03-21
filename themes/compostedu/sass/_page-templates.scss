@@ -612,10 +612,130 @@
      }
  }
 
+/* News */
+
+.news-slider-button {
+    background-color: $color__background-body;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: $pine;
+    margin: 4px 2px;
+    height: initial;
+    width: 45px;
+    border-radius: 50%;
+    border: solid 1px $pine;
+}
+
+.news-slider-button:disabled, .news-slider-button[disabled]{
+    color: grey;
+    border: solid 1px grey;
+}
+
+.news-read-more {
+    width: 125px;
+}
+
+.news-buttons-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.single-post {
+    .content-area {
+        @include default-padding;
+    }
+    .entry-content {
+        padding-left: initial;
+        padding-right: initial;
+    }
+}
+
+.news-img {
+    width: 100%;
+    height: 250px;
+}
+
+.news-img-top {
+    width: 100%;
+    height: 216px;
+}
+
+.entry-content-top p {
+    height: 65px;
+    font-size: 0.8rem;
+}
+
+.news-short-content {
+    @include default-padding;
+    //height: 550px;
+}
+
+.news-content {
+    @include default-padding;
+    background-color: $very-light-pink;
+}
+
+.news-information-container {
+    display: grid;
+    grid-template-columns: 8% 92%;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 1rem;
+
+    div {
+        font-size: 0.9rem; 
+        font-weight: 600;
+        text-align: left;
+    }
+}
+
+.news-nav-links {
+    color: $dull_red;
+    margin-bottom: 1rem;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 93%;
+        display: inline-block;
+    }
+}
+
+.news-information {
+    font-size: 0.9rem;
+}
+
+.news-nav-link-content {
+    .fa-arrow-left, .fa-arrow-right {
+        position: relative;
+        bottom: 8px;
+    }
+}
+
+.news-author-information {
+    font-weight: bold;
+
+    .author {
+        color: $pine;
+        font-style: italic;
+        font-weight: initial;
+    }
+}
+
 /* Search Pagination */ 
 
 .search-pagination {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 
     .current {
        display: inline-block; 
