@@ -32,3 +32,17 @@
 	text-align: center;
 	text-decoration: none;
 }
+
+// Tablet devices
+@mixin tablet {
+    @media (min-width: #{$screen-tablet}) {
+        @content;
+    }
+ }
+ 
+ // Desktop devices
+@mixin desktop {
+    @media (min-width: #{$screen-desktop}) {
+        @content;
+    }
+}

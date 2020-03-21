@@ -143,6 +143,15 @@
 
 /* Front page */
 
+@include tablet {
+
+
+}
+
+@include desktop {
+
+}
+
 .front-page-header {
     display: flex;
     flex-direction: column;
@@ -640,6 +649,8 @@
     width: 125px;
     @include default-a-btn;
 }
+
+.view-link:visited 
 
 .news-buttons-content {
     display: flex;
