@@ -31,3 +31,18 @@ function enqueue_load_fa() {
 }
   
 add_action('wp_enqueue_scripts', 'enqueue_load_fa');
+
+add_filter( 'rest_prepare_post', function( $response, $post, $request ) {
+		// Only do this for single post requests.
+		global $post;
+		// Get the so-called next post.
+		$next = get_adjacent_post( false, '', false );
+		// Get the so-called previous post.
+		$previous = get_adjacent_post( false, '', true );
+		// Format them a bit and only send id and slug (or null, if there is no next/previous post).
+		$response->data['next'] = ( is_a( $next, 'WP_Post') ) ? array( "id" => $next->ID, "slug" => $next->post_name ) : null;
+		$response->data['previous'] = ( is_a( $previous, 'WP_Post') ) ? array( "id" => $previous->ID, "slug" => $previous->post_name ) : null;
+  
+	  return $response;
+  }, 10, 3 );
+

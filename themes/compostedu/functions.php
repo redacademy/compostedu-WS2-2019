@@ -104,6 +104,11 @@ function scripts() {
 	wp_localize_script( 'navigation', 'compostedu_vars', array(
 		'directory' => get_template_directory_uri(),
 	));
+
+	wp_localize_script( 'scripts', 'restVars', array(
+		'rest_url' => esc_url_raw( rest_url() ),
+		'wpapi_nonce' => wp_create_nonce( 'wp_rest' )
+	));
 }
 add_action( 'wp_enqueue_scripts', 'scripts' );
 

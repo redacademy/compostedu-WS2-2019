@@ -17,16 +17,24 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
 
 		<section class="fp-image-content">
-			<img src="<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited.jpg' ?>"
-				srcset="<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited@2x.jpg' ?> 2x,
-				<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited@3x.jpg' ?> 3x"
-				class="fp-image">
+			<div class="fp-content">
+				<?php the_content(); ?>
+				<div class="fp-about-div">
+					<a class="fp-about-link btn-red">Learn more about us</a>
+				</div>
+			</div>
+
+			<div>
+				<img src="<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited.jpg' ?>"
+					srcset="<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited@2x.jpg' ?> 2x,
+					<?php echo get_template_directory_uri() . '/images/front-page/compost-education-centre-edited@3x.jpg' ?> 3x"
+					class="fp-image">
+			</div>
 		</section>
 
-		<section>
+		<section class="highlight-mocha-contents">
 			<div class="mocha-content">
 				<img src="<?php echo get_template_directory_uri() . '/images/front-page/paper.png' ?>" srcset="<?php echo get_template_directory_uri() . '/images/front-page/paper@2x.png' ?> 2x, <?php echo get_template_directory_uri() . '/images/front-page/paper@3x.png' ?> 3x" class="fp-icon">
 

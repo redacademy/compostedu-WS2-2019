@@ -30,6 +30,7 @@ access_log
 # ========================================================== #
 plugins/*
 !plugins/compostedu-functionality/
+!plugins/acf-to-rest-api-master/
 
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #

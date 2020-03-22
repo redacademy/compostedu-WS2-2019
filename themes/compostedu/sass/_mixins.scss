@@ -16,6 +16,11 @@
 	padding-right: 16px;
 }
 
+@mixin default-padding-desktop {
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
 @mixin default-btn {
 	border: 0px;
 	height: 48px;
@@ -31,4 +36,18 @@
 	@include default-btn;
 	text-align: center;
 	text-decoration: none;
+}
+
+// Tablet devices
+@mixin tablet {
+    @media (min-width: #{$screen-tablet}) {
+        @content;
+    }
+ }
+ 
+ // Desktop devices
+@mixin desktop {
+    @media (min-width: #{$screen-desktop}) {
+        @content;
+    }
 }

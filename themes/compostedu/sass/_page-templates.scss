@@ -16,6 +16,20 @@
     }
 }
 
+@include desktop {
+    .archive {
+        .content-area {
+            @include default-padding-desktop;
+        }
+    }
+    
+    .page-home, .single, .contact-us-site-main { 
+        .entry-content {
+            @include default-padding-desktop;
+        }
+    }
+}
+
 .single {
     .entry-content {
         margin-bottom: 1rem;
@@ -195,6 +209,84 @@
 .fp-icon {
     width: 42.9px;
     height: 56px;
+}
+
+.fp-about-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fp-about-link {
+    display: block;
+    @include default-a-btn;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+@include tablet {
+    .front-page-header {
+        height: 425px;
+    }
+
+    .fp-image {
+        height: 322px;
+    }
+}
+
+@include desktop {
+
+    .front-page-header {
+        justify-content: center;
+        height: 798px;
+
+        .entry-title {
+            font-size: 5.3vw;
+            padding-top: 186px;
+            padding-bottom: 44px;
+        }
+
+        .front-page-header-btns {
+            flex-direction: row;
+            width: auto;
+        }
+    }
+
+    .fp-image-content {
+        margin-bottom: 3rem;
+    }
+
+    .fp-image-content {
+        display: grid;
+        grid-template-columns: 34% 66%;
+        grid-template-rows: 350px;
+
+        .fp-content  {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 100%;
+
+            p {
+                width: 65%;
+            }
+        }
+    }
+
+    .fp-image {
+        width: 100%;
+        height: 344px;
+        border-radius: 5px;
+    }
+
+    .highlight-mocha-contents {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+    }
+
 }
 
 /* Adult Worshops */ 
@@ -611,10 +703,131 @@
      }
  }
 
+/* News */
+
+.news-slider-button {
+    background-color: $color__background-body;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: $pine;
+    margin: 4px 2px;
+    height: initial;
+    width: 45px;
+    border-radius: 50%;
+    border: solid 1px $pine;
+}
+
+.news-slider-button:disabled, .news-slider-button[disabled]{
+    color: grey;
+    border: solid 1px grey;
+}
+
+.news-read-more {
+    width: 125px;
+    @include default-a-btn;
+}
+
+.news-buttons-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.single-post {
+    .content-area {
+        @include default-padding;
+    }
+    .entry-content {
+        padding-left: initial;
+        padding-right: initial;
+    }
+}
+
+.news-img {
+    width: 100%;
+    height: 250px;
+}
+
+.news-img-top {
+    width: 100%;
+    height: 216px;
+}
+
+.entry-content-top p {
+    height: 65px;
+    font-size: 0.8rem;
+}
+
+.news-short-content {
+    @include default-padding;
+    //height: 550px;
+}
+
+.news-content {
+    @include default-padding;
+    background-color: $very-light-pink;
+}
+
+.news-information-container {
+    display: grid;
+    grid-template-columns: 8% 92%;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 1rem;
+
+    div {
+        font-size: 0.9rem; 
+        font-weight: 600;
+        text-align: left;
+    }
+}
+
+.news-nav-links {
+    color: $dull_red;
+    margin-bottom: 1rem;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 93%;
+        display: inline-block;
+    }
+}
+
+.news-information {
+    font-size: 0.9rem;
+}
+
+.news-nav-link-content {
+    .fa-arrow-left, .fa-arrow-right {
+        position: relative;
+        bottom: 8px;
+    }
+}
+
+.news-author-information {
+    font-weight: bold;
+
+    .author {
+        color: $pine;
+        font-style: italic;
+        font-weight: initial;
+    }
+}
+
 /* Search Pagination */ 
 
 .search-pagination {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 
     .current {
        display: inline-block; 
@@ -1215,3 +1428,256 @@
         }
     }
 }
+
+/* Donate */
+
+.donate-page-header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/donate/Donate-medium.jpg) no-repeat top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 320px;
+
+    .entry-title {
+        color: #fffdf7;
+        font-size: 26px;
+    }
+
+    .donate-header-description {
+        color: #fffdf7;
+        text-align: center;
+        margin: 0px 10px;
+    }
+
+
+}
+
+//Main content
+
+.donate-site-main {
+
+    h2 {
+        color: #355a46;
+         font-size: 22px;
+         margin-bottom: 16px;
+    }
+
+    h3 {
+        color: #464646;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p {
+        color: rgba(70, 70, 70, 0.7);
+    }
+
+    .entry-content {
+        @include default-padding;
+    }
+
+    //Cards
+
+    .wp-block-group {
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+        border: solid 1px rgba(70, 70, 70, 0.25);
+        background-color: #fffcf5;
+        margin-bottom: 16px;
+        border-radius: 5px;
+        
+        .wp-block-group__inner-container {
+            
+            margin: 24px;
+        }
+
+        
+        
+    }
+    
+        //Last card with different style
+
+        .charity-card {
+            box-shadow: none;
+             border: solid .5px rgba(70, 70, 70, 0.25);
+            background-color:rgba(211, 211, 211, 0.4);
+            margin-bottom: 16px;
+            border-radius: 5px;
+
+
+        }
+
+    //Links on each Card with respective font awesome arrow
+    .card-links {
+        color: #aa443a;
+
+    }
+
+    .card-links::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        margin-left: 5px;
+    }
+
+
+    .bequest-description {
+        color: #464646;
+
+    }
+
+    //Logos  main container
+
+    .images-container {
+        box-shadow:none;
+        border: none;
+
+        // Inside logos conatiner
+        
+        .wp-block-group__inner-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0;
+
+            img {
+                width: 60px;
+            }
+
+            figcaption {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+        }
+        
+    }
+
+    // Custom fields for donate 
+
+    ul {
+        margin: 0;
+    }
+
+    .donate-field-description {
+        border-bottom: 2px solid rgb(211, 211, 211);
+        padding: 15px 0px;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+/* Annual Reports */
+
+.annual-reports-site-main {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .reports {
+        margin: 5% 6%;
+        padding: 5% 0;
+        border-bottom: solid 1px #707070;
+        
+        .report-title {
+            margin: 4% 0;
+        }
+
+        .report-pdf {
+            text-decoration: none;
+        }
+
+        .report-pdf::after {
+            content: '\f061';
+            font-family: 'Font Awesome 5 free';
+            font-weight: 900;
+            margin-left: 5px;
+        }
+    }
+}
+
+/* Funders */
+
+// Header
+
+.funders-page-header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .entry-title {
+        color: $pine;
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    .funders-header-description {
+        color: #464646;
+        text-align: center;
+        margin: 0px 10px;
+    }
+
+
+}
+
+// Main Content
+
+.funders-site-main {
+
+    .entry-content {
+        @include default-padding;
+    }
+
+    //Each funder title
+
+    h3 {
+        color: #464646;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+
+    }
+
+    //Each container including image, title and URL
+    .custom-fields-container {
+        border-bottom: 2px solid rgb(211, 211, 211);
+        margin-bottom: 15px;
+        padding-bottom: 15px ;
+    }
+
+    //Website links with respective font awesome
+    .funders-links {
+        text-decoration: none;
+        color:#aa443a ;
+        font-weight: 700;
+
+    }
+
+    .funders-links::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        margin-left: 5px;
+
+    }
+
+
+
+}
+
+
+
