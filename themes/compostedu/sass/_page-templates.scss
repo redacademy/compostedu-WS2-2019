@@ -23,7 +23,7 @@
         }
     }
     
-    .page-home, .single, .contact-us-site-main { 
+    .page-home, .contact-us-site-main { 
         .entry-content {
             @include default-padding-desktop;
         }
@@ -290,7 +290,13 @@
 
 }
 
-/* Adult Worshops */ 
+/* Adult Worshops */
+
+.adult-workshop-img {
+    width: 100%;
+    height: 200px;
+    border: solid 1px rgba(70, 70, 70, 0.3);
+}
 
 .aw-information-container {
     display: grid;
@@ -309,7 +315,7 @@
     display: grid;
     grid-template-columns: 8% 92%;
     grid-template-rows: 1fr 1fr;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     div {
         font-size: 0.9rem; 
@@ -318,17 +324,107 @@
     }
 }
 
+.aw-register-event {
+    @include default-a-btn;
+}
+
 .aw-about {
     @include default-padding;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: $very-light-pink;
+
+    .aw-address-map {
+        height: 240px;
+        object-fit: contain;
+        border-radius: 5px;
+        border: solid 1px rgba(70, 70, 70, 0.3);
+    }
 }
 
 .view-link, .view-link:visited {
     color: $dull_red;
     font-weight: 600;
     text-decoration: none;
+}
+
+@include tablet {
+    .adult-workshop-img {
+        height: 380px;
+    }
+}
+
+@include desktop {
+    .aw-grid-content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+    }
+
+    .adult-workshop-img {
+        width: 100%;
+        height: 100%;
+        border: solid 1px rgba(70, 70, 70, 0.3);
+    }
+
+    .adult-workshops-grid {
+        display: grid;
+        grid-template-columns: 23% 77%;
+        grid-template-rows: 1fr;
+
+        article {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 1fr;
+            border: solid 1px $pine;
+            border-radius: 5px;
+
+            .aw-data {
+                padding: 28px;
+            }
+
+            hr {
+                display: none;
+            }
+
+            .entry-content {
+                margin: 1rem 0 0;
+            }
+
+            .aw-time-link-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .view-link {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .aw-information-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0rem;
+        width: 68%;
+        
+        .aw-information-container-item-2 {
+            order: 3;
+        }
+
+        .aw-information-container-item-3 {
+            order: 2;
+        }
+    
+        div {
+            font-size: 0.8rem; 
+            font-weight: 600;
+            text-align: left;
+        }
+    }
 }
 
 /* Community Worshops */

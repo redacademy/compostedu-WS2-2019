@@ -29,17 +29,19 @@
 				<?php endif; ?>
 			</div>
 			<div><i class="fas fa-map-marker-alt"></i></div>
-			<div>Address //TODO</div>
+			<div><?php the_field('address'); ?></div>
 			<div><i class="fas fa-dollar-sign"></i></div>
 			<div><?php the_field('price'); ?></div>
 		</div>
 
-		<button class="btn-pine">Register for this event</button>
+		<?php $event = get_field('event');?>
+		<a href="<?php echo $event['url'] ?>" class="aw-register-event btn-pine">Register for this event</a>
 	</section><!-- .entry-content -->
 
 	<div class="aw-about">
 		<h1>About This event</h1>
 		<?php the_content(); ?>
+		<div class="aw-address-map"><?php the_field('address_map'); ?></div>
 	</div>
 
 	<footer class="entry-footer">

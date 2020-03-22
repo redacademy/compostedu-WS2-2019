@@ -16,16 +16,28 @@ get_header(); ?>
 				<h1 class="page-title"> Adult Workshops</h1>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<section class="adult-workshops-grid">
+			
+				<div>
+					 <!-- TODO Filters -->
+				</div>
 
-				<?php
-					get_template_part( 'template-parts/content', 'adult-workshop' );
-				?>
+				<div>
+				
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+						<?php
+							get_template_part( 'template-parts/content', 'adult-workshop' );
+						?>
 
-			<?php red_starter_numbered_pagination(); ?>
+					<?php endwhile; ?>
+
+					<?php red_starter_numbered_pagination(); ?>
+
+				</div>
+
+			</section>
 
 		<?php else : ?>
 
