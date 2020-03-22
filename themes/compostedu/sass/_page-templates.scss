@@ -315,7 +315,7 @@
     display: grid;
     grid-template-columns: 8% 92%;
     grid-template-rows: 1fr 1fr;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     div {
         font-size: 0.9rem; 
@@ -324,11 +324,22 @@
     }
 }
 
+.aw-register-event {
+    @include default-a-btn;
+}
+
 .aw-about {
     @include default-padding;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: $very-light-pink;
+
+    .aw-address-map {
+        height: 240px;
+        object-fit: contain;
+        border-radius: 5px;
+        border: solid 1px rgba(70, 70, 70, 0.3);
+    }
 }
 
 .view-link, .view-link:visited {
