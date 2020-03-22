@@ -23,7 +23,7 @@
         }
     }
     
-    .page-home, .single, .contact-us-site-main { 
+    .page-home, .contact-us-site-main { 
         .entry-content {
             @include default-padding-desktop;
         }
@@ -355,6 +355,12 @@
 }
 
 @include desktop {
+    .aw-grid-content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+    }
+
     .adult-workshop-img {
         width: 100%;
         height: 100%;
