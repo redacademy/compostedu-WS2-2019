@@ -49,33 +49,32 @@
 .site-header {
     .first-sight-header {
         background-color: $pine;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .menu {
         .main-navigation {
-
-            .menu-button {
-                background-color: transparent;
-                border: none;
-                color: transparent;
-                box-shadow: none;
-                
-                .menu-icon {
-                    padding: 21px 22px;
-                }
+            .menu-toggle {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
             }
         }
     }
 
     .site-branding  {
-        display: flex;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .search-form-wrapper {
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
         .search-form {
             display: flex;
