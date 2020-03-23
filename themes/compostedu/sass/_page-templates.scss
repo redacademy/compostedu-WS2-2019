@@ -977,6 +977,70 @@
     }
 }
 
+.high-school-program-img {
+    width: 100%;
+    height: 287px;
+}
+
+
+@include tablet {
+    .high-school-program-img {
+        width: 100%;
+        height: 366px;
+    }
+}
+
+@include desktop {
+    .post-type-archive-high_school_program {
+        .page-header {
+            margin-bottom: 3rem;
+            .page-title {
+                text-align: center;
+            }
+            p {
+                padding-left: 240px;
+                padding-right: 240px;
+                text-align: center;
+                font-size: 0.8rem; 
+            }
+        }
+    }
+
+    .high-school-program-grid {
+        display: grid;
+        grid-template-columns: 66% 34%;
+        grid-template-rows: 1fr;
+    }
+
+    .high-school-program-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-bottom: 3rem;
+        padding-right: 20px;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hentry {
+            margin: 0px;
+        }
+
+        hr {
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .high-school-program-img {
+        width: 100%;
+        height: 306px;
+    }
+}
+
 /* Products */
 
 .post-type-archive-product {
