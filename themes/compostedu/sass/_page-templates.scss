@@ -893,6 +893,68 @@
     }
 }
 
+.intermediate-program-img {
+    width: 100%;
+    height: 287px;
+}
+
+@include tablet {
+    .intermediate-program-img {
+        width: 100%;
+        height: 366px;
+    }
+}
+
+@include desktop {
+    .post-type-archive-intermediate_program {
+        .page-header {
+            .page-title {
+                text-align: center;
+            }
+            p {
+                padding-left: 240px;
+                padding-right: 240px;
+                text-align: center;
+                font-size: 0.8rem; 
+            }
+        }
+    }
+
+    .intermediate-programs-grid {
+        display: grid;
+        grid-template-columns: 66% 34%;
+        grid-template-rows: 1fr;
+    }
+
+    .intermediate-programs-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-bottom: 3rem;
+        padding-right: 20px;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hentry {
+            margin: 0px;
+        }
+
+        hr {
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .intermediate-program-img {
+        width: 100%;
+        height: 306px;
+    }
+}
+
 /* High School Programs */
 
 .post-type-archive-high_school_program {

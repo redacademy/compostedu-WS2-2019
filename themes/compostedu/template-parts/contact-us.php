@@ -6,7 +6,6 @@
 
 <?php $contactUsText = get_query_var('contactUsText'); ?>
 
-
 <h2>Contact Us</h2>
 
 <?php if (isset($contactUsText)) : ?>
