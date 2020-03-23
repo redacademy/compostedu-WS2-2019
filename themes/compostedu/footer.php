@@ -62,7 +62,7 @@
 	</section> <!--footer main container------->
 
 	<section class='copyright-container'>
-			<p>Copyright © 2020 Compost Education Center.  <br>
+			<p>Copyright © 2020 Compost Education Center.
 					All rights reserved.</p>
 	</section>
 

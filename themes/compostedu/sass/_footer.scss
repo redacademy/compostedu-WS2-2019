@@ -47,9 +47,14 @@
         color:#fffdf7;
         line-height: 1.2;
         font-size: 20px;
-
+        font-weight: 700;
         @include tablet {
             margin: 15px 0px;
+            font-size: 15px;
+        }
+
+        @include desktop {
+            font-size: 20px;
         }
 
     }
@@ -62,6 +67,13 @@
         li {
             list-style: none;
             line-height: 3;
+            @include tablet {
+                line-height: 2;
+            }
+            @include desktop {
+                line-height: 2.5;
+    
+            }
 
             a{
                 color:#fffdf7;
@@ -85,6 +97,7 @@
             font-size: 16px;
             @include tablet {
                 text-align: right;
+                line-height: 16px;
             }
             @include desktop {
                 text-align: right;
@@ -111,6 +124,12 @@
 
         .icons {
             padding-right: 5px;
+            @include tablet {
+            padding-right: 10px;
+            }
+            @include desktop {
+                padding-right: 5px;
+                }
         }
     }
 
@@ -138,6 +157,10 @@
 
     grid-column: 1/ span 2;
     background-color: #4d6458;
+    @include desktop {
+        @include default-padding-desktop;
+
+    }
             
         p {
             color: #fffdf7;
