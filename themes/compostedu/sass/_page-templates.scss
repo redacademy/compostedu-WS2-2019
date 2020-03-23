@@ -792,7 +792,6 @@
 
 .post-type-archive-composting_for_kids {
     .page-header {
-        margin-bottom: 3rem;
         .page-title {
             text-align: center;
         }
@@ -825,6 +824,7 @@
 @include desktop {
     .post-type-archive-composting_for_kids {
         .page-header {
+            margin-bottom: 3rem;
             .page-title {
                 text-align: center;
             }
@@ -908,6 +908,7 @@
 @include desktop {
     .post-type-archive-intermediate_program {
         .page-header {
+            margin-bottom: 3rem;
             .page-title {
                 text-align: center;
             }
