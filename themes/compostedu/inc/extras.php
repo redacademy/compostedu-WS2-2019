@@ -46,3 +46,15 @@ add_filter( 'rest_prepare_post', function( $response, $post, $request ) {
 	  return $response;
   }, 10, 3 );
 
+  function red_starter_widgets_contactus_init() {
+	register_sidebar( array(
+		'name'          => esc_html( 'ContactUs' ),
+		'id'            => 'contactus-1',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="contact-us-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'red_starter_widgets_contactus_init' );

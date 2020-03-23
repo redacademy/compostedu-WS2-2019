@@ -17,16 +17,40 @@ get_header(); ?>
 				<p>Workshops are available Wednesday-Friday, 9 am - 4 pm. Workshops may be delivered in our straw bale teaching building or at your facility, while site tours take place in the Compost Education Centre demonstration gardens. For Prescribed Learning Outcomes (PLO). click <a href="#">HERE</a>.</p>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<section class="compost-for-kids-grid">
 
-				<?php
-					get_template_part( 'template-parts/content', 'composting-for-kids' );
+				<?php $compost_for_kids = new WP_Query(
+						array(
+							'post_type'=>'composting_for_kids', 
+							'post_status'=>'publish', 
+							'posts_per_page'=>-1
+						)); 
 				?>
 
-			<?php endwhile; ?>
+				<div class="compost-for-kids-container">
 
-			<?php red_starter_numbered_pagination(); ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( $compost_for_kids->have_posts() ) : $compost_for_kids->the_post(); ?>
+
+						<?php
+							get_template_part( 'template-parts/content', 'composting-for-kids' );
+						?>
+
+					<?php endwhile; ?>
+
+				</div>
+				
+				<div>
+					<div class="mocha-content contact-us-panel">
+						<?php
+							$contactUsText='If you have questions about our school programs or would like to book a program, call Kayla at 230-386-9676 or email using the form below.';
+							set_query_var( 'contactUsText', $contactUsText );
+							get_template_part( 'template-parts/contact-us' );
+						?>
+					</div>
+				</div>
+
+			</section>
 
 		<?php else : ?>
 

@@ -95,7 +95,13 @@
 			<p>To book a program call our Education Coordinator at 386-WORM (9676) during our regular office hours or contact us using the form below.</p>
 		</div>
 
-		//TODO CONTACT-US
+		<div class="mocha-content contact-us-panel">
+			<?php
+				$contactUsText='If you have questions about our school programs or would like to book a program, call Kayla at 230-386-9676 or email using the form below.';
+				set_query_var( 'contactUsText', $contactUsText );
+				get_template_part( 'template-parts/contact-us' );
+			?>
+		</div>
 
 		<h1>Teaching Resources</h1>
 		
