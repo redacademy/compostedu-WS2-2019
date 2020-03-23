@@ -12,6 +12,12 @@
 	margin: 0 0 $base__space-unit;
 }
 
+@include desktop {
+	.hentry {
+		margin: 0 0 $base__space-unit-desktop;
+	}
+}
+
 .updated:not(.published){
 	display: none;
 }
