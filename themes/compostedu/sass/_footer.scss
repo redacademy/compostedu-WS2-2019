@@ -8,9 +8,37 @@
     background-color: #355a46;
     @include default-padding;
 
+    @include tablet {
+        grid-template-columns: repeat(3,1fr);
+
+        .tablet-desktop-container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(3,1fr);
+        @include default-padding-desktop;
+
+        .tablet-desktop-container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    }
 
     .footer-links {
         text-align: left;
+
+        @include tablet {
+            margin: 30px 30px 30px 0px;
+        }
+        @include desktop {
+            margin: 30px 30px 30px 0px;
+
+        }
     }
 
 
@@ -19,6 +47,15 @@
         color:#fffdf7;
         line-height: 1.2;
         font-size: 20px;
+        font-weight: 700;
+        @include tablet {
+            margin: 15px 0px;
+            font-size: 15px;
+        }
+
+        @include desktop {
+            font-size: 20px;
+        }
 
     }
 
@@ -30,6 +67,13 @@
         li {
             list-style: none;
             line-height: 3;
+            @include tablet {
+                line-height: 2;
+            }
+            @include desktop {
+                line-height: 2.5;
+    
+            }
 
             a{
                 color:#fffdf7;
@@ -39,8 +83,6 @@
         }
     }
 
-
-
     .contact-main-container {
         grid-column: 1;
         color:#fffdf7;
@@ -48,12 +90,19 @@
         .mobile-phone-number {
             font-size: 18px;
             font-weight: 900;
-            margin-bottom: 0;
+            margin-bottom: 15px;
         }
 
         p {
             font-size: 16px;
-            margin: 0;
+            @include tablet {
+                text-align: right;
+                line-height: 16px;
+            }
+            @include desktop {
+                text-align: right;
+    
+            }
         }
         
     }
@@ -63,8 +112,24 @@
         justify-content: space-between;
         margin: 20px 0px;
 
+        @include tablet {
+            justify-content: end;
+            margin:37px 0px 29px;
+        }
+        @include desktop {
+            justify-content: flex-end;
+            margin:37px 0px 29px;
+
+        }
+
         .icons {
             padding-right: 5px;
+            @include tablet {
+            padding-right: 10px;
+            }
+            @include desktop {
+                padding-right: 5px;
+                }
         }
     }
 
@@ -72,8 +137,15 @@
         grid-column: 1 / span 2;
 
         P {
-            color:#fffdf7;
+            color:rgba(255, 253, 247, 0.4);
             font-size: 16px;
+            @include tablet {
+                text-align: right;
+            }
+            @include desktop {
+                text-align: right;
+    
+            }
 
         }
     }
@@ -82,13 +154,18 @@
 
 
 .copyright-container {
-     grid-column: 1/ span 2;
-     background-color: #4d6458;
-            
-    p {
-         color: #fffdf7;
-        padding: 8px 16px ;
-         margin: 0;
-         opacity: 0.5;
+
+    grid-column: 1/ span 2;
+    background-color: #4d6458;
+    @include desktop {
+        @include default-padding-desktop;
+
     }
+            
+        p {
+            color: #fffdf7;
+            padding: 8px 16px ;
+            margin: 0;
+            opacity: 0.5;
+        }
  }
