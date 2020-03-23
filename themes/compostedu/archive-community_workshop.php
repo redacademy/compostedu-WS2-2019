@@ -17,16 +17,26 @@ get_header(); ?>
 				<p>Workshops can be delivered during our regular business hours: Wed-Sat, between 10am and 4pm. To book a workshop, call us at 250-386-9676 or get in touch via our contact form. We require at least 48 hours notice for workshop cancellation.</p>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<section class="community-workshops-content">
 
-				<?php
-					get_template_part( 'template-parts/content', 'community-workshop' );
+				<?php $community_workshops = new WP_Query(
+					array(
+						'post_type'=>'community_workshop', 
+						'post_status'=>'publish', 
+						'posts_per_page'=>-1
+					)); 
 				?>
 
-			<?php endwhile; ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( $community_workshops->have_posts() ) : $community_workshops->the_post(); ?>
 
-			<?php red_starter_numbered_pagination(); ?>
+					<?php
+						get_template_part( 'template-parts/content', 'community-workshop' );
+					?>
+
+				<?php endwhile; ?>
+				
+			</section>
 
 		<?php else : ?>
 

@@ -113,7 +113,7 @@
         margin: 20px 0px;
 
         @include tablet {
-            justify-content: end;
+            justify-content: flex-end;
             margin:37px 0px 29px;
         }
         @include desktop {
@@ -125,6 +125,7 @@
         .icons {
             padding-right: 5px;
             @include tablet {
+            width: 34px;    
             padding-right: 10px;
             }
             @include desktop {
