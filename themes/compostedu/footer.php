@@ -11,7 +11,8 @@
 
 <footer >
 	<section class='main-footer-container'>
-		<div>
+		<!-- Division created to make it work for tablet and desktop -->
+		<div class='tablet-desktop-container'>
 			<div class='footer-links'>
 				 <h4>Activities</h4>
 				<?php wp_nav_menu( array( 'theme_location' => 'activities-menu', 'container_class' => 'p' ) ); ?>
@@ -23,7 +24,8 @@
 			</div>
 		</div> 
 
-		<div>
+		<!-- Division created to make it work for tablet and desktop -->
+		<div class='tablet-desktop-container'>
 
 			<div class='footer-links'>
 				<h4>Get Involved</h4>
@@ -38,21 +40,24 @@
 			</div>
 		</div>
 
-		<div class='social-icons-main-container'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/fb.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/twtr.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Insta.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Mail.svg' alt='social-media-icon'>
-			<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/YT.svg' alt='social-media-icon'>
-		</div>
+		
+		<div>
+			<div class='social-icons-main-container'>
+				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/fb.svg' alt='social-media-icon'>
+				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/twtr.svg' alt='social-media-icon'>
+				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Insta.svg' alt='social-media-icon'>
+				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Mail.svg' alt='social-media-icon'>
+				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/YT.svg' alt='social-media-icon'>
+			</div>
 
-		<div class='contact-main-container'>
-			<p class='mobile-phone-number'>(250) 386-9676</p>
-			<p> 1216 North Park St <br> Victoria BC <br>V8T 1C9</p>
-		</div>
+			<div class='contact-main-container'>
+				<p class='mobile-phone-number'>(250) 386-9676</p>
+				<p> 1216 North Park St <br> Victoria BC <br>V8T 1C9</p>
+			</div>
 
-		<div class='hours-container'>
-			<p>Wed-Sat, <br> 10:00 AM -- 4:00 PM</p>
+			<div class='hours-container'>
+				<p>Wed-Sat, <br> 10:00 AM -- 4:00 PM</p>
+			</div>
 		</div>
 	</section> <!--footer main container------->
 
