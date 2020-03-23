@@ -489,6 +489,11 @@
 
 /* Community Worshops */
 
+.cw-image {
+    width: 100%;
+    height: 287px;
+}
+
 .post-type-archive-community_workshop {
     .page-header {
         .page-title {
@@ -505,6 +510,58 @@
     .entry-header {
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+}
+
+@include tablet {
+    .cw-image {
+        width: 100%;
+        height: 476px;
+    }
+}
+
+@include desktop {
+
+    .post-type-archive-community_workshop {
+        .page-header {
+            margin-bottom: 3rem;
+            .page-title {
+                text-align: center;
+            }
+            p {
+                padding-left: 240px;
+                padding-right: 240px;
+                text-align: center;
+                font-size: 0.8rem; 
+            }
+        }
+    }
+
+    .community-workshops-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-bottom: 3rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hentry {
+            margin: 0px;
+        }
+
+        hr {
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .cw-image {
+        width: 100%;
+        height: 288px;
     }
 }
 
