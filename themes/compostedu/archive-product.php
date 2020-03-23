@@ -37,17 +37,21 @@ get_header(); ?>
 							)
 						)); 
 					?>
+
+					<div class="products-container">
 						
-					<?php if ( $products->have_posts() ) : ?>
+						<?php if ( $products->have_posts() ) : ?>
 
-						<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+							<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-							<?php
-								get_template_part( 'template-parts/content', 'products' );
-							?>
+								<?php
+									get_template_part( 'template-parts/content', 'products' );
+								?>
 
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+
+					</div>
 
 					<?php else : ?>
 
