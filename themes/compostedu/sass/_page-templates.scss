@@ -1094,6 +1094,66 @@
      color: $dull_red;
  }
 
+ .product-img {
+    width: 100%;
+    height: 288px;
+}
+
+ @include tablet {
+    .product-img {
+        width: 100%;
+        height: 425px;
+    }
+ }
+
+ @include desktop {
+    .post-type-archive-product {
+        .page-header {
+            margin-bottom: 3rem;
+            .page-title {
+                text-align: center;
+            }
+            p {
+                padding-left: 380px;
+                padding-right: 380px;
+                text-align: center;
+                font-size: 0.8rem; 
+            }
+        }
+    }
+
+    .product-type-content {
+        @include default-padding-desktop;
+    }
+
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-bottom: 3rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hentry {
+            margin: 0px;
+        }
+
+        hr {
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .product-img {
+        width: 100%;
+        height: 288px;
+    }
+ }
+
  /* People */
 
  .people-img {
