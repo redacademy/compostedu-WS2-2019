@@ -43,8 +43,12 @@
 
 	<div class="aw-about">
 		<h1>About This event</h1>
-		<?php the_content(); ?>
-		<div class="aw-address-map"><?php the_field('address_map'); ?></div>
+		<section class="aw-about-grid">
+			<div class="aw-about-content">
+				<?php the_content(); ?>
+			</div>
+			<div class="aw-address-map"><?php the_field('address_map'); ?></div>
+		</section>
 	</div>
 
 	<footer class="entry-footer">
