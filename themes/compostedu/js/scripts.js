@@ -186,7 +186,6 @@
                 
                 if (content.is(':visible')) {
                     let parent = $(this).parent();
-                    let height = parent.height();
                     let id = parent.attr('id');
                     $(this).text('Read more');
                     $(this).siblings('.displayed-content').hide('slow', function() {
