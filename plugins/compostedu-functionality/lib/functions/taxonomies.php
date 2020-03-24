@@ -86,3 +86,43 @@ function people_taxonomy() {
 
 }
 add_action( 'init', 'people_taxonomy', 0 );
+
+// Register Custom Taxonomy
+function adult_workshop_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Adult Workshop Taxonomies', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Adult Workshop Taxonomy', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Adult Workshop Taxonomy', 'text_domain' ),
+		'all_items'                  => __( 'All Adult Workshop Terms', 'text_domain' ),
+		'parent_item'                => __( 'Parent Adult Workshop Term', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Adult Workshop Term:', 'text_domain' ),
+		'new_item_name'              => __( 'New Adult Workshop Term Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Adult Workshop Term', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Adult Workshop Term', 'text_domain' ),
+		'update_item'                => __( 'Update Adult Workshop Term', 'text_domain' ),
+		'view_item'                  => __( 'View Adult Workshop Term', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Adult Workshop Terms with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Adult Workshop Terms', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Adult Workshop Terms', 'text_domain' ),
+		'search_items'               => __( 'Search Adult Workshop Terms', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No Adult Workshop Terms', 'text_domain' ),
+		'items_list'                 => __( 'Adult Workshop Terms list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Adult Workshop Terms list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'adult_workshop_taxonomy', array( 'adult_workshop' ), $args );
+
+}
+add_action( 'init', 'adult_workshop_taxonomy', 0 );

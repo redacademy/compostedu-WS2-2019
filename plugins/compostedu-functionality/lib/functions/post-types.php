@@ -44,7 +44,7 @@ function adult_workshops_post_type() {
 		'description'           => __( 'Adult Workshops information pages.', 'text_domain' ),
 		'labels'                => $labels,
 		'supports' 				=> array( 'title','editor'),
-		'taxonomies'            => array( ),
+		'taxonomies'            => array( 'Adult Workshop Taxonomies' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
