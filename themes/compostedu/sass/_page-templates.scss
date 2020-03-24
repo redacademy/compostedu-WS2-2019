@@ -1534,10 +1534,10 @@
     width: 100%;
     height: 320px;
 
-    // @include tablet {
-    //     height: 798px;
+    @include tablet {
+        height: 500px;
     
-    // }
+    }
     
     @include desktop {
         height: 798px;
@@ -1583,28 +1583,13 @@
 .contact-us-site-main {
 
 
-    // .contact-us-grid {
-        // @include tablet {
-        //     display: grid;
-        //     grid-template-columns: 64% 34%;
-        
-        // }
-        
-    //     @include desktop {
-    //         display: grid;
-    //         grid-template-columns: 64% 34%;
-            
-    //     }
-
-    // }
-
     h2 {
         color: #355a46;
         margin-bottom: 8px;
-        // @include tablet {
-        //     font-size: 40px;
+        @include tablet {
+            font-size: 24px;
         
-        // }
+        }
         
         @include desktop {
             font-size: 40px;
@@ -1643,11 +1628,14 @@
             border-radius: 5px;
             height: 220px;
             margin-bottom: 24px;
-            // @include tablet {
-            //     height: 488px;
+            @include tablet {
+                height: 488px;
+                width: 100%;
+             margin-bottom: 10px;
+
                 
             
-            // }
+            }
             
             @include desktop {
                 height: 488px;
@@ -1670,6 +1658,9 @@
         h2 {
             font-size: 16px;
             color: white;
+            @include tablet {
+                font-size: 21px;
+            }
             @include desktop {
                 font-size: 21px;
             }
@@ -1694,15 +1685,22 @@
 
 //New section added for text on top of newsletter
 .subcription-main-container {
+
+    //Desktop padding for main container
     @include desktop {
         @include default-padding-desktop;
     }
+    // Mobile padding to main contaier
     @include default-padding;
 
 
     h2 {
         color: $pine;
         font-size: 20px;
+        @include tablet {
+            font-size: 24px;
+        }
+
         @include desktop {
             font-size: 40px;
         }
