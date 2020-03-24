@@ -1683,17 +1683,38 @@
     width: 100%;
     height: 320px;
 
+    @include tablet {
+        height: 500px;
+    
+    }
+    
+    @include desktop {
+        height: 798px;
+        
+    }
+
     .entry-title {
         color: $color__background-body;
         font-weight: 600;
         line-height: 0.43;
         font-size: 7.3vw;
         padding-top: 65px;
+        
+        @include desktop {
+            font-size: 64px;
+            
+        }
 
     }
 
     p {
         color: #fffdf7;
+        
+        @include desktop {
+            font-size: 24px;
+            
+        }
+
     }
 
 }
@@ -1702,18 +1723,41 @@
 
 .contact-us-site-main {
 
+
     h2 {
         color: #355a46;
         margin-bottom: 8px;
+        @include tablet {
+            font-size: 24px;
+        
+        }
+        
+        @include desktop {
+            font-size: 40px;
+            
+        }
     }
 
     .entry-content {
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: 64% 34%;
+            
+        }
+
         .about-text {
             color: #464646;
             background-color: rgba(211, 211, 211,0.4);
             padding: 24px;
             margin-bottom: 24px;
             border-radius: 5px;
+            
+            @include desktop {
+                width: 95%;
+                
+            }
+            
 
         }
 
@@ -1722,91 +1766,135 @@
             border-radius: 5px;
             height: 220px;
             margin-bottom: 24px;
+            @include tablet {
+                height: 488px;
+                width: 100%;
+                margin-bottom: 10px;
+            
+            }
+            
+            @include desktop {
+                height: 488px;
+                width: 95%;
+            
+            }
+        }
+
+        .newsletter-tablet-desktop {
+            
+            @include desktop {
+                width: 572px;
+            }
+
         }
     }
 
-    //Contact Form 
-    .wpcf7-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    //Contact Form inside content
-    .wp-block-group__inner-container {
-        background-color: #a3714e;
-        padding: 15px;
-        border-radius: 5px;
-        margin-bottom: 32px;
-        
-        .contact-form-title {
+    //Contact us from/sidebar
+    .mocha-content.contact-us-panel {
+
+        h2 {
+            font-size: 16px;
             color: white;
-            margin-bottom: 24px;
+            @include tablet {
+                font-size: 21px;
+            }
+            @include desktop {
+                font-size: 21px;
+            }
         }
 
-        p {
-            display: flex;
-            justify-content: start;
-            color: white;
-        }
-
-        input {
-            width: 294px;
-            height: 40px;
-            border-radius: 5px;
-            border: 0;
-        }
-
-        textarea {
-            width: 294px ;
-            height: 276px;
-            border-radius: 5px;
-            border: 0;
-        }
-
-        //Submit Button
-        .wpcf7-submit  {
-            background-color: #fffcf5;
-            width: 98px;
-            font-weight: 700;
-            color: #794d2f;
+        //Height for form on desktop size
+        @include desktop {
+            height:96%;
         }
     }
-
-
 
 }
 
 //Hardcoded  Newsletter Subscription box
-.subscribe-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
 
-    .newsletter-subscription-form {
-        background-color: rgba(211, 211, 211, 0.4);
-        padding: 25px;
-        width: 341px;
+//Grey-ish color on whole newsletter background
+.background-grey-color {
+    background-color: rgba(211, 211, 211, 0.4);
+    padding: 32px 0px;
+}
+
+//New section added for text on top of newsletter
+.subcription-main-container {
+
+    //Desktop padding for main container
+    @include desktop {
+        @include default-padding-desktop;
+    }
+
+    // Mobile padding to main contaier
+    @include default-padding;
+
+    h2 {
+        color: $pine;
+        font-size: 20px;
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include desktop {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        @include desktop {
+            width: 572px;
+        }
+    }
+
+
+    .subscribe-container {
         display: flex;
+        justify-content: center;
+
+        
+        @include desktop {
+            justify-content: flex-start;
+            
+        }
+
+        .newsletter-subscription-form {
+            background-color: rgba(211, 211, 211, 0.4);
+            padding: 25px;
+            width: 341px;
+            display: flex;
+            border-radius: 5px;
+            flex-direction: column;
+            
+            @include desktop {
+                width: 572px;
+                
+            }
+
+        }
+
+    .subscribe-input {
+        width: 294px;
+        height: 40px;
+        border: 0;
         border-radius: 5px;
-        flex-direction: column;
+        margin-bottom: 16px;
+        
+        @include desktop {
+            width: 510px;
+            
+        }
 
-    }
+        }
 
-   .subscribe-input {
-       width: 294px;
-       height: 40px;
-       border: 0;
-        border-radius: 5px;
-       margin-bottom: 16px;
-
-    }
-
-    .subscribe-btn {
-        border-radius: 5px;
-        margin: 16px 0px;
-        color: white;
-        width: 110px;
-        background-color: #355a46;
+        .subscribe-btn {
+            border-radius: 5px;
+            margin: 16px 0px;
+            color: white;
+            width: 110px;
+            background-color: #355a46;
+        }
     }
 }
 
