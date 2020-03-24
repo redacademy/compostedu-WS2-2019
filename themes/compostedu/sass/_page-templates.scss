@@ -1906,14 +1906,35 @@
     width: 100%;
     height: 320px;
 
+    @include tablet {
+        height: 500px;
+    }
+    @include desktop {
+        height: 800px;
+    }
+
     .entry-title {
         color: #fffdf7;
         font-size: 26px;
+        @include tablet {
+            font-size: 40px;
+        }
+        @include desktop {
+            font-size: 64px;
+        }
     }
 
     .victoria-soil-header-description {
         color: #fffdf7;
         text-align: center;
+        @include tablet {
+            width: 50%;
+            font-size: 15px;
+        }
+        @include desktop {
+            width: 50%;
+            font-size: 24px;
+        }
     }
 
 
@@ -1923,17 +1944,42 @@
 
 .victoria-soil-site-main {
 
+    //Division to make the grid work. Size to separate from sidebar
+    .victoria-entry-content{
+        @include desktop {
+            width: 95%;
+        }
+    }
+
     h2 {
         color: #355a46;
         font-size: 22px;
+
+        @include tablet {
+            font-size: 24px;
+        }
+        @include desktop{
+            font-size: 40px;
+        }
     }
 
     .entry-content {
     @include  default-padding;
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: 64% 34%;
+            @include default-padding-desktop;
+        }
     }
 
-     //Google interactive soil map
-     iframe {
+    .soil-text-link {
+        text-decoration: none;
+    }
+
+
+    //Google interactive soil map
+    iframe {
         height: 640px;
         margin-bottom: 5px;
     }
@@ -1943,6 +1989,10 @@
     .map-link {
         color: #aa443a;
         font-weight: 700;
+
+        a {
+            text-decoration: none;
+        }
 
     }
 
@@ -1956,7 +2006,7 @@
 
     //Open Applications section
 
-    .wp-block-group__inner-container {
+    .application-container {
 
         background-color: #a3714e;
         padding: 30px;
@@ -1976,6 +2026,7 @@
 
         .victoria-apply-button {
             background-color: white;
+            text-decoration: none;
             color: #794d2f;
             padding: 10px;
             width: 117px;
@@ -1985,6 +2036,21 @@
             box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.33);
         }
 
+    }
+
+    //sidebar for victoria page
+
+    .mocha-content.contact-us-panel {
+        h2 {
+            font-size: 16px;
+            color: white;
+            @include tablet {
+                font-size: 21px;
+            }
+            @include desktop {
+                font-size: 21px;
+            }
+        }
     }
 
 
