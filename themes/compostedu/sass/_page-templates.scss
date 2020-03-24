@@ -1626,6 +1626,7 @@
             
             @include desktop {
                 height: 488px;
+                width: 95%;
             
             }
         }
@@ -1655,7 +1656,7 @@
 
         //Height for form on desktop size
         @include desktop {
-            height:95%;
+            height:96%;
         }
     }
 
