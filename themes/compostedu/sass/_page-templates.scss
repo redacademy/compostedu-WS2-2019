@@ -2390,20 +2390,34 @@
 
     .entry-content {
         @include default-padding;
+        @include desktop {
+            @include default-padding-desktop;
+        }
     }
 
+    //Grid container for desktop
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:16px ;
+    }
+   
+    
     //Cards
-
     .wp-block-group {
+
         box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
         border: solid 1px rgba(70, 70, 70, 0.25);
         background-color: #fffcf5;
         margin-bottom: 16px;
         border-radius: 5px;
+
+
         
+
         .wp-block-group__inner-container {
-            
             margin: 24px;
+
         }
 
         
@@ -2435,6 +2449,13 @@
         margin-left: 5px;
     }
 
+    .bequest-title {
+        @include desktop {
+            font-size: 40px;
+            text-align: center;
+        }
+        
+    }
 
     .bequest-description {
         color: #464646;

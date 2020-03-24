@@ -17,9 +17,10 @@ Thank you so much! </p>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		
 
 	<?php	$rows = get_field('donate_fields'); ?>
-
+<section class='custom-fields-grid'>
 	<?php foreach($rows as $row): ?>
 		<div class="custom-fields-container">
 			<?php $image = $row['image']; ?>
@@ -30,6 +31,7 @@ Thank you so much! </p>
 			<p class="donate-field-description"> <?php echo $row['description'] ?></p>
 		</div>
 	<?php endforeach; ?>
+</section>
 
 
 
