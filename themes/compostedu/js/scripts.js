@@ -175,7 +175,7 @@
             || $('body.post-type-archive-composting_for_kids').length
             || $('body.post-type-archive-intermediate_program').length
             || $('body.post-type-archive-high_school_program').length
-            //|| $('body.page-third-party-resources').length
+            || $('body.page-third-party-resources').length
             || $('body.post-type-archive-product').length
             || $('body.post-type-archive-people').length
             ){
@@ -189,7 +189,7 @@
                     let id = parent.attr('id');
                     $(this).text('Read more');
                     $(this).siblings('.displayed-content').hide('slow', function() {
-                        $('article').each(function() {
+                        $('.expand-item').each(function() {
                             if ($(this).attr('id') !== id) {
                                 $(this).height('');
                             }
@@ -199,13 +199,15 @@
                     let parent = $(this).parent();
                     let height = parent.height();
                     let id = parent.attr('id');
-                    $('article').each(function() {
+                    $('.expand-item').each(function() {
                         
                         if ((!($(this).find('.displayed-content')).is(':visible'))) {
                                 $(this).height(''); 
                         } else {
                                 $(this).find('.view-click').text('Read more');
                                 $(this).find('.displayed-content').hide();
+                                console.log('aqui');
+                                console.log($(this));
                         }
 
                         if ($(this).attr('id') !== id) {
@@ -215,21 +217,6 @@
 
                     $(this).text('Read less');
                     $(this).siblings('.displayed-content').slideDown('slow');
-                }
-            });
-        }
-
-        if($('body.page-third-party-resources').length) {
-            let view = $('.view-click');
-            view.click(function(e) {
-                e.preventDefault();
-                let content = $(this).siblings('.displayed-content');
-                if (content.is(':visible')) {
-                    $(this).text('Read more');
-                    $(this).siblings('.displayed-content').hide('slow');
-                } else {
-                    $(this).text('Read less');
-                    $(this).siblings('.displayed-content').show('slow');
                 }
             });
         }
