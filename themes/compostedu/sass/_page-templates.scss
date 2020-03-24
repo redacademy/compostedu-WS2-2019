@@ -1973,8 +1973,13 @@
         }
     }
 
-     //Google interactive soil map
-     iframe {
+    .soil-text-link {
+        text-decoration: none;
+    }
+
+
+    //Google interactive soil map
+    iframe {
         height: 640px;
         margin-bottom: 5px;
     }
