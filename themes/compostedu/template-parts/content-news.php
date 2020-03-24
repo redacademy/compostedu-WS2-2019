@@ -8,14 +8,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php $image = get_field('image'); ?>
-	<?php if( !empty( $image ) ): ?>
-		<img class="news-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-	<?php endif; ?>
 
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
+	<div>
+		<?php $image = get_field('image'); ?>
+		<?php if( !empty( $image ) ): ?>
+			<img class="news-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		<?php endif; ?>
+
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		</header><!-- .entry-header -->
+	</div>
 
 	<div class="entry-content">
 		<?php $excerpt = get_the_excerpt(); ?>
@@ -26,6 +29,8 @@
 			<?php if ($content) : ?>
 				<?php if (strpos($content, 'wp:core-embed/youtube ') !== false) : ?>
 					<p>Check out the video!</p>
+				<?php else : ?>
+					<p>For more informations click here!</p>
 				<?php endif; ?>
 			<?php endif; ?>
 		<?php endif;?>

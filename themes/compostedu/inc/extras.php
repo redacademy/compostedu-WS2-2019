@@ -58,3 +58,7 @@ add_filter( 'rest_prepare_post', function( $response, $post, $request ) {
 	) );
 }
 add_action( 'widgets_init', 'red_starter_widgets_contactus_init' );
+
+add_filter( 'excerpt_length', function($length) {
+    return 10;
+} );
