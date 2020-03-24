@@ -1478,6 +1478,10 @@
     }
 }
 
+.previous-link {
+    text-align: right;
+}
+
 @include tablet {
     .news-img {
         width: 100%;
