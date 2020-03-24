@@ -2573,12 +2573,27 @@
         color: $pine;
         font-size: 26px;
         margin-bottom: 8px;
+        @include tablet {
+            font-size: 40px;
+        }
+        @include desktop {
+            font-size: 64px;
+            
+        }
     }
 
     .funders-header-description {
         color: #464646;
         text-align: center;
         margin: 0px 10px;
+        @include tablet {
+            width: 50%;
+        }
+        @include desktop {
+            width: 50%;
+
+            
+        }
     }
 
 
@@ -2590,6 +2605,12 @@
 
     .entry-content {
         @include default-padding;
+        @include desktop {
+            @include default-padding-desktop;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 16px;
+        }
     }
 
     //Each funder title
