@@ -17,11 +17,11 @@ get_header(); ?>
 			<div class="news-nav-links">
 				<hr/>
 				<div class="news-nav-link-content">
-					<i class="fas fa-arrow-left"></i> <?php next_post_link('%link') ;?>
+					<?php next_post_link('<i class="fas fa-arrow-left"></i> %link') ;?>
 				</div>
 				<hr/>
 				<div class="news-nav-link-content">
-					<?php previous_post_link('%link') ?> <i class="fas fa-arrow-right"></i>
+					<?php previous_post_link('%link <i class="fas fa-arrow-right"></i>') ?>
 				</div>
 				<hr/>
 			</div>
