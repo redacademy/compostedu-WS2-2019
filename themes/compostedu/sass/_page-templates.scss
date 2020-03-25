@@ -2574,9 +2574,36 @@
 /* Annual Reports */
 
 .annual-reports-site-main {
+
+    //apply padding for desktop on article since no entry-content found
+    article {
+        @include desktop {
+            @include default-padding-desktop;
+        }
+
+    }
+
     header {
         display: flex;
         justify-content: center;
+    }
+
+    .entry-title {
+        @include tablet {
+            font-size: 40px;
+        }
+        
+        @include desktop {
+            font-size: 64px;
+        }
+    }
+
+    .reports-grid-container {
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 80px;
+        }
     }
 
     .reports {
