@@ -15,7 +15,8 @@
              Find your volunteer opportunity now. </p>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+	<div class="entry-content">
+		<div class='test'>
+			<?php the_content(); ?>
+	<!-- </div>.entry-content -->
