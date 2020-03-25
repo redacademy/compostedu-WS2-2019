@@ -413,6 +413,60 @@
 
 @include desktop {
 
+    .search-section-aw {
+        margin-bottom: 1rem;
+    }
+
+    .search-input-aw {
+        border: solid 1px $pine;
+        padding: 8px;
+        border-radius: 5px;
+        width: 272px;
+    }
+
+    .datapicker-section-aw {
+        margin-bottom: 2rem;
+    }
+
+    .filters-aw-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        label {
+            font-weight: bold;
+        }
+    }
+
+    .filters-aw-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .button-search-aw {
+        background-color: $color__background-body;
+        padding: 0;
+        height: 6px;
+        position: relative;
+        right: 37px;
+        font-size: 1rem;
+    }
+
+    .check-box-section-aw {
+        margin-bottom: 1.2rem;
+    }
+
+    .hiring-section-aw {
+        padding-top: 27px;
+        padding-bottom: 27px;
+        margin-right: 45px;
+        a {
+            display: block;
+            width: 115px;
+            @include default-a-btn;
+        }
+    }
+
     .single-adult_workshop {
         .entry-content {
             padding-left: 0px;

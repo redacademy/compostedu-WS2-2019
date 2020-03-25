@@ -21,34 +21,41 @@ get_header(); ?>
 				<div>
 					 <!-- TODO Filters -->
 
-					 <section>   
+					 <section class="search-section-aw">   
 						<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-							<input type="text" name="s" placeholder="Search Adult Workshops"/>
+							<input class="search-input-aw" type="text" name="s" placeholder="Search"/>
 							<input type="hidden" name="post_type" value="adult_workshop" /> <!-- // hidden 'players' value -->
-							<input type="submit" alt="Search" value="Search" />
+							<button class="button-search-aw" type="submit" alt="Search">
+								<i class="fa fa-search"></i>
+							</button>
 						</form>
 					</section>
 
-					<div>
+					<section class="datapicker-section-aw">
 						<div class="adult-workshop-datepicker"></div>
-					</div>
-
-					<?php $taxonomies = get_terms( 'adult_workshop_taxonomy'); ?>
+					</section>
 				
-					<section>
-						<h2>Filters</h2>
-						<div>
-							<div>
+					<section class="check-box-section-aw">
+						<?php $taxonomies = get_terms( 'adult_workshop_taxonomy'); ?>
+						<h2 class="filters-aw">Filters</h2>
+						<div class="filters-aw-container">
+							<div class="filters-aw-item">
 								<input type="checkbox" class="adult-workshop-all-filter" id="all-workshops-id" name="all-workshops" value="all">
 								<label for="all-workshops"> All Workshops </label>
 							</div>
 							<?php foreach ( $taxonomies as $term ) : ?>
-								<div>
+								<div class="filters-aw-item">
 									<input type="checkbox" class="adult-workshop-filter" id="adult-workshop-type-<?php echo $term->term_taxonomy_id?>" name="<?php echo $term->slug?>" value="<?php echo $term->slug ?>">
 									<label for="<?php echo $term->slug ?>"> <?php echo $term->name ?> </label>
 								</div>
 							<?php endforeach; ?>
 						</div>
+					</section>
+
+					<section class="mocha-content hiring-section-aw">
+						<h2>The CEC is Hiring an Executive Director</h1>
+						<p>A non-profit organization with charitable status providing composting and ecological gardening educational to residents</p>
+						<a class="btn-white-mocha" href="#">Read More</a>
 					</section>
 					
 				</div>
@@ -56,21 +63,12 @@ get_header(); ?>
 				<div>
 				
 					<?php 
-					//enviar essas variaveis ao clicar por jquery
-					//construir array para fazer a pesquisa
-					//https://plugins.jquery.com/tag/calendar/
-					//https://github.com/nazar-pc/PickMeUp
-					//https://stackoverflow.com/questions/10120543/how-to-pass-the-parameter-to-same-page-using-java-script-in-asp-net
-					// if (get_query_var('adult_workshop_date')) echo "token = $adult_workshop_date"; ?>
-
-					<?php 
 
 						$meta_query = array ();
 						if (isset($adult_workshop_date)) {
 							$meta_query = array(
 								array(
 									'key' => 'date',
-									//'value' => '2020-02-29',
 									'value' => $adult_workshop_date,
 									'type' => 'DATE',
 									'compare' => '=='
