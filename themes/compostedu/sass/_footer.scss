@@ -122,6 +122,7 @@
 
         }
 
+
         .icons {
             padding-right: 5px;
             @include tablet {
@@ -130,7 +131,8 @@
             }
             @include desktop {
                 padding-right: 5px;
-                }
+            }
+
         }
     }
 

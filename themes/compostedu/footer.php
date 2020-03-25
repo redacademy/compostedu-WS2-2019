@@ -7,8 +7,6 @@
 
 ?>
 
-<!-- <a> TAG LINK TO BE ADDED TO ALL THE <p> TAGS  -->
-
 <footer >
 	<section class='main-footer-container'>
 		<!-- Division created to make it work for tablet and desktop -->
@@ -43,12 +41,12 @@
 		
 		<div>
 			<div class='social-icons-main-container'>
-				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/fb.svg' alt='social-media-icon'>
-				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/twtr.svg' alt='social-media-icon'>
-				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Insta.svg' alt='social-media-icon'>
-				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Mail.svg' alt='social-media-icon'>
-				<img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/YT.svg' alt='social-media-icon'>
-			</div>
+			<a class='fb' href='https://www.facebook.com/composteducation'><img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/fb.svg' alt='social-media-icon'></a>
+			<a class='twt' href='https://twitter.com/viccomposted'><img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/twtr.svg' alt='social-media-icon'></a>
+			<a class='insta' href='https://www.instagram.com/composteducation/'><img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Insta.svg' alt='social-media-icon'></a>
+			<a class='yt' href='https://www.youtube.com/channel/UCDCeINX3_s_6lGL5QrLuulA'><img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/Mail.svg' alt='social-media-icon'></a>
+			<a class='mail' href='mailto:office@compost.bc.ca'><img class='icons' src='<?php echo get_template_directory_uri() ?>/images/footer/YT.svg' alt='social-media-icon'></a>
+		</div>
 
 			<div class='contact-main-container'>
 				<p class='mobile-phone-number'>(250) 386-9676</p>
