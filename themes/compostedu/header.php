@@ -39,7 +39,7 @@
 					
 					<div id="logo" class="site-branding show">
 						<a href="<?php echo get_home_url() ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/header/logo.png" alt="Logo">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/header/logo@3x.png" alt="Logo">
 						</a>
 					</div><!-- .site-branding -->
 					

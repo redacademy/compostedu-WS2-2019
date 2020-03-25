@@ -9,7 +9,7 @@
 		&:focus {
 			outline: thin dotted;
 		}
-		&:hover,
+		// &:hover,
 		&:active {
 			outline: 0;
 		}
@@ -24,15 +24,28 @@
 	display: block;
 	float: left;
 	width: 100%;
+	@include desktop {
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-around;
+	}
 
 	.menu-toggle {
 		display: flex;
-		justify-content: center;
-		background-color: transparent;
+		justify-content: flex-start;
+		align-items: center;
+		background-color: $pine;
 		border: none;
+		@include desktop {
+			display: none;
+		}
 	}
 
-	div {
+	.menu-menu-container {
+		@include desktop {
+			display: flex;
+			width: 100%;
+		}
 		.nav-menu {
 			display: none;
 			list-style: none;
@@ -42,6 +55,11 @@
 			top: 48px;
 			width: 100vw;
 			align-items: flex-start;
+			@include desktop {
+				display: flex;
+				width: 100%;
+				position: inherit;
+			}
 
 			li {
 				width: 100%;
@@ -50,6 +68,12 @@
 					display: none;
 					list-style: none;
 					padding-left: 30px;
+					@include desktop {
+						margin-top: 35px;
+						background-color: red;
+						padding-left: 0;
+						width: 100%;
+					}
 					
 					li {
 						width: 100%;
@@ -61,18 +85,18 @@
 						}
 					}
 
-					li:hover > ul,
-					li.focus > ul {
-						display: block;
-					}
+					// li:hover > ul,
+					// li.focus > ul {
+					// 	display: block;
+					// }
 				}
 				
 			}
 			
-			li:hover > ul,
-			li.focus > ul {
-				display: block;
-			}
+			// li:hover > ul,
+			// li.focus > ul {
+			// 	display: block;
+			// }
 		}
 	}
 	a {
