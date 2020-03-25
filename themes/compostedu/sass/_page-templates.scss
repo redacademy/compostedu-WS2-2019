@@ -2123,14 +2123,43 @@
     width: 100%;
     height: 320px;
 
+    @include tablet {
+        height: 500px;
+        
+    }
+    @include desktop{
+        height: 800px;
+        
+    }
+
     .entry-title {
         color: #fffdf7;
         font-size: 26px;
+
+        @include tablet {
+            font-size: 40px ; 
+            
+        }
+        @include desktop{
+            font-size: 64px;
+            
+        }
     }
 
     .volunteer-header-description {
         color: #fffdf7;
         text-align: center;
+        @include tablet {
+            width: 50%;
+            font-size: 20px;
+            
+        }
+        @include desktop{
+            width: 50%;
+            font-size: 24px;
+
+            
+        }
     }
 
 }
@@ -2143,10 +2172,25 @@
     h2 {
         color: #355a46;
          font-size: 22px;
+         @include tablet {
+            font-size: 24px;
+            
+        }
+        @include desktop{
+            font-size: 40px;
+
+            
+        }
     }
     
     .entry-content {
-        @include  default-padding;
+        @include  default-padding; 
+        @include desktop {
+            @include default-padding-desktop;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-bottom: 75px;
+        }
      }
     
 }
