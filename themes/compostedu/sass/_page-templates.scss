@@ -85,44 +85,51 @@
         li {
             margin: 10px 0;
         }
-        .sub-menu {
-            position: absolute;
-            top: 104px;
-            padding: 10px 20px;
-            background-color: #192b21;
-
-            .sub-sub-menu {
-                position: inherit;
+        @include desktop {
+            
+            .sub-menu {
+                position: absolute;
+                top: 104px;
+                padding: 10px 20px;
+                background-color: #192b21;
+                
+                .sub-sub-menu {
+                    position: inherit;
+                }
             }
-        }
-        .activites {
-            left: 21%;
-        }
-        .resources {
-            left: 32%;
-        }
-        .involved {
-            left: 44%;
-        }
-        .about {
-            left: 55%;
+            .activites {
+                left: 21%;
+            }
+            .resources {
+                left: 32%;
+            }
+            .involved {
+                left: 44%;
+            }
+            .about {
+                left: 55%;
+            }
         }
     }
 
     .arrow {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
     }
     
     .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu, .school-programs-hide-submenu {
-        display: none;
+        @include desktop {
+            display: none;
+        }
     }
     
     .menu {
-        background-color: #192b21;
         @include desktop {
+            background-color: #192b21;
             grid-column: 2;
             background-color: $pine;
 
@@ -130,14 +137,14 @@
                 margin-top: 30px;
             }
 
-            .hide-primary-menu {
-                display: none;
-                @include desktop {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    position: inherit;
-                }
+        }
+        .hide-primary-menu {
+            display: none;
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: inherit;
             }
         }
     }
