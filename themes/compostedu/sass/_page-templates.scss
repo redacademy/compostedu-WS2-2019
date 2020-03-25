@@ -2638,7 +2638,7 @@
             }
         }
 
-        //Conatiner to make grid work on desktop
+        //Container to make grid work on desktop
         .membership-cards-container {
             @include desktop {
                 display: grid;
@@ -2694,6 +2694,12 @@
 
         }
 
+        .purchase-title {
+            @include desktop {
+                @include default-padding-desktop;
+            }
+        }
+
         //Purchase membership container
         .wp-block-group__inner-container {
             
@@ -2703,6 +2709,7 @@
                 padding: 15px;
                 border: 1px solid #d3d3d3;
                 border-radius: 5px;
+
                 @include desktop {
                    margin-left: 0;
                 }
@@ -2716,6 +2723,7 @@
 
             @include desktop {
                 @include default-padding-desktop;
+
             }
             
             .wp-block-group__inner-container {
@@ -2733,7 +2741,7 @@
         .wpcf7 {
 
             @include desktop {
-                @include default-padding-desktop;
+                // @include default-padding-desktop;
                 
             }
         
@@ -2779,6 +2787,8 @@
                 @include default-padding-desktop;
             }
         }
+
+        //Second paragraph on subcription section
         .two {
 
             @include desktop {
