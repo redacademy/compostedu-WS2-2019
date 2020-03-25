@@ -215,9 +215,40 @@
         display: none;
     }
 
-    .hide-form {
+    .search-form {
         @include desktop {
-            display: block;
+            margin-right: 10px;
+            border: solid 1px gray;
+        }
+        .search-form-fieldset {
+            @include desktop {
+                display: contents;
+
+                .search-form-input {
+                    @include desktop {
+                        margin: 10px;
+                    }
+
+                    .search-field {
+                        @include desktop {
+                            border: none;
+                            background-color: transparent;
+                        }
+                    }  
+                }
+                
+                .search-submit {
+                    @include desktop {
+                        margin: 10px;
+                    }
+                }
+            }
+            
+            .hide-form {
+                @include desktop {
+                    display: block;
+                }
+            }
         }
     }
 
