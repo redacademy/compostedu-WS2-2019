@@ -6,5 +6,13 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+
+		<div class="mocha-content contact-us-panel">
+				<?php
+							$contactUsText='If you have questions about our school programs or would like to book a program, call Kayla at 230-386-9676 or email using the form below.';
+							set_query_var( 'contactUsText', $contactUsText );
+							get_template_part( 'template-parts/contact-us' );
+							?>
+			</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
