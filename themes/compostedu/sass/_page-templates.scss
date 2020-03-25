@@ -2070,45 +2070,131 @@
         background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/who-we-are/compost-education-centre-edited.jpg) no-repeat top;
         background-size: 100% 100%;
         width: 100%;
-        height: 320px;
+        height: 320px; 
+
+        @include tablet {
+            height: 500px;
+
+        }
+        @include desktop {
+            height: 800px;
+            
+        }
 
         .header-description {
             width: 80%;
             text-align: center;
         }
     }
+
     .entry-content {
-        div:first-child{
-            margin: 0;
-            border: none;
+
+        @include desktop {
+            @include default-padding-desktop;
         }
 
-        .wp-block-group {
+        //Container to display grid
+        .main-content-container-grid {
+            @include desktop {
+            display: grid;
+            grid-template-columns: 64% 34%;
+            }
+        }
+
+        //Grey container that span two columns
+        .span-container {
+            @include desktop {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            }
+            .inside-span {
+                @include desktop {
+                    grid-column: 1 / span 2;
+                }
+            }
+
+        }
+
+        .main-title {
+            color: $pine;
+            padding-left: 24px;
+            margin: 3% 0;
+            @include tablet {
+                font-size: 24px;
+
+            }
+            @include desktop {
+                font-size: 40px;
+                padding-left: 0;
+            }
+        }
+
+        //First container about us description with different style
+        .first-grey-container {
+            background-color: rgba(211, 211, 211, 0.4);
+            padding: 24px;
+            border-radius: 5px;
+            margin:24px;
+            @include desktop {
+            margin:0 auto;
+
+                
+            }
+        }
+
+        //Cards that had different margin 
+        .card-container.one {
+            @include desktop {
+                margin-left: 0px;
+            }
+        }
+
+        .card-container.two {
+            @include desktop {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+        
+        .card-container {
             margin: 0 6%;
             margin-bottom: 4%;
             padding: 24px;
             border: 1px solid #d3d3d3;
             border-radius: 5px;
-            
-            .main-title {
-                color: $pine;
-                padding-left: 0;
-                margin: 3% 0;
+            .cards-description {
+                color: rgba(70, 70, 70, 0.7);
             }
-            
-            .description {
-                padding: 24px;
-                border: 1px solid #d3d3d3;
-                border-radius: 5px;
-                background-color: #d3d3d3;
+
+            ul {
+                margin: 0;
+            }
+
+            li {
+                list-style: none;
+                font-weight: 600;
+            }
+
+        }
+        
+        //Youtube video margin on left to fit content 
+        figure.wp-block-embed-youtube.wp-block-embed.is-type-video.is-provider-youtube.wp-embed-aspect-16-9.wp-has-aspect-ratio{
+            @include desktop {
+                margin-left: 0px;
             }
         }
-
         .wp-block-embed__wrapper {
+
             
             iframe {
                 height: 192px;
                 border-radius: 5px;
+
+                @include desktop {
+                    width: 100%;
+                    height: 650px;
+                    margin-left: 0px;
+                }
             }
         }
     }
