@@ -12,7 +12,11 @@
         });
 
         let adultWorkshopDate = getParameterByName('adult_workshop_date');
-        $('.adult-workshop-datepicker').datepicker( 'setDate', adultWorkshopDate );
+        if (adultWorkshopDate) {
+            $('.button-show-calendar').addClass('button-hide-calendar');
+            $('.adult-workshop-datepicker').show();
+            $('.adult-workshop-datepicker').datepicker( 'setDate', adultWorkshopDate );
+        }
 
         function getParameterByName(name, url) {
             if (!url) { 
@@ -47,35 +51,37 @@
             }
       });
 
-      $('.adult-workshop-all-filter').click(function() {
-        if ($(this).is(':checked')) {
-            $('.adult-workshop-filter:checked').each(function() {
-                $(this).prop('checked', false );
-            });
-            redirectForSearch('adult_workshop_taxonomy_name=all', restVars.base_url + '/adult_workshop/');
-        } else {
-            redirectForSearch('', restVars.base_url + '/adult_workshop/');            
-        }
+        $('.adult-workshop-all-filter').click(function() {
+            if ($(this).is(':checked')) {
+                $('.adult-workshop-filter:checked').each(function() {
+                    $(this).prop('checked', false );
+                });
+                redirectForSearch('adult_workshop_taxonomy_name=all', restVars.base_url + '/adult_workshop/');
+            } else {
+                redirectForSearch('', restVars.base_url + '/adult_workshop/');            
+            }
         
-  });
-
-      let adultWorkshopTaxonomies = getParameterByName('adult_workshop_taxonomy_name');
-      if (adultWorkshopTaxonomies && adultWorkshopTaxonomies.length > 0) {
-        let adultWorkshopTaxonomiesList = adultWorkshopTaxonomies.split(',');
-
-        $('.adult-workshop-filter, .adult-workshop-all-filter').each(function() {
-
-            let checkBoxElement = $(this);
-            let taxonomyFilter = $(this).val();
-                
-            adultWorkshopTaxonomiesList.forEach(function(queryStringTaxonomy) {
-                if (taxonomyFilter === queryStringTaxonomy) {
-                    checkBoxElement.prop('checked', true );
-                }
-            });
-                
         });
-    }
+
+        let adultWorkshopTaxonomies = getParameterByName('adult_workshop_taxonomy_name');
+        if (adultWorkshopTaxonomies && adultWorkshopTaxonomies.length > 0) {
+            $('.button-show-filters').addClass('button-hide-filters');
+            $('.filters-aw-list').show();
+            let adultWorkshopTaxonomiesList = adultWorkshopTaxonomies.split(',');
+
+            $('.adult-workshop-filter, .adult-workshop-all-filter').each(function() {
+
+                let checkBoxElement = $(this);
+                let taxonomyFilter = $(this).val();
+                    
+                adultWorkshopTaxonomiesList.forEach(function(queryStringTaxonomy) {
+                    if (taxonomyFilter === queryStringTaxonomy) {
+                        checkBoxElement.prop('checked', true );
+                    }
+                });
+                    
+            });
+        }
 
       function redirectForSearch(queryString, url) {
             if (!url) { 
@@ -87,6 +93,32 @@
             url += '?' + queryString;
             window.location.replace(url);
       }
+
+      // button show calendar
+
+      $('.button-show-calendar').click(function() {
+          if ($( '.adult-workshop-datepicker' ).is(':visible')) {
+            $(this).removeClass('button-hide-calendar');
+            $( '.adult-workshop-datepicker' ).hide( 'slow' );
+          } else {
+            $(this).addClass('button-hide-calendar');
+            $( '.adult-workshop-datepicker' ).show( 'slow' );
+          } 
+          
+      });
+
+       // button show filtes
+
+       $('.button-show-filters').click(function() {
+        if ($( '.filters-aw-list' ).is(':visible')) {
+          $(this).removeClass('button-hide-filters');
+          $( '.filters-aw-list' ).hide( 'slow' );
+        } else {
+          $(this).addClass('button-hide-filters');
+          $( '.filters-aw-list' ).show( 'slow' );
+        } 
+        
+    });
 
         if( $('body.blog').length ) {
 

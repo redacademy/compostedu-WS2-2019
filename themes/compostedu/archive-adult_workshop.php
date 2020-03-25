@@ -32,31 +32,39 @@ get_header(); ?>
 					</section>
 
 					<section class="datapicker-section-aw">
+						<button class="button-show-calendar">
+							<i class="far fa-calendar"></i>Calendar
+						</button>
 						<div class="adult-workshop-datepicker"></div>
 					</section>
 				
 					<section class="check-box-section-aw">
 						<?php $taxonomies = get_terms( 'adult_workshop_taxonomy'); ?>
 						<h2 class="filters-aw">Filters</h2>
-						<div class="filters-aw-container">
-							<div class="filters-aw-item">
-								<input type="checkbox" class="adult-workshop-all-filter" id="all-workshops-id" name="all-workshops" value="all">
-								<label for="all-workshops"> All Workshops </label>
-							</div>
-							<?php foreach ( $taxonomies as $term ) : ?>
+						<button class="button-show-filters">
+							<i class="fas fa-filter"></i>Filters
+						</button>
+						<div class="filters-aw-list">
+							<div class="filters-aw-container">
 								<div class="filters-aw-item">
-									<input type="checkbox" class="adult-workshop-filter" id="adult-workshop-type-<?php echo $term->term_taxonomy_id?>" name="<?php echo $term->slug?>" value="<?php echo $term->slug ?>">
-									<label for="<?php echo $term->slug ?>"> <?php echo $term->name ?> </label>
+									<input type="checkbox" class="adult-workshop-all-filter" id="all-workshops-id" name="all-workshops" value="all">
+									<label for="all-workshops"> All Workshops </label>
 								</div>
-							<?php endforeach; ?>
-						</div>
+								<?php foreach ( $taxonomies as $term ) : ?>
+									<div class="filters-aw-item">
+										<input type="checkbox" class="adult-workshop-filter" id="adult-workshop-type-<?php echo $term->term_taxonomy_id?>" name="<?php echo $term->slug?>" value="<?php echo $term->slug ?>">
+										<label for="<?php echo $term->slug ?>"> <?php echo $term->name ?> </label>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						<div>
 					</section>
 
-					<section class="mocha-content hiring-section-aw">
+					<!-- <section class="mocha-content hiring-section-aw">
 						<h2>The CEC is Hiring an Executive Director</h1>
 						<p>A non-profit organization with charitable status providing composting and ecological gardening educational to residents</p>
 						<a class="btn-white-mocha" href="#">Read More</a>
-					</section>
+					</section> -->
 					
 				</div>
 
