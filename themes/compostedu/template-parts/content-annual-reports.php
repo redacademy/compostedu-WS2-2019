@@ -14,6 +14,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<div class='reports-grid-container'>
+
 	<?php foreach($annual_reports as $annual_report): ?>
 		<div class="reports">
 			<?php $image = $annual_report['image']; ?>
@@ -24,5 +26,6 @@
 			<a class="report-pdf" href="<?php echo $annual_report['link'] ?>">View report on ISSUU</a>
 		</div>
 	<?php endforeach; ?>
+			</div>
 	
 </article><!-- #post-## -->
