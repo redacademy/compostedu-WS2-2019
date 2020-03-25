@@ -84,11 +84,28 @@
 
         li {
             margin: 10px 0;
-
         }
-        ul {
+        .sub-menu {
             position: absolute;
+            top: 104px;
+            padding: 10px 20px;
             background-color: #192b21;
+
+            .sub-sub-menu {
+                position: inherit;
+            }
+        }
+        .activites {
+            left: 21%;
+        }
+        .resources {
+            left: 32%;
+        }
+        .involved {
+            left: 44%;
+        }
+        .about {
+            left: 55%;
         }
     }
 
@@ -196,6 +213,12 @@
     // Classes used with function.js
     .hide, .hide-form, .hide-menu {
         display: none;
+    }
+
+    .hide-form {
+        @include desktop {
+            display: block;
+        }
     }
 
     .show {
