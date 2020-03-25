@@ -18,6 +18,11 @@ button {
 	color: $pine;
 }
 
+.btn-white-mocha, .btn-white-mocha:visited, .btn-white-mocha:hover {
+	background-color: $white;
+	color: $mocha;
+}
+
 .btn-pine, .btn-pine:visited, .btn-pine:hover {
 	background-color: $pine;
 	color: $white;

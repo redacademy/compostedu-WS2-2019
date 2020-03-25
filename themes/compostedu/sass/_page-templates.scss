@@ -338,6 +338,92 @@
 
 /* Adult Worshops */
 
+.search-section-aw {
+    margin-bottom: 1rem;
+}
+
+.search-input-aw {
+    border: solid 1px $pine;
+    padding: 8px;
+    border-radius: 5px;
+    width: 93%;
+}
+
+.button-search-aw {
+    background-color: $color__background-body;
+    padding: 0;
+    height: 6px;
+    position: relative;
+    right: 37px;
+    font-size: 1rem;
+}
+
+.ui-datepicker {
+    width: 100%;
+}
+
+.button-show-calendar {
+    width: 100%;
+
+    .fa-calendar {
+        margin-right: 10px;
+    }
+}
+
+.button-hide-calendar {
+    color: $white;
+    background-color: $greyish-brown;
+    margin-bottom: 1rem;
+}
+
+.button-show-filters {
+    width: 100%;
+
+    .fa-calendar {
+        margin-right: 10px;
+    }
+}
+
+.button-hide-filters {
+    color: $white;
+    background-color: $greyish-brown;
+    margin-bottom: 1rem;
+}
+
+.adult-workshop-datepicker {
+    display: none;
+}
+
+.datapicker-section-aw {
+    margin-bottom: 1rem;
+}
+
+.filters-aw-list {
+    display: none;
+}
+
+.filters-aw-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    label {
+        font-weight: bold;
+    }
+}
+
+.filters-aw-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.check-box-section-aw {
+    margin-bottom: 1.2rem;
+
+    h2 {
+        display: none;
+    }
+}
+
 .adult-workshop-img {
     width: 100%;
     height: 200px;
@@ -413,6 +499,57 @@
 
 @include desktop {
 
+    .ui-datepicker {
+        width: 265px;
+    }
+
+    .search-input-aw {
+        width: 265px;
+    }
+
+    .button-show-calendar, .button-hide-calendar {
+        display: none;
+    }
+
+    .adult-workshop-datepicker {
+        display: block;
+    }
+
+    .button-show-filters, .button-hide-filters {
+        display: none;
+    }
+
+    .filters-aw-list {
+        display: block;
+    }
+
+    .filters-aw-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .check-box-section-aw {
+        h2 {
+            display: block;
+        }
+    }
+
+    .datapicker-section-aw {
+        margin-bottom: 2rem;
+    }
+
+    .hiring-section-aw {
+        padding-top: 27px;
+        padding-bottom: 27px;
+        margin-right: 45px;
+        a {
+            display: block;
+            width: 115px;
+            @include default-a-btn;
+        }
+    }
+
     .single-adult_workshop {
         .entry-content {
             padding-left: 0px;
@@ -452,7 +589,7 @@
 
     .adult-workshops-grid {
         display: grid;
-        grid-template-columns: 23% 77%;
+        grid-template-columns: 30% 70%;
         grid-template-rows: 1fr;
 
         article {
@@ -1476,6 +1613,10 @@
         font-style: italic;
         font-weight: initial;
     }
+}
+
+.previous-link {
+    text-align: right;
 }
 
 @include tablet {
