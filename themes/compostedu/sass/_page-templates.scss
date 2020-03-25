@@ -65,29 +65,40 @@
         background-color: $pine;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        @include desktop {
-            grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 0;
+        color: $white;
+    }
+
+    .primary-menu, .sub-menu {
+        list-style-type: none;
+        background-color: #192b21;
+        width: 100%;
+    }
+    .primary-menu {
+        position: absolute;
+        left: 0;
+        margin: 0;
+
+        li {
+            margin: 10px 0;
         }
     }
 
-    .menu {
-        @include desktop {
-            grid-column: 2;
-        }
+    .arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .arrow-right {
-            @include desktop {
-                display: none;
-            }
-        }
+    .hide-primary-menu, .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu {
+        display: none;
+    }
 
-        .arrow-down {
-            display: none;
-            @include desktop {
-                display: block;
-            }
-        }
+    .show {
+        display: block;
+    }
+
+    .menu-toggle {
+        background-color: $pine;
     }
 
     .site-branding  {
