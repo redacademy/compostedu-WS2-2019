@@ -2089,52 +2089,85 @@
             @include default-padding-desktop;
         }
 
-        div:first-child{
-            margin: 0;
-            border: none;
+        .main-content-container-grid {
+            @include desktop {
+            display: grid;
+            grid-template-columns: 64% 34%;
+            }
         }
 
+        .span-container {
+            @include desktop {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            }
+            .inside-span {
+                @include desktop {
+                    grid-column: 1 / span 2;
+                }
+            }
+
+        }
+
+        .main-title {
+            color: $pine;
+            padding-left: 24px;
+            margin: 3% 0;
+            @include tablet {
+                font-size: 24px;
+
+            }
+            @include desktop {
+                font-size: 40px;
+                padding-left: 0;
+            }
+        }
+
+        //First container about us description with different style
+        .first-grey-container {
+            background-color: rgba(211, 211, 211, 0.4);
+            padding: 24px;
+            border-radius: 5px;
+            margin:24px;
+            @include desktop {
+            margin:0 auto;
+
+                
+            }
+        }
+
+        .card-container.one {
+            @include desktop {
+                margin-left: 0px;
+            }
+        }
+
+        .card-container.two {
+            @include desktop {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
         
-        .wp-block-group {
+        .card-container {
             margin: 0 6%;
             margin-bottom: 4%;
             padding: 24px;
             border: 1px solid #d3d3d3;
             border-radius: 5px;
-            
-            .main-title {
-                color: $pine;
-                padding-left: 0;
-                margin: 3% 0;
-                @include tablet {
-                    font-size: 24px;
-                }
-                @include desktop {
-                    font-size: 40px;
-                }
+            .cards-description {
+                color: rgba(70, 70, 70, 0.7);
             }
 
-            //Conatiner created for grid
-            .wp-block-group__inner-container {
-                @include desktop {
-                    // display: grid;
-                    // grid-template-columns: repeat(3, 1fr);
-                }
-            }
-            
-            //First container about us description with different style
-            .first-grey-container {
-                background-color: rgba(211, 211, 211, 0.4);
-                padding: 24px;
-                border-radius: 5px;
+            ul {
+                margin: 0;
             }
 
-            .description {
-                padding: 24px;
-                border: 1px solid #d3d3d3;
-                border-radius: 5px;
-                background-color: #d3d3d3;
+            li {
+                list-style: none;
+                font-weight: 600;
             }
+
         }
 
         .wp-block-embed__wrapper {
