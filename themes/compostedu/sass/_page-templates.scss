@@ -61,6 +61,10 @@
 
 /* Header */
 .site-header {
+    a {
+        text-decoration: none;
+        color: $white;
+    }
     .first-sight-header {
         background-color: $pine;
         display: grid;
@@ -80,12 +84,11 @@
 
         li {
             margin: 10px 0;
-            .submenu {
-                width: 91%;
-                @include desktop {
-                    position: absolute;
-                }
-            }
+
+        }
+        ul {
+            position: absolute;
+            background-color: #192b21;
         }
     }
 
@@ -96,7 +99,7 @@
 
     }
     
-    .hide-primary-menu, .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu, .school-programs-hide-submenu {
+    .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu, .school-programs-hide-submenu {
         display: none;
     }
     
@@ -111,9 +114,11 @@
             }
 
             .hide-primary-menu {
+                display: none;
                 @include desktop {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     position: inherit;
                 }
             }
@@ -126,6 +131,12 @@
 
     .menu-toggle {
         background-color: $pine;
+    }
+
+    .donate {
+        padding: 10px 20px;
+        border: 1px solid $dull_red;
+        background-color: $dull_red;
     }
 
     .site-branding  {
