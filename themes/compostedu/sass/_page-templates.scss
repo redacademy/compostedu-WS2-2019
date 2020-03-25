@@ -2637,6 +2637,7 @@
                 
             }
         }
+
         //Conatiner to make grid work on desktop
         .membership-cards-container {
             @include desktop {
@@ -2710,7 +2711,6 @@
 
 
         .purchase-membership {
-            
             background-color: rgba(211, 211, 211, 0.2);
             padding: 15px 0;
 
@@ -2731,9 +2731,19 @@
         }
 
         .wpcf7 {
+
+            @include desktop {
+                @include default-padding-desktop;
+                
+            }
         
             .wpcf7-form {
                 background-color: rgba(211, 211, 211,0.2);
+                @include desktop {
+                    margin-left:0;
+                    width: 50%;
+                }
+               
             }
         }
 
@@ -2756,14 +2766,26 @@
             }
         }
 
-        
-        
-
         .purchase, .subscribe {
             background-color: #355a46;
             color: white;
             padding: 8px 20px;
             border-radius: 5px;
+        }
+
+        .subscribe-title {
+
+            @include desktop {
+                @include default-padding-desktop;
+            }
+        }
+        .two {
+
+            @include desktop {
+                @include default-padding-desktop;
+                width: 70%;
+            }
+
         }
     }
 }
