@@ -64,22 +64,28 @@
     .first-sight-header {
         background-color: $pine;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         color: $white;
-    }
+        grid-template-columns: 1fr 1fr 1fr;
+        @include desktop {
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 0;
+        }
 
-    .primary-menu, .sub-menu {
-        list-style-type: none;
-        background-color: #192b21;
-        width: 100%;
     }
     .primary-menu {
+        width: 100%;
         position: absolute;
         left: 0;
         margin: 0;
 
         li {
             margin: 10px 0;
+            .submenu {
+                width: 91%;
+                @include desktop {
+                    position: absolute;
+                }
+            }
         }
     }
 
@@ -87,10 +93,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
 
-    .hide-primary-menu, .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu {
+    }
+    
+    .hide-primary-menu, .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu, .school-programs-hide-submenu {
         display: none;
+    }
+    
+    .menu {
+        background-color: #192b21;
+        @include desktop {
+            grid-column: 2;
+            background-color: $pine;
+
+            .main-navigation {
+                margin-top: 30px;
+            }
+
+            .hide-primary-menu {
+                @include desktop {
+                    display: flex;
+                    justify-content: space-between;
+                    position: inherit;
+                }
+            }
+        }
     }
 
     .show {

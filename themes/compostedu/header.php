@@ -29,48 +29,54 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/images/header/menu.svg" alt="Menu Icon">
 							</button>
 							<ul id="primary-menu" class="primary-menu hide-primary-menu">
-								<li>Home</li>
+								<a href="<?php echo get_home_url() ?>"><li>Home</li></a>
+								
 								<li class="arrow activities">Activities <img id="arrow_right-activities" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
 									<ul id= "activities-submenu" class="activities-hide-submenu sub-menu">
-										<li>Adult Workshops</li>
-										<li>Community Workshops</li>
-										<li class="arrow school-programs">School Programs <img id="arrow_right2" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
-											<ul id="school-programs-submenu" class="school-programs-submenu sub-menu hide-submenu">
-												<li>About School Programs</li>
-												<li>Composting For Kids</li>
-												<li>Intermediate Programs</li>
-												<li>High School Programs</li>
+										<a href="<?php echo get_template_directory_uri();?>/archive-adult_workshop.php"><li>Adult Workshops</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/archive-community_workshop.php"><li>Community Workshops</li></a>
+										
+										<li class="arrow school-programs">School Programs <img id="arrow_right-school" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
+											<ul id="school-programs-submenu" class="school-programs-hide-submenu sub-menu">
+												<a href="<?php echo get_template_directory_uri();?>/page-about-school-programs.php"><li>About School Programs</li></a>
+												<a href="<?php echo get_template_directory_uri();?>/archive-composting_for_kids.php"><li>Composting For Kids</li></a>
+												<a href="<?php echo get_template_directory_uri();?>/archive-intermediate_program.php"><li>Intermediate Programs</li></a>
+												<a href="<?php echo get_template_directory_uri();?>/archive-high_school_program.php"><li>High School Programs</li></a>
 											</ul>
-										<li class="arrow healing-city-soils">Healing City Soils <img id="arrow_right3" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
+										
+										<li class="arrow healing-city-soils">Healing City Soils <img id="arrow_right-healing" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
 											<ul id="healing-city-soils-submenu" class="healing-city-soils-hide-submenu sub-menu">
-												<li>About Healing Soils</li>
-												<li>Victoria Soil Quality Map</li>
+												<a href="<?php echo get_template_directory_uri();?>"><li>About Healing Soils</li></a>
+												<a href="<?php echo get_template_directory_uri();?>/page-victoria-soil-quality-map.php"><li>Victoria Soil Quality Map</li></a>
 											</ul>
 									</ul>
+								
 								<li class="arrow resources">Resources <img id="arrow_right-resources" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
 									<ul id= "resources-submenu" class="resources-hide-submenu sub-menu ">
-										<li>Fact Sheets</li>
-										<li>Teaching Garden</li>
-										<li>Third Party Resources</li>
-										<li>Products</li>
+										<a href="<?php echo get_template_directory_uri();?>/page-fact-sheets.php"><li>Fact Sheets</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/paage-teaching-garden.php"><li>Teaching Garden</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/page-third-party-resources.php"><li>Third Party Resources</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/archive-product.php"><li>Products</li></a>
 									</ul>
 								</li>
+								
 								<li class="arrow get-involved">Get Involved <img id="arrow_right-get-involved" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
 									<ul id= "get-involved-submenu" class="get-involved-hide-submenu sub-menu">
-										<li>Membership</li>
-										<li>Donate</li>
-										<li>Volunteer</li>
+										<a href="<?php echo get_template_directory_uri();?>/page-membership.php"><li>Membership</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/page-donate.php"><li>Donate</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/page-volunteer.php"><li>Volunteer</li></a>
 									</ul>
+								
 								<li class="arrow about-us">About Us <img id="arrow_right-about-us" src="<?php echo get_template_directory_uri();?>/images/header/arrow-right.svg" alt="Arrow Right"></li>
 									<ul id= "about-us-submenu" class="sub-menu about-us-hide-submenu">
-										<li>Who We Are</li>
-										<li>People</li>
-										<li>News</li>
-										<li>Annual Reports</li>
-										<li>Funders</li>
+										<a href="<?php echo get_template_directory_uri();?>/page-who-we-are.php"><li>Who We Are</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/archive-people.php"><li>People</li></a>
+										<a href="<?php echo get_template_directory_uri();?>"><li>News</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/page-annual-reports.php"><li>Annual Reports</li></a>
+										<a href="<?php echo get_template_directory_uri();?>/page-funders"><li>Funders</li></a>
 									</ul>
-								<li>Contact Us</li>
-								<li class="donate">Donate</li>
+								<a href="<?php echo get_template_directory_uri();?>/page-contact-us.php"><li>Contact Us</li></a>
+								<a href="<?php echo get_template_directory_uri();?>/page-donate.php"><li class="donate">Donate</li></a>
 							</ul>
 						</nav>
 					</div>
@@ -84,10 +90,6 @@
 					<div id="form-wrapper" class="search-form-wrapper">
 						<?php echo get_search_form(); ?>
 					</div>
-				</div>
-
-				<div id="menu-bar" class="menu-bar hide-menu">
-					<?php wp_nav_menu() ?>
 				</div>
 			</header><!-- #masthead -->
 

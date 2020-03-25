@@ -96,3 +96,38 @@
         }
     }
 }());
+
+// Toggle school programs sub menu 
+(function(){
+    let arrowSchool = document.getElementById('arrow_right-school');
+    arrowSchool.onclick = function(toggle_school) {
+        toggle_school.preventDefault();
+        let schoolPrograms = document.getElementById('school-programs-submenu');
+
+        if(document.querySelector('.school-programs-hide-submenu')) {
+            schoolPrograms.classList.remove('school-programs-hide-submenu');
+            schoolPrograms.classList.add('show');
+        } else {
+            schoolPrograms.classList.remove('show');
+            schoolPrograms.classList.add('school-programs-hide-submenu');
+        }
+    }
+}());
+
+
+// Toggle heaaling city soils sub menu
+(function(){
+    let arrowHealing = document.getElementById('arrow_right-healing');
+    arrowHealing.onclick = function(toggle_healing) {
+        toggle_healing.preventDefault();
+        let healingCitySoils = document.getElementById('healing-city-soils-submenu');
+
+        if(document.querySelector('.healing-city-soils-hide-submenu')) {
+            healingCitySoils.classList.remove('healing-city-soils-hide-submenu');
+            healingCitySoils.classList.add('show');
+        } else {
+            healingCitySoils.classList.remove('show');
+            healingCitySoils.classList.add('healing-city-soils-hide-submenu')
+        }
+    }
+}());
