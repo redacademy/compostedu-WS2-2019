@@ -2089,6 +2089,7 @@
             @include default-padding-desktop;
         }
 
+        //Container to display grid
         .main-content-container-grid {
             @include desktop {
             display: grid;
@@ -2096,6 +2097,7 @@
             }
         }
 
+        //Grey container that span two columns
         .span-container {
             @include desktop {
             display: grid;
@@ -2136,6 +2138,7 @@
             }
         }
 
+        //Cards that had different margin 
         .card-container.one {
             @include desktop {
                 margin-left: 0px;
@@ -2169,8 +2172,15 @@
             }
 
         }
-
+        
+        //Youtube video margin on left to fit content 
+        figure.wp-block-embed-youtube.wp-block-embed.is-type-video.is-provider-youtube.wp-embed-aspect-16-9.wp-has-aspect-ratio{
+            @include desktop {
+                margin-left: 0px;
+            }
+        }
         .wp-block-embed__wrapper {
+
             
             iframe {
                 height: 192px;
@@ -2179,6 +2189,7 @@
                 @include desktop {
                     width: 100%;
                     height: 650px;
+                    margin-left: 0px;
                 }
             }
         }
