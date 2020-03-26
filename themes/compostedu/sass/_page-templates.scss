@@ -957,6 +957,36 @@
 .page-about-school-programs { 
     .entry-content {
         @include default-padding;
+        @include desktop {
+            @include default-padding-desktop;
+            margin-top: 0;
+        }
+    }
+    
+    //Container created for grid on first section
+    .main-grid-container-school {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 64% 34%;
+            grid-gap: 16px;
+        }
+
+        .hentry {
+            @include desktop {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                border: 1px solid #d3d3d3;
+                .p-small-size {
+                    font-size: 13px;
+                }
+            }
+
+            .card-img-container {
+                @include desktop {
+                    padding: 15px;
+                }
+            }
+        }
     }
 }
 
@@ -970,19 +1000,52 @@
     width: 100%;
     height: 320px;
 
+    @include tablet {
+        height: 500px;
+
+    }
+    @include desktop {
+        height: 800px;
+
+    }
+
     .entry-title {
         color: $color__background-body;
         font-weight: 600;
         line-height: 0.43;
         font-size: 7.3vw;
         padding-top: 65px;
+        @include tablet {
+            font-size: 40px;
+    
+        }
+        @include desktop {
+            font-size: 64px;
+    
+        }
     }
 
     p {
         color: #fffdf7;
         text-align: center;
+        @include tablet {
+            font-size: 20px;
+    
+        }
+        @include desktop {
+            font-size: 24px;
+            width: 50%;
+    
+        }
     }
 
+}
+
+.school-main-title {
+    @include desktop {
+        @include default-padding-desktop;
+        margin-bottom: 10px;
+    }
 }
 
 .images-school-programs {
@@ -990,6 +1053,9 @@
     height: 200px;
     border-radius: 5px;
     border: solid 1px rgba(70, 70, 70, 0.3);
+    @include desktop {
+        height: 257px;
+    }
 }
 
 .image-school-programs-content {
