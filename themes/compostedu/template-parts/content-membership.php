@@ -29,5 +29,20 @@
 		</section>
 
 		<?php the_content(); ?>
+
+		<div class='subcribe-main-container'>
+			<h2 class='subscribe-title'>Subscribe To Our Newsletter!</h2>
+			<p>Interested in keeping in touch with us?  The Latest Dirt is our monthly newsletter that keeps you in the loop about all our workshops and special events.
+					You can subscribe to our newsletter using the form below. We love keeping in touch but we also make it easy for you to unsubscribe at any point.</p>
+					<div class='subscribe-container'>
+					<form class='newsletter-subscription-form'>
+					<label for='name'>Name</label><br>
+					<input class='subscribe-input'  type="text" id="fname" name="fname"><br>
+					<label for='email'>Email Address</label><br>
+					<input class='subscribe-input'  type="text" id="fname" name="fname"><br>
+					<button class='subscribe-btn'>Subscribe</button>
+					</form>
+				</div>
+		</div>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

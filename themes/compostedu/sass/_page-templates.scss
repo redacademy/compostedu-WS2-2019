@@ -2730,7 +2730,9 @@
 
                 .wp-block-group {
                     background-color: #fffdf7;
-                    border: 1px solid $pine;
+                    @include desktop {
+                        width: 50%;
+                    }
                     form {
                         padding: 0;
                     }
@@ -2746,7 +2748,7 @@
             }
         
             .wpcf7-form {
-                background-color: rgba(211, 211, 211,0.2);
+                background-color: rgba(211, 211, 211,0);
                 @include desktop {
                     margin-left:0;
                     width: 50%;
@@ -2796,6 +2798,93 @@
                 width: 70%;
             }
 
+        }
+    }
+
+    
+    .subcribe-main-container {
+
+        //Desktop padding for main container
+        @include desktop {
+            @include default-padding-desktop;
+        }
+        
+        // Mobile padding to main contaier
+        @include default-padding;
+        
+       .subscribe-title {
+           @include desktop {
+               padding: 0;
+           }
+       }
+        h2 {
+            color: $pine;
+            font-size: 20px;
+            margin-left: 0;
+            @include tablet {
+                font-size: 24px;
+            }
+            @include desktop {
+                font-size: 40px;
+            }
+        }
+    
+        p {
+            @include desktop {
+                width: 572px;
+            }
+        }
+    
+    
+        .subscribe-container {
+            display: flex;
+            justify-content: center;
+    
+            
+            @include desktop {
+                justify-content: flex-start;
+                
+            }
+    
+            .newsletter-subscription-form {
+                background-color: rgba(211, 211, 211, 0.4);
+                padding: 25px;
+                width: 341px;
+                display: flex;
+                border-radius: 5px;
+                flex-direction: column;
+                
+                @include desktop {
+                    width: 572px;
+                    
+                }
+                @include desktop {
+                    margin-left: 0;
+                }
+    
+            }
+    
+        .subscribe-input {
+            width: 294px;
+            height: 40px;
+            border: 0;
+            border-radius: 5px;
+            margin-bottom: 16px;
+            
+            @include desktop {
+                width: 510px;
+                
+            }
+    
+            }
+    
+            .subscribe-btn {
+                border-radius: 5px;
+                margin: 16px 0px;
+                color: white;
+                width: 110px;
+                background-color: #355a46;
+            }
         }
     }
 }
