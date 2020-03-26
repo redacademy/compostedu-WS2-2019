@@ -3386,4 +3386,235 @@
 }
 
 
+// About Healing City Soils
+.healing-city-soils-site-main {
+    .entry-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/healing-city-soils/about-healing-city-soils-hero-edited@2x.jpg) no-repeat top;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 320px;
+        @include desktop {
+            height: 600px;
+        }
 
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 15px;
+            color: $white;
+
+            .entry-title {
+                color: $white;
+                @include desktop {
+                    font-size: 4em;
+                }
+            }
+
+            .healind-soil-title-description {
+                @include desktop {
+                    width: 40%;
+                    text-align: center;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    .entry-content {
+        padding: 20px 15px;
+        @include desktop {
+            padding: 20px 10%;
+        }
+
+        h2 {
+            color: $pine;
+            margin: 10px 0;
+            @include desktop {
+                font-size: 2.5em;
+            }
+        }
+
+        .first-section {
+            .wp-block-group__inner-container {
+                @include desktop {
+                    display: grid;
+                    grid-auto-columns: 2fr 1fr;
+                    grid-template-rows: 0fr 0fr;
+                }
+
+                h2 {
+                    @include desktop {
+                        grid-row: 1;
+                        grid-column: 1;
+                    }
+                }
+
+                p {
+                    @include desktop {
+                        grid-row: 2;
+                        grid-column: 1;
+                    }
+                }
+                
+                .apply-now {
+                    padding: 30px;
+                    border: solid 1px $mocha;
+                    border-radius: 5px;
+                    background-color: $mocha;
+                    color: $white;
+                    @include desktop {
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+                    
+                    h2 {
+                        color: $white;
+                    }
+                    
+                    .apply-now-button {
+                        text-decoration: none;
+                        color: $mocha;
+                        padding: 10px 15px;
+                        border: solid 1px $white;
+                        border-radius: 5px;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        .second-section {
+            background-color: #d3d3d3;
+            width: 100%;
+
+            .wp-block-group__inner-container {
+                margin: 20px;
+                @include desktop {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 0fr 0fr;
+                }
+                h2{
+                    @include desktop {
+                        grid-row: 1;
+                        grid-column: 1;
+                    }
+                }
+                .visit-website {
+                    @include desktop {
+                        grid-row: 2;
+                        margin: 10px;
+                    }
+                    .wp-block-group__inner-container{
+                        border-bottom: solid 1px #d3d3d3;
+                        margin: 20px 0;
+                        margin-bottom: 4%;
+                        @include desktop {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        
+                        figure {
+                            margin: 0;
+                            width: 100%;
+                            
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        
+                        p {
+                            width: 60%;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                        }
+                        
+                        a::after {
+                            content: '\f061';
+                            font-family: 'Font Awesome 5 free';
+                            font-weight: 900;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .visit-website:hover {
+                    a {
+                        font-size: 1.5em;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        .third-section {
+            .wp-block-group__inner-container {
+                @include desktop {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: 0fr 0fr 0fr 0fr;
+                }
+                h2 {
+                    @include desktop {
+                        grid-row: 1;
+                        grid-column: 1;
+                    }
+                }
+                p {
+                    @include desktop {
+                        grid-row: 2;
+                    }
+                }
+                figure {
+                    @include desktop {
+                        grid-row: 3;
+                    }
+                }
+                .test-results {
+                    padding: 30px;
+                    border: solid 1px $mocha;
+                    border-radius: 5px;
+                    background-color: $mocha;
+                    color: $white;
+                    @include desktop {
+                        grid-row: 2;
+                        grid-column: 2;
+                    }
+                    
+                    h2 {
+                        color: $white;
+                    }
+                }
+                
+                .contact-us-form {
+                    margin: 20px 0;
+                    padding: 30px;
+                    border: solid 1px $mocha;
+                    border-radius: 5px;
+                    background-color: $mocha;
+                    color: $white;
+                    @include desktop {
+                        grid-row: 3;
+                        grid-column: 2;
+                    }
+                    .wp-block-group__inner-container {
+                        @include desktop {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                    
+                    h2 {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
