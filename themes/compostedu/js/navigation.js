@@ -4,130 +4,106 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-
-
-// Toggle primary menu whe button is clicked
 (function() {
-    let menuButton = document.getElementById('menu-button');
-    menuButton.onclick = function(toggle_menu) {
-        toggle_menu.preventDefault();
-        let primaryMenuItems = document.getElementById('primary-menu');
-
-        if(document.querySelector('.hide-primary-menu')) {
-            primaryMenuItems.classList.remove('hide-primary-menu');
-            primaryMenuItems.classList.add('show');
-            // JS to display menu items
-        }
-        else {
-            primaryMenuItems.classList.remove('show');
-            primaryMenuItems.classList.add('hide-primary-menu');
-            // JS to hide menu items
-        }
+    let container, button, menu, links, i, len;
+  
+    container = document.getElementById('site-navigation');
+    if (!container) {
+      return;
     }
-}());
-
-// Toggle about us sub menu when arrow right icon is clicked
-(function() {
-    let arrowRight = document.getElementById('arrow_right-about-us');
-    arrowRight.onclick = function(toggle_aboutUs) {
-        toggle_aboutUs.preventDefault();
-        let aboutUsSubMenuItems = document.getElementById('about-us-submenu');
-
-        if(document.querySelector('.about-us-hide-submenu')) {
-            aboutUsSubMenuItems.classList.remove('about-us-hide-submenu');
-            aboutUsSubMenuItems.classList.add('show');
-            // JS to display sub menu items
-        }
-        else {
-            aboutUsSubMenuItems.classList.remove('show');
-            aboutUsSubMenuItems.classList.add('about-us-hide-submenu');
-            // JS to hide sub menu items
-        }   
+  
+    button = container.getElementsByTagName('button')[0];
+    if ('undefined' === typeof button) {
+      return;
     }
-}());
-
-// Toggle get involved sub meenu
-(function(){
-    let arrowGetInvolved = document.getElementById('arrow_right-get-involved');
-    arrowGetInvolved.onclick = function(toggle_getInvolved) {
-        toggle_getInvolved.preventDefault();
-        let getInvolved = document.getElementById('get-involved-submenu');
-
-        if(document.querySelector('.get-involved-hide-submenu')) {
-            getInvolved.classList.remove('get-involved-hide-submenu');
-            getInvolved.classList.add('show');
-        } else {
-            getInvolved.classList.remove('show');
-            getInvolved.classList.add('get-involved-hide-submenu');
-        }
+  
+    menu = container.getElementsByTagName('ul')[0];
+  
+    // Hide menu toggle button if menu is empty and return early.
+    if ('undefined' === typeof menu) {
+      button.style.display = 'none';
+      return;
     }
-}());
-
-// Toggle resources sub menu
-(function(){
-    let arrowResources = document.getElementById('arrow_right-resources');
-    arrowResources.onclick = function(toggle_resources) {
-        toggle_resources.preventDefault();
-        let resources = document.getElementById('resources-submenu');
-
-        if(document.querySelector('.resources-hide-submenu')) {
-            resources.classList.remove('resources-hide-submenu');
-            resources.classList.add('show');
-        } else {
-            resources.classList.remove('show');
-            resources.classList.add('resources-hide-submenu');
-        }
+  
+    menu.setAttribute('aria-expanded', 'false');
+    if (-1 === menu.className.indexOf('nav-menu')) {
+      menu.className += ' nav-menu';
     }
-}());
-
-// Toggle activities sub menu
-(function(){
-    let arrowActivities = document.getElementById('arrow_right-activities');
-    arrowActivities.onclick = function(toggle_activities) {
-        toggle_activities.preventDefault();
-        let activities = document.getElementById('activities-submenu');
-
-        if(document.querySelector('.activities-hide-submenu')) {
-            activities.classList.remove('activities-hide-submenu');
-            activities.classList.add('show');
-        } else {
-            activities.classList.remove('show');
-            activities.classList.add('activities-hide-submenu');
-        }
+  
+    button.onclick = function() {
+      if (-1 !== container.className.indexOf('toggled')) {
+        container.className = container.className.replace(' toggled', '');
+        button.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-expanded', 'false');
+      } else {
+        container.className += ' toggled';
+        button.setAttribute('aria-expanded', 'true');
+        menu.setAttribute('aria-expanded', 'true');
+      }
+    };
+  
+    // Get all the link elements within the menu.
+    links = menu.getElementsByTagName('a');
+  
+    // Each time a menu link is focused or blurred, toggle focus.
+    for (i = 0, len = links.length; i < len; i++) {
+      links[i].addEventListener('focus', toggleFocus, true);
+      links[i].addEventListener('blur', toggleFocus, true);
     }
-}());
-
-// Toggle school programs sub menu 
-(function(){
-    let arrowSchool = document.getElementById('arrow_right-school');
-    arrowSchool.onclick = function(toggle_school) {
-        toggle_school.preventDefault();
-        let schoolPrograms = document.getElementById('school-programs-submenu');
-
-        if(document.querySelector('.school-programs-hide-submenu')) {
-            schoolPrograms.classList.remove('school-programs-hide-submenu');
-            schoolPrograms.classList.add('show');
-        } else {
-            schoolPrograms.classList.remove('show');
-            schoolPrograms.classList.add('school-programs-hide-submenu');
+  
+    /**
+     * Sets or removes .focus class on an element.
+     */
+    function toggleFocus() {
+      let self = this;
+  
+      // Move up through the ancestors of the current link until we hit .nav-menu.
+      while (-1 === self.className.indexOf('nav-menu')) {
+        // On li elements toggle the class .focus.
+        if ('li' === self.tagName.toLowerCase()) {
+          if (-1 !== self.className.indexOf('focus')) {
+            self.className = self.className.replace(' focus', '');
+          } else {
+            self.className += ' focus';
+          }
         }
+  
+        self = self.parentElement;
+      }
     }
-}());
-
-
-// Toggle heaaling city soils sub menu
-(function(){
-    let arrowHealing = document.getElementById('arrow_right-healing');
-    arrowHealing.onclick = function(toggle_healing) {
-        toggle_healing.preventDefault();
-        let healingCitySoils = document.getElementById('healing-city-soils-submenu');
-
-        if(document.querySelector('.healing-city-soils-hide-submenu')) {
-            healingCitySoils.classList.remove('healing-city-soils-hide-submenu');
-            healingCitySoils.classList.add('show');
-        } else {
-            healingCitySoils.classList.remove('show');
-            healingCitySoils.classList.add('healing-city-soils-hide-submenu')
+  
+    /**
+     * Toggles `focus` class to allow submenu access on tablets.
+     */
+    (function(container) {
+      let touchStartFn,
+        i,
+        parentLink = container.querySelectorAll(
+          '.menu-item-has-children > a, .page_item_has_children > a'
+        );
+  
+      if ('ontouchstart' in window) {
+        touchStartFn = function(e) {
+          let menuItem = this.parentNode,
+            i;
+  
+          if (!menuItem.classList.contains('focus')) {
+            e.preventDefault();
+            for (i = 0; i < menuItem.parentNode.children.length; ++i) {
+              if (menuItem === menuItem.parentNode.children[i]) {
+                continue;
+              }
+              menuItem.parentNode.children[i].classList.remove('focus');
+            }
+            menuItem.classList.add('focus');
+          } else {
+            menuItem.classList.remove('focus');
+          }
+        };
+  
+        for (i = 0; i < parentLink.length; ++i) {
+          parentLink[i].addEventListener('touchstart', touchStartFn, false);
         }
-    }
-}());
+      }
+    })(container);
+  })();
