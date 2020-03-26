@@ -13,8 +13,10 @@
             <p class ='contact-us-header-address'>250-386-WORM (9676) </p>
             <p>1216 North Park Street<br>Victoria, BC, V8T 1C9</p>
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+	
 </article><!-- #post-## -->
+<div class="entry-content">
+	<div class ='test'>
+		<?php the_content(); ?>
+
+

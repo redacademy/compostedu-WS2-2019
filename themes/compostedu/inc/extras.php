@@ -46,3 +46,51 @@ add_filter( 'rest_prepare_post', function( $response, $post, $request ) {
 	  return $response;
   }, 10, 3 );
 
+function red_starter_widgets_contactus_init() {
+	register_sidebar( array(
+		'name'          => esc_html( 'ContactUs' ),
+		'id'            => 'contactus-1',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="contact-us-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'red_starter_widgets_contactus_init' );
+
+add_filter( 'excerpt_length', function($length) {
+    return 10;
+} );
+
+function add_query_vars_filter( $vars ){
+	$vars[] = "adult_workshop_date";
+	$vars[] = "adult_workshop_taxonomy_name";
+	return $vars;
+  }
+  
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+function template_chooser( $template ){
+    global $wp_query;   
+    $post_type = get_query_var('post_type');   
+	if (isset($_GET['s']) && isset($_GET['post_type']) && $_GET['post_type'] == 'adult_workshop') { 
+        return locate_template('search-adult-workshop.php');  //  redirect to archive-search.php
+    }   
+    return $template;   
+}
+add_filter( 'template_include', 'template_chooser' ); 
+
+function mySearchFilter($query) {
+	if (isset($_GET['post_type'])) { 
+    	if ($query->is_search) {
+			$query->set('post_type', $_GET['post_type']);
+	  	}	
+	}
+    return $query;
+}
+
+add_filter('pre_get_posts','mySearchFilter');
+
+
+

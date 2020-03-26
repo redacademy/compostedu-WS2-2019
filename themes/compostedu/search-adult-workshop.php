@@ -65,65 +65,74 @@ get_header(); ?>
 						<p>A non-profit organization with charitable status providing composting and ecological gardening educational to residents</p>
 						<a class="btn-white-mocha" href="#">Read More</a>
 					</section> -->
-					
+
 				</div>
 
 				<div>
-				
-					<?php 
 
-						$meta_query = array ();
-						if (isset($adult_workshop_date)) {
-							$meta_query = array(
-								array(
-									'key' => 'date',
-									'value' => $adult_workshop_date,
-									'type' => 'DATE',
-									'compare' => '=='
-								)
-							);
-						}
-					
-						$taxonomy_query = array ();
-						if (isset($adult_workshop_taxonomy_name)) {
-							if ($adult_workshop_taxonomy_name !== 'all') {
-								$taxonomies_query_string = explode(',',$adult_workshop_taxonomy_name);
-								if (!empty($taxonomies_query_string)) {
-									foreach ($taxonomies_query_string as &$taxonomy_query_string) {
-										array_push($taxonomy_query, array (
-											'taxonomy' => 'adult_workshop_taxonomy',
-											'field' => 'slug',
-											'terms' => $taxonomies_query_string,
-										));
-									}
+				<?php 
+
+					$meta_query = array ();
+					if (isset($adult_workshop_date)) {
+						$meta_query = array(
+							array(
+								'key' => 'date',
+								'value' => $adult_workshop_date,
+								'type' => 'DATE',
+								'compare' => '=='
+							)
+						);
+					}
+
+					$taxonomy_query = array ();
+					if (isset($adult_workshop_taxonomy_name)) {
+						if ($adult_workshop_taxonomy_name !== 'all') {
+							$taxonomies_query_string = explode(',',$adult_workshop_taxonomy_name);
+							if (!empty($taxonomies_query_string)) {
+								foreach ($taxonomies_query_string as &$taxonomy_query_string) {
+									array_push($taxonomy_query, array (
+										'taxonomy' => 'adult_workshop_taxonomy',
+										'field' => 'slug',
+										'terms' => $taxonomies_query_string,
+									));
 								}
 							}
 						}
+					}
 
-						$date_query = array(
-							'year'  => 2020,
-							'month' => 3,
-							'day'   => 10,
+					$date_query = array(
+						'year'  => 2020,
+						'month' => 3,
+						'day'   => 10,
+					);
+
+					$wpb_all_query = new WP_Query(array(
+						'post_type'=>'adult_workshop', 
+						'post_status'=>'publish', 
+						'posts_per_page'=>-1,
+						'tax_query' => $taxonomy_query,
+						'meta_query' => $meta_query
+						// 'date_query' => array(
+						// 	'year'  => 2020,
+						// 	'month' => 3,
+						// 	'day'   => 10,
+						// )
+						)
+					);
+					
+					$args = array(
+						'post_type'=> 'adult_workshop',
+						's'    => $s,
+						'paged' => $paged,
+						'tax_query' => $taxonomy_query,
+						'meta_query' => $meta_query
 						);
-					
-						$wpb_all_query = new WP_Query(array(
-							'post_type'=>'adult_workshop', 
-							'post_status'=>'publish', 
-							'posts_per_page'=>-1,
-							'tax_query' => $taxonomy_query,
-							'meta_query' => $meta_query
-							// 'date_query' => array(
-							// 	'year'  => 2020,
-							// 	'month' => 3,
-							// 	'day'   => 10,
-							// )
-							)
-						); 
-					
-					?>
+					query_posts($args);
+
+				?>
 
 					<?php /* Start the Loop */ ?>
-					<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
 							get_template_part( 'template-parts/content', 'adult-workshop' );
@@ -139,7 +148,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php get_template_part( 'template-parts/content', 'adult-workshop-none' ); ?>
 
 		<?php endif; ?>
 
@@ -147,3 +156,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
+

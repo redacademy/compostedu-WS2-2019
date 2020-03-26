@@ -2,6 +2,124 @@
 
     $(function() {
 
+        // Adult Workshop DatePicker Filter
+
+        $('.adult-workshop-datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            onSelect: function() {
+                redirectForSearch('adult_workshop_date=' + this.value, restVars.base_url + '/adult_workshop/');
+            }
+        });
+
+        let adultWorkshopDate = getParameterByName('adult_workshop_date');
+        if (adultWorkshopDate) {
+            $('.button-show-calendar').addClass('button-hide-calendar');
+            $('.adult-workshop-datepicker').show();
+            $('.adult-workshop-datepicker').datepicker( 'setDate', adultWorkshopDate );
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) { 
+                url = window.location.href;
+            }
+            name = name.replace(/[[]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) {
+                return null;
+            }
+            if (!results[2]) {
+                return '';
+            }
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+       // Adult Workshop CheckBox Filter
+
+       $('.adult-workshop-filter').click(function() {
+            let selectedFilters = [];
+            $('.adult-workshop-all-filter').prop('checked', false );
+            $('.adult-workshop-filter:checked').each(function() {
+                selectedFilters.push($(this).val());
+            });
+
+            if (selectedFilters.length > 0) {
+                let selectedFiltersText = selectedFilters.join(',');
+                redirectForSearch('adult_workshop_taxonomy_name=' + selectedFiltersText, restVars.base_url + '/adult_workshop/');
+            } else {
+                redirectForSearch('', restVars.base_url + '/adult_workshop/');
+            }
+      });
+
+        $('.adult-workshop-all-filter').click(function() {
+            if ($(this).is(':checked')) {
+                $('.adult-workshop-filter:checked').each(function() {
+                    $(this).prop('checked', false );
+                });
+                redirectForSearch('adult_workshop_taxonomy_name=all', restVars.base_url + '/adult_workshop/');
+            } else {
+                redirectForSearch('', restVars.base_url + '/adult_workshop/');            
+            }
+        
+        });
+
+        let adultWorkshopTaxonomies = getParameterByName('adult_workshop_taxonomy_name');
+        if (adultWorkshopTaxonomies && adultWorkshopTaxonomies.length > 0) {
+            $('.button-show-filters').addClass('button-hide-filters');
+            $('.filters-aw-list').show();
+            let adultWorkshopTaxonomiesList = adultWorkshopTaxonomies.split(',');
+
+            $('.adult-workshop-filter, .adult-workshop-all-filter').each(function() {
+
+                let checkBoxElement = $(this);
+                let taxonomyFilter = $(this).val();
+                    
+                adultWorkshopTaxonomiesList.forEach(function(queryStringTaxonomy) {
+                    if (taxonomyFilter === queryStringTaxonomy) {
+                        checkBoxElement.prop('checked', true );
+                    }
+                });
+                    
+            });
+        }
+
+      function redirectForSearch(queryString, url) {
+            if (!url) { 
+                url = window.location.href;
+            }
+            if(url.indexOf('?') > 0) {
+                url = url.substring(0, url.indexOf('?'));
+            } 
+            url += '?' + queryString;
+            window.location.replace(url);
+      }
+
+      // button show calendar
+
+      $('.button-show-calendar').click(function() {
+          if ($( '.adult-workshop-datepicker' ).is(':visible')) {
+            $(this).removeClass('button-hide-calendar');
+            $( '.adult-workshop-datepicker' ).hide( 'slow' );
+          } else {
+            $(this).addClass('button-hide-calendar');
+            $( '.adult-workshop-datepicker' ).show( 'slow' );
+          } 
+          
+      });
+
+       // button show filtes
+
+       $('.button-show-filters').click(function() {
+        if ($( '.filters-aw-list' ).is(':visible')) {
+          $(this).removeClass('button-hide-filters');
+          $( '.filters-aw-list' ).hide( 'slow' );
+        } else {
+          $(this).addClass('button-hide-filters');
+          $( '.filters-aw-list' ).show( 'slow' );
+        } 
+        
+    });
+
         if( $('body.blog').length ) {
 
             $.ajax({
@@ -183,12 +301,38 @@
             view.click(function(e) {
                 e.preventDefault();
                 let content = $(this).siblings('.displayed-content');
+                
                 if (content.is(':visible')) {
+                    let parent = $(this).parent();
+                    let id = parent.attr('id');
                     $(this).text('Read more');
-                    $(this).siblings('.displayed-content').hide('slow');
+                    $(this).siblings('.displayed-content').hide('slow', function() {
+                        $('.expand-item').each(function() {
+                            if ($(this).attr('id') !== id) {
+                                $(this).height('');
+                            }
+                        });
+                    });
                 } else {
+                    let parent = $(this).parent();
+                    let height = parent.height();
+                    let id = parent.attr('id');
+                    $('.expand-item').each(function() {
+                        
+                        if ((!($(this).find('.displayed-content')).is(':visible'))) {
+                                $(this).height(''); 
+                        } else {
+                                $(this).find('.view-click').text('Read more');
+                                $(this).find('.displayed-content').hide();
+                        }
+
+                        if ($(this).attr('id') !== id) {
+                            $(this).height(height);
+                        }
+                    });
+
                     $(this).text('Read less');
-                    $(this).siblings('.displayed-content').show('slow');
+                    $(this).siblings('.displayed-content').slideDown('slow');
                 }
             });
         }
@@ -204,4 +348,4 @@
         }
     });
 
-})( jQuery );
+})( jQuery, this );

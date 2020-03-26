@@ -15,15 +15,16 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'single-post' ); ?>
 
 			<div class="news-nav-links">
-				<div class="news-nav-link-content">
-					<i class="fas fa-arrow-left"></i> <?php next_post_link('%link') ;?>
+				<hr/>
+				<div class="news-nav-link-content next-link">
+					<?php next_post_link('<i class="fas fa-arrow-left"></i> %link') ;?>
 				</div>
 				<hr/>
-				<div class="news-nav-link-content">
-					<?php previous_post_link('%link') ?> <i class="fas fa-arrow-right"></i>
+				<div class="news-nav-link-content previous-link">
+					<?php previous_post_link('%link <i class="fas fa-arrow-right"></i>') ?>
 				</div>
 				<hr/>
-			</div> 
+			</div>
 
 		<?php endwhile; // End of the loop. ?>
 

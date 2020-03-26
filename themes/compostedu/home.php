@@ -12,30 +12,34 @@ get_header(); ?>
 
 		<section class="news-short-content">
 
-			<article class="article-news-top">
+			<div class="new-short-item-1">
 				<img class="news-img-top" alt="">
+			</div>
 
-				<header class="entry-header">
-					<h1 class="entry-title entry-title-top"></h1> </header>
-				<!-- .entry-header -->
+			<div class="new-short-item-2">
+				<article class="article-news-top">
+					<header class="entry-header">
+						<h1 class="entry-title entry-title-top"></h1> </header>
+					<!-- .entry-header -->
 
-				<div class="entry-content entry-content-top">
-					<p></p>
-				</div>
-				<!-- .entry-content -->
+					<div class="entry-content entry-content-top">
+						<p></p>
+					</div>
+					<!-- .entry-content -->
 
-				<div class="news-information-container">
-					<div><i class="far fa-folder"></i></div>
-					<div class="news-categories-top"></div>
-					<div><i class="far fa-calendar"></i></div>
-					<div class="news-date-top"></div>
-				</div>
-			</article>
-			
-			<div class="news-buttons-content">
-				<button id="new-next-button" class="news-slider-button slider-next" type="button"><i class="fas fa-chevron-left"></i></button>
-				<a id="new-red-more-button" class="btn-pine news-read-more" type="button">Read more</a>
-				<button id="new-previous-button" class="news-slider-button slider-previous" type="button"><i class="fas fa-chevron-right"></i></button>
+					<div class="news-information-container">
+						<div><i class="far fa-folder"></i></div>
+						<div class="news-categories-top"></div>
+						<div><i class="far fa-calendar"></i></div>
+						<div class="news-date-top"></div>
+					</div>
+
+					<div class="news-buttons-content">
+						<button id="new-next-button" class="news-slider-button slider-next" type="button"><i class="fas fa-chevron-left"></i></button>
+						<a id="new-red-more-button" class="btn-pine news-read-more" type="button">Read more</a>
+						<button id="new-previous-button" class="news-slider-button slider-previous" type="button"><i class="fas fa-chevron-right"></i></button>
+					</div>
+				</article>
 			</div>
 
 		</section>
@@ -50,14 +54,20 @@ get_header(); ?>
 					</header>
 				<?php endif; ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<section class="news-container">
 
-					<?php get_template_part( 'template-parts/content', 'news' ); ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
+						<?php get_template_part( 'template-parts/content', 'news' ); ?>
 
-				<?php red_starter_numbered_pagination(); ?>
+					<?php endwhile; ?>
+
+				</section>
+
+				<section class="news-pagination">
+					<?php red_starter_numbered_pagination(); ?>
+				</section>
 
 			<?php else : ?>
 

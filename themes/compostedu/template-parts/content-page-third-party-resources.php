@@ -25,7 +25,7 @@
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-	<div class="entry-content">
+	<div class="entry-content topic-tps-grid">
 		<div class="topic-tps">Topics</div>
 
 		<div class="type-tps-content topic-anchor">
@@ -40,15 +40,17 @@
 	<?php foreach($types as $type): ?>
 		<div id="<?php echo sha1($type)?>-tps-id" class="entry-content type-box-tps-content">
 			<h1><?php echo $type ?></h1>
-			<?php foreach($third_party_resources as $third_party_resource): ?>
-				<?php if ($type == $third_party_resource['type']): ?>
-					<div class="box-tps">
-						<h2><?php echo $third_party_resource['title']?></h2>
-						<a class="view-link view-click" href="#">Read more</a>
-						<div class="displayed-content" style="display:none;"><?php echo $third_party_resource['content']?></div>
-					</div>
-				<?php endif; ?>
-			<?php endforeach; ?>
+			<section class="tps-container">
+				<?php foreach($third_party_resources as $third_party_resource): ?>
+					<?php if ($type == $third_party_resource['type']): ?>
+						<div id="<?php echo sha1($third_party_resource['title'])?>-box-tps-id" class="box-tps expand-item">
+							<h2><?php echo $third_party_resource['title']?></h2>
+							<a class="view-link view-click" href="#">Read more</a>
+							<div class="displayed-content" style="display:none;"><?php echo $third_party_resource['content']?></div>
+						</div>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			</section>
 		</div>
 	<?php endforeach; ?>
 
