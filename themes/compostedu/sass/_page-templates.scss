@@ -2801,6 +2801,20 @@
                     }
                     form {
                         padding: 0;
+
+                        .purchase {
+                                width: 35%;
+                                @include tablet {
+                                    width: 30%;
+                                }
+                                @include desktop {
+                                    width: 50%;
+                                }
+                            a {
+                                color: $white;
+                                text-decoration: none;
+                            }
+                        }
                     }
                 }
             }
