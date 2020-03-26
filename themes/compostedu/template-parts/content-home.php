@@ -22,7 +22,7 @@
 			<div class="fp-content">
 				<?php the_content(); ?>
 				<div class="fp-about-div">
-					<a class="fp-about-link btn-red">Learn more about us</a>
+					<a href="<?php echo get_permalink( get_page_by_title( 'Who We Are' ) ); ?>" class="fp-about-link btn-red">Learn more about us</a>
 				</div>
 			</div>
 

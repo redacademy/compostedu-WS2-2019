@@ -1,0 +1,322 @@
+
+//when is not desktop
+
+.logo-img {
+    height: 50px;
+}
+
+.menu-item-donate {
+    @include default-a-btn;
+    text-align: left;
+}
+
+.search-menu-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-field-menu {
+    background-color: #355a46;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.search-field-menu::placeholder {
+    color: white;
+}
+
+.show-search-menu {
+    display: none;
+    border-color: white;
+}
+
+.show-search-button-menu {
+    display: none;
+}
+
+.button-search-menu {
+    background-color: #355a46;
+    padding: 0;
+    height: 6px;
+    font-size: 1rem;
+    color: white;
+}
+
+.compostedu-menu {
+    background-color: #355a46;;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .compostedu-menu-item-3 {
+        margin-right: 20px;
+    }
+}
+
+.compostedu-menu-desktop {
+    background-color: #355a46;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .compostedu-menu-item-desktop-1 {
+        display: none;
+    }
+
+    .compostedu-menu-item-desktop-2 {
+        flex-grow: 1;
+    }
+
+    .compostedu-menu-item-desktop-3 {
+        display: none;
+    }
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    }
+
+    #menu .main-menu {
+    display: none;
+    }
+
+    #tm:checked + .main-menu {
+    display: block;
+    }
+
+    #menu input[type="checkbox"], 
+    #menu ul span.drop-icon {
+    display: none;
+    }
+
+    #menu li, 
+    #toggle-menu, 
+    #menu .sub-menu {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, .05);
+    }
+
+    #menu li, 
+    #toggle-menu {
+    border-width: 0 0 1px;
+    }
+
+    #menu .sub-menu {
+    background-color: #444;
+    border-width: 1px 1px 0;
+    margin: 0 1em;
+    }
+
+    #menu .sub-menu li:last-child {
+    border-width: 0;
+    }
+
+    #menu li, 
+    #toggle-menu, 
+    #menu a {
+    position: relative;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
+    }
+
+    #menu {
+    background-color: #355a46;
+    }
+
+    #toggle-menu {
+    background: #355a46;
+    padding: 0;
+    }
+
+    #toggle-menu, 
+    #menu a {
+    padding: 1em 1.5em;
+    }
+
+    #menu a {
+    transition: all .125s ease-in-out;
+    -webkit-transition: all .125s ease-in-out;
+    }
+
+    #menu a:hover:not(.menu-item-donate) {
+    background-color: #355a46;;
+    color: white;
+    }
+
+    #menu .sub-menu {
+    display: none;
+    }
+
+    #menu input[type="checkbox"]:checked + .sub-menu {
+    display: block;
+    }
+
+    #menu .sub-menu a:hover {
+    color: white;
+    }
+
+    #toggle-menu .drop-icon, 
+    #menu li label.drop-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+
+    #menu label.drop-icon, #toggle-menu span.drop-icon {
+    padding: 1em;
+    font-size: 1em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .125);
+    text-shadow: 0 0 0 transparent;
+    color: rgba(255, 255, 255, .75);
+    }
+
+    // when is desktop
+    @media only screen and (min-width: 1240px) {
+
+        .show-search-menu {
+            display: inline;
+        }
+
+        .show-search-button-menu {
+            display: inline-block;
+        }
+
+        .compostedu-menu {
+            .compostedu-menu-item-2 {
+                display: none;
+            }
+
+            .compostedu-menu-item-3 {
+                display: none;
+            }
+
+        }
+
+        .compostedu-menu-desktop {
+            background-color: green;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        
+            .compostedu-menu-item-desktop-1 {
+                display: block;
+                a {
+                    padding-top: 0px !important; 
+                    padding-bottom: 0px !important;
+                }
+            }
+        
+            .compostedu-menu-item-desktop-2 {
+                flex-grow: 0;
+            }
+        
+            .compostedu-menu-item-desktop-3 {
+                display: flex;
+                margin-right: 20px;
+            }
+        }
+
+        #menu .main-menu {
+            display: block;
+        }
+
+        #toggle-menu, 
+        #menu label.drop-icon {
+            display: none;
+        }
+
+        #menu ul span.drop-icon {
+            display: inline-block;
+        }
+
+        #menu li {
+            float: left;
+            border-width: 0 1px 0 0;
+        }
+
+        #menu .sub-menu li {
+            float: none;
+        }
+
+        #menu .sub-menu {
+            border-width: 0;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 12em;
+            z-index: 3000;
+        }
+
+        #menu .sub-menu, 
+        #menu input[type="checkbox"]:checked + .sub-menu {
+            display: none;
+        }
+
+        #menu .sub-menu li {
+            border-width: 0 0 1px;
+        }
+
+        #menu .sub-menu .sub-menu {
+            top: 0;
+            left: 100%;
+        }
+
+        #menu .sub-menu .drop-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+        }
+
+        #menu li:hover > input[type="checkbox"] + .sub-menu {
+            display: block;
+        }
+    }
+
+/**
+ * CLEAR FLOATS
+ * Reference: http://w3bits.com/clearfix
+ */
+
+ .cf:after,
+ .lab-grid:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ /**
+  * CONTENT WRAPPER
+  */
+ 
+ .wrapper {
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 1.5em;
+   padding-right: 1.5em;
+   padding-left: 1.5em;
+   max-width: 1080px;
+ }
+ 
+ /**
+ * ICON SYSTEM
+ */
+ 
+ .icon {
+   height: 1em;
+   width: 1em;
+   display: inline-block;
+   vertical-align: middle;
+   fill: currentColor;
+ }

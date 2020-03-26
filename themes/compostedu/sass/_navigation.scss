@@ -9,78 +9,11 @@
 		&:focus {
 			outline: thin dotted;
 		}
-		&:hover,
+		// &:hover,
 		&:active {
 			outline: 0;
 		}
 		text-decoration: none;
-	}
-}
-
-/* Menus */
-
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
-	.menu-toggle {
-		display: flex;
-		justify-content: center;
-		background-color: transparent;
-		border: none;
-	}
-
-	div {
-		.nav-menu {
-			display: none;
-			list-style: none;
-			margin: 0;
-			padding-left: 0;
-			position: absolute;
-			top: 48px;
-			width: 100vw;
-			align-items: flex-start;
-
-			li {
-				width: 100%;
-
-				.sub-menu {
-					display: none;
-					list-style: none;
-					padding-left: 30px;
-					
-					li {
-						width: 100%;
-
-						.sub-menu {
-							display: none;
-							list-style: none;
-							padding-left: 30px;
-						}
-					}
-
-					li:hover > ul,
-					li.focus > ul {
-						display: block;
-					}
-				}
-				
-			}
-			
-			li:hover > ul,
-			li.focus > ul {
-				display: block;
-			}
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-		margin: 10px;
-		display: flex;
-		justify-content: space-between;
 	}
 }
 
