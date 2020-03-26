@@ -2521,9 +2521,19 @@
     .entry-content {
         margin: 4% 6%;
 
+        @include desktop {
+            @include default-padding-desktop;
+        }
+
         h2 {
             color: $pine;
             margin: 4% 0;
+            @include tablet {
+                font-size: 24px;
+            }
+            @include desktop {
+                font-size: 40px;
+            }
         }
 
         figure {
@@ -2532,46 +2542,63 @@
             align-items: center;
         }
 
-        .slideshow-p {
-            margin: 24px 0px 15px;
-        }
+        //Container to work on grid
 
-        //flickr slideshow
-        .flickr-embed-frame {
-            border-radius: 5px;
-        }
+       
 
-        form {
+
+        
+    }
+}
+
+//Slideshow photos and contact us container
+
+.slideshow-flickr-container {
+    @include desktop {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+        padding: 0;
+        margin: 30px 50px;
+    }
+    
+    .flickr-slide {
+        @include desktop {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: $white;
-            padding: 30px;
-            background-color: $mocha;
+            border: 1.5px solid #d3d3d3;
             border-radius: 5px;
-
-            p {
-                width: 100%;
-
-                label {
-                    width: 100%;
-                    background-color: $mocha;
-                    border-radius: 5px;
-
-                    
-                    span {
-                        width: 100%;
-                        
-                        textarea {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-
+            height: 618px;
         }
     }
 }
+
+//Description for each slideshow at the top
+.slideshow-p {
+    margin: 24px 0px 15px;
+    @include desktop {
+        font-weight: bold;
+        text-align: center;
+        width: 50%;
+    }
+}
+
+//flickr slideshow
+.flickr-embed-frame {
+    border-radius: 5px;
+    @include desktop {
+        border-radius: 0px;
+    }
+}
+
+.mocha-content.contact-us-panel  {
+    h2 {
+        color: #fffcf7;
+        font-size: 20px;
+    }
+}
+
 
 
 /* Membership */
