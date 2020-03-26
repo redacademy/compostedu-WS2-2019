@@ -25,10 +25,19 @@ Thank you so much! </p>
 					<div class="custom-fields-container-two">
 						<h3 class="cards-fields-title"><?php echo $card['header']?></h3>
 						<p class="cards-field-description"> <?php echo $card['description'] ?></p>
-						<a class="cards-links" href="<?php echo $card['link-url'] ?>"><p class='cards-link-text'> <?php echo $card['link-text'] ?></p></a>
+							<!-- remove unescessary arrows -->
+							<?php $linkText = $card['link-text'] ?>
+								<?php if (!empty($linkText) ) :  ?>
+										<a class="cards-links" href="<?php echo $card['link-url'] ?>"><p class='cards-link-text'> <?php echo $card['link-text'] ?></p></a>
+								<?php endif; ?>
 					</div>
 					<?php endforeach; ?>
 				</div>
+
+					<!-- remove unescessary arrows -->
+
+					<?php $linkText = $card['link-text'] ?>
+				<?php if ($linkText )            ?>
 
 				<div class="mocha-content contact-us-panel">
 					<?php
