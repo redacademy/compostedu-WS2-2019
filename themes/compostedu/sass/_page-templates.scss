@@ -986,6 +986,7 @@
             }
 
             .card-img-container {
+                border-bottom: 2px solid #d3d3d3;
                 @include desktop {
                     padding: 15px;
                 }
@@ -1046,6 +1047,7 @@
 }
 
 .school-main-title {
+    @include default-padding;
     @include tablet {
         padding: 0px 50px;
         font-size: 30px;
