@@ -3107,6 +3107,12 @@
                         }
                     }
                 }
+                .visit-website:hover {
+                    a {
+                        font-size: 1.5em;
+                        transition: all 0.5s;
+                    }
+                }
             }
         }
 
