@@ -2484,23 +2484,56 @@
         width: 100%;
         height: 320px;
 
+        @include tablet {
+            height: 500px;
+        }
+        @include desktop{
+            height: 800px;
+        }
+
         h1 {
             color: $white;
+            @include tablet {
+                font-size: 40px;
+
+            }
+            @include desktop{
+                font-size: 64px;
+            }
         }
 
         .header-description {
             color: $white;
             width: 80%;
             text-align: center;
+            @include tablet {
+                font-size: 20px;
+                width: 50%;
+
+            }
+            @include desktop{
+                font-size: 24px;
+                width: 50%;
+            }
         }
     }
 
     .entry-content {
         margin: 4% 6%;
 
+        @include desktop {
+            @include default-padding-desktop;
+        }
+
         h2 {
             color: $pine;
             margin: 4% 0;
+            @include tablet {
+                font-size: 24px;
+            }
+            @include desktop {
+                font-size: 40px;
+            }
         }
 
         figure {
@@ -2509,59 +2542,76 @@
             align-items: center;
         }
 
-        form {
+        //Container to work on grid
+
+       
+
+
+        
+    }
+}
+
+//Slideshow photos and contact us container
+
+.slideshow-flickr-container {
+
+    @include default-padding;
+
+    @include tablet {
+        padding-left: 47px;
+        padding-right: 47px ;
+    }
+
+    @include desktop {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+        padding: 0;
+        margin: 30px 50px;
+    }
+    
+    .flickr-slide {
+        @include desktop {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: $white;
-            padding: 30px;
-            background-color: $mocha;
+            border: 1.5px solid #d3d3d3;
             border-radius: 5px;
-
-            p {
-                width: 100%;
-
-                label {
-                    width: 100%;
-                    background-color: $mocha;
-                    border-radius: 5px;
-
-                    
-                    span {
-                        width: 100%;
-                        
-                        textarea {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-
-            .submit {
-                display: flex;
-                justify-content: center;
-            }
-
-            .submit-button {
-                display: flex;
-                align-items: center;
-                background-color: #fffcf5;
-                width: 98px;
-                input {
-                    color: $dirt-brown;
-                }
-            }
-
-            input {
-                width: 294px;
-                height: 40px;
-                border: none;
-                border-radius: 5px;
-
-            }
+            height: 618px;
         }
     }
 }
+
+//Description for each slideshow at the top
+.slideshow-p {
+    margin: 24px 0px 15px;
+
+    @include tablet {
+        text-align: center;
+    }
+
+    @include desktop {
+        font-weight: bold;
+        text-align: center;
+        width: 50%;
+    }
+}
+
+//flickr slideshow
+.flickr-embed-frame {
+    border-radius: 5px;
+    @include desktop {
+        border-radius: 0px;
+    }
+}
+
+.mocha-content.contact-us-panel  {
+    h2 {
+        color: #fffcf7;
+        font-size: 20px;
+    }
+}
+
 
 
 /* Membership */
