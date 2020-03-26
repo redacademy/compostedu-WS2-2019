@@ -1048,6 +1048,7 @@
 
 .school-main-title {
     @include default-padding;
+    
     @include tablet {
         padding: 0px 50px;
         font-size: 30px;
