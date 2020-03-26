@@ -34,11 +34,6 @@ Thank you so much! </p>
 					<?php endforeach; ?>
 				</div>
 
-					<!-- remove unescessary arrows -->
-
-					<?php $linkText = $card['link-text'] ?>
-				<?php if ($linkText )            ?>
-
 				<div class="mocha-content contact-us-panel">
 					<?php
 							$contactUsText='If you have questions about our school programs or would like to book a program, call Kayla at 230-386-9676 or email using the form below.';
