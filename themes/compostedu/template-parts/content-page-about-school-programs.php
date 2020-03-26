@@ -28,7 +28,6 @@
 								<p>This program is for children attending preschool to grade 3. Workshops may be delivered in our straw bale teaching building or at your gacility, while site tours take place in our demonstration gardens.</p>
 							</div><!-- .entry-content -->
 							<a class="view-link" href="<?php echo get_post_type_archive_link( 'composting_for_kids' ) ?>">Find out more <i class="fas fa-arrow-right"></i></a>
-							<hr>
 						</div> <!-- card img container ----------->
 					</article>
 
@@ -43,7 +42,6 @@
 								</div><!-- .entry-content -->
 
 								<a class="view-link" href="<?php echo get_post_type_archive_link( 'intermediate_program' ) ?>">Find out more <i class="fas fa-arrow-right"></i></a>
-								<hr>
 						</div> <!-- card img container ----------->	
 					</article>
 					
@@ -57,7 +55,7 @@
 									<p>This program is for children attending grades 4 through 8. Workshops may be delivered in our straw bale teaching building or at your gacility, while site tours take place in our demonstration gardens.</p>
 								</div><!-- .entry-content -->
 								<a class="view-link" href="<?php echo get_post_type_archive_link( 'high_school_program' ) ?>">Find out more <i class="fas fa-arrow-right"></i></a>
-								<hr>
+
 							</div> <!-- card img container ----------->	
 					</article>
 					
@@ -70,7 +68,7 @@
 								<div>
 									<p class='p-small-size'>Home learners can access the full workshop line-up for the same prices. Worshops can be done at the Compost Education Centre or at a home learner's house. Workshop line-up varies by age. Visit our <a href="<?php echo get_post_type_archive_link( 'composting_for_kids' ) ?>">Composting For Kids</a>, <a href="<?php echo get_post_type_archive_link( 'intermediate_program' ) ?>">Intermediate Programs</a>, and <a href="<?php echo get_post_type_archive_link( 'high_school_program' ) ?>">High School Programs</a> pages to view the available workshops.</p>
 								</div><!-- .entry-content -->
-								<hr>
+
 							</div> <!-- card img container ----------->	
 					</article>
 
@@ -105,44 +103,43 @@
 					</div> <!-- test-two----------->
 			</div> <!--main-grid-container  ---------------------------->
 		
-		<h1>Teaching Resources</h1>
-		
-		<div class="teaching-resources-content">
 
-			<?php if( have_rows('teaching_resources') ): ?>
+		</div><!-- .entry-content -->
+			<section class='grey-background'>
+				<div class='padding-container'>
+					<h1 class='resources-title'>Teaching Resources</h1>
+						<div class="teaching-resources-content">
 
-				<?php while( have_rows('teaching_resources') ): the_row(); 
-				
-				// vars
-				$image = get_sub_field('image');
-				$title = get_sub_field('title');
-				$pdf = get_sub_field('pdf');
+						<?php if( have_rows('teaching_resources') ): ?>
 
-				?>
+							<?php while( have_rows('teaching_resources') ): the_row(); 
+							
+							// vars
+							$image = get_sub_field('image');
+							$title = get_sub_field('title');
+							$pdf = get_sub_field('pdf');
 
-				<section class="hentry teaching-resources-item">
-					<?php if( !empty( $image ) ): ?>
-						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-					<?php endif; ?>
-			
-					<header class="entry-header">
-						<h2 class="entry-title"><?php echo $title?></h2>
-					</header><!-- .entry-header -->
+							?>
 
-					<?php
-						if( $pdf ): ?>
-							<a class="view-link" href="<?php echo $pdf['url']; ?>" target="_blank">Download PDF <i class="fas fa-arrow-right"></i></a>
-						<?php endif; 
-					?>
-
-					<hr>
-				</section>
-
-				<?php endwhile; ?>
-
-			<?php endif; ?>
+						<section class="hentry teaching-resources-item">
+							<?php if( !empty( $image ) ): ?>
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endif; ?>
+							<header class="entry-header">
+								<h2 class="entry-title"><?php echo $title?></h2>
+							</header><!-- .entry-header -->
+							<?php
+								if( $pdf ): ?>
+									<a class="view-link" href="<?php echo $pdf['url']; ?>" target="_blank">Download PDF <i class="fas fa-arrow-right"></i></a>
+								<?php endif; 
+							?>
+							<hr>
+						</section>
+						<?php endwhile; ?>
+						<?php endif; ?>
+				</div>
+			</section>
 
 		</div>
 
-	</div><!-- .entry-content -->
 </article><!-- #post-## -->

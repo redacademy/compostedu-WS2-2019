@@ -957,6 +957,10 @@
 .page-about-school-programs { 
     .entry-content {
         @include default-padding;
+
+        @include tablet {
+            padding: 0px 50px;
+        }
         @include desktop {
             @include default-padding-desktop;
             margin-top: 0;
@@ -1042,6 +1046,10 @@
 }
 
 .school-main-title {
+    @include tablet {
+        padding: 0px 50px;
+        font-size: 30px;
+    }
     @include desktop {
         @include default-padding-desktop;
         margin-bottom: 10px;
@@ -1068,6 +1076,36 @@
         p {
             font-size: 0.94rem;
         }
+    }
+}
+
+//Section on school programs teaching resources
+
+.resources-title {
+   @include desktop {
+       padding-top: 60px;
+   }
+}
+
+.grey-background {
+    background-color: rgba(211, 211, 211, 0.2);
+}
+.padding-container {
+    @include default-padding;
+    @include tablet {
+        padding: 0px 50px
+    }
+    @include desktop {
+        @include default-padding-desktop;
+    }
+
+}
+
+.teaching-resources-content {
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 16px;
     }
 }
 
