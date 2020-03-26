@@ -2554,6 +2554,14 @@
 //Slideshow photos and contact us container
 
 .slideshow-flickr-container {
+
+    @include default-padding;
+
+    @include tablet {
+        padding-left: 47px;
+        padding-right: 47px ;
+    }
+
     @include desktop {
         display: grid;
         grid-gap: 10px;
@@ -2577,6 +2585,11 @@
 //Description for each slideshow at the top
 .slideshow-p {
     margin: 24px 0px 15px;
+
+    @include tablet {
+        text-align: center;
+    }
+
     @include desktop {
         font-weight: bold;
         text-align: center;
