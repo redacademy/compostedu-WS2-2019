@@ -348,4 +348,4 @@
         }
     });
 
-})( jQuery, this );
+})( jQuery);
