@@ -1780,6 +1780,7 @@
 
 .search-pagination {
     padding-bottom: 2rem;
+  
 
     .current {
        display: inline-block; 
@@ -3642,4 +3643,38 @@
     justify-content: center;
     align-items: center;
     margin: 5% 10%;
+}
+
+/* Search */ 
+.search-site-main {
+    @include default-padding;
+
+    .page-title {
+        @include tablet {
+            font-size: 30px;
+
+        }
+        @include desktop {
+            font-size: 40px;
+            
+        }
+    }
+
+    .search-pagination {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            display: block;
+
+        }
+    }
+
+    @include tablet {
+        padding: 0px 50px;
+
+    }
+    @include desktop {
+        @include default-padding-desktop;
+
+    }
 }
