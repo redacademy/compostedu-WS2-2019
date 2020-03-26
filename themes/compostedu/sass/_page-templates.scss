@@ -2952,15 +2952,43 @@
     width: 100%;
     height: 320px;
 
+    @include tablet {
+        height: 500px;
+
+    }
+    @include desktop {
+        height: 798px;
+
+    }
+
     .entry-title {
         color: #fffdf7;
         font-size: 26px;
+        @include tablet {
+            font-size: 24px;
+    
+        }
+        @include desktop {
+            font-size: 64px;
+    
+        }
     }
 
     .donate-header-description {
         color: #fffdf7;
         text-align: center;
         margin: 0px 10px;
+        @include tablet {
+            font-size: 20px;
+            width: 50%;
+    
+        }
+        @include desktop {
+            font-size: 24px;
+            width: 50%;
+           
+    
+        }
     }
 
 
@@ -2974,6 +3002,13 @@
         color: #355a46;
          font-size: 22px;
          margin-bottom: 16px;
+         @include tablet {
+             font-size: 24px;
+
+         }
+         @include tablet {
+             font-size: 40px;
+        }
     }
 
     h3 {
@@ -2988,54 +3023,103 @@
 
     .entry-content {
         @include default-padding;
+        @include desktop {
+            @include default-padding-desktop;
+        }
     }
 
-    //Cards
+    .Content-title {
+        @include tablet {
+            font-size: 30px;
+        }
+    }
 
-    .wp-block-group {
+    //Grid container for desktop
+    .custom-fields-two-grid {
+        @include desktop {
+        display: grid;
+        grid-template-columns: 64% 34%;
+        grid-gap:16px ;
+        margin-bottom: 70px;
+        }
+
+    }
+
+    .cards-container {
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 10px;
+        }
+    }
+   
+    
+    //Cards
+    .custom-fields-container-two {
+
         box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
         border: solid 1px rgba(70, 70, 70, 0.25);
         background-color: #fffcf5;
         margin-bottom: 16px;
         border-radius: 5px;
-        
-        .wp-block-group__inner-container {
-            
-            margin: 24px;
-        }
+        padding: 24px;
 
-        
+
         
     }
     
         //Last card with different style
 
-        .charity-card {
-            box-shadow: none;
-             border: solid .5px rgba(70, 70, 70, 0.25);
-            background-color:rgba(211, 211, 211, 0.4);
-            margin-bottom: 16px;
-            border-radius: 5px;
-
-
-        }
 
     //Links on each Card with respective font awesome arrow
-    .card-links {
+    .cards-links {
+        text-decoration: none;
+        
+    }
+    
+    .cards-link-text {
         color: #aa443a;
 
     }
 
-    .card-links::after {
+    .cards-link-text::after {
         content: '\f061';
         font-family: 'Font Awesome 5 free';
         font-weight: 900;
         margin-left: 5px;
     }
 
+    .mocha-content.contact-us-panel {
+
+        h2 {
+            color: #fffcf5;
+            font-size: 21px;
+
+        }
+
+        p {
+            color: #fffcf5;
+        }
+
+        label {
+            color: #fffcf5;
+        }
+    }
+
+    .bequest-title {
+
+        @include desktop {
+            font-size: 40px;
+            text-align: center;
+        }
+        
+    }
 
     .bequest-description {
         color: #464646;
+        @include desktop {
+            text-align: center;
+        }
 
     }
 
@@ -3052,6 +3136,13 @@
             grid-template-columns: repeat(2, 1fr);
             margin: 0;
 
+            @include tablet {
+                display: inline-flex;
+            }
+            @include desktop {
+                display: inline-flex;
+            }
+
             img {
                 width: 60px;
             }
@@ -3065,7 +3156,60 @@
         
     }
 
+    .investments-container {
+
+        h3 {
+            margin-bottom: 10px;
+            @include tablet {
+                font-size: 20px;
+
+            }
+            @include desktop {
+                font-size: 28px;
+            }
+        }
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 100px;
+        }
+    }
+
+    .goods-title {
+        margin-top: 60px;
+    }
+
     // Custom fields for donate 
+
+    .custom-fields-grid {
+        @include desktop {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+        }
+    }
+
+    .test {
+        @include desktop {
+         padding: 10px 15px;
+         background-color:white ;
+        }
+    }
+
+    .custom-images {
+        @include desktop {
+            height: 216px;
+            border-radius: 0;
+        }
+    }
+
+    .custom-fields-container {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            border: 1px solid #d3d3d3;
+        }
+    }
 
     ul {
         margin: 0;
@@ -3074,6 +3218,10 @@
     .donate-field-description {
         border-bottom: 2px solid rgb(211, 211, 211);
         padding: 15px 0px;
+        @include desktop {
+            padding: 0;
+            border: 0;
+        }
     }
 
 
