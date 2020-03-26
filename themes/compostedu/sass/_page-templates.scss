@@ -81,6 +81,10 @@
         position: absolute;
         left: 0;
         margin: 0;
+        background-color: #192b21;
+        @include desktop {
+            background-color: transparent;
+        }
 
         li {
             margin: 10px 0;
@@ -122,9 +126,7 @@
     }
     
     .about-us-hide-submenu, .get-involved-hide-submenu, .resources-hide-submenu, .healing-city-soils-hide-submenu, .activities-hide-submenu, .school-programs-hide-submenu {
-        @include desktop {
-            display: none;
-        }
+        display: none;
     }
     
     .menu {
@@ -158,9 +160,13 @@
     }
 
     .donate {
+        width: 25%;
         padding: 10px 20px;
         border: 1px solid $dull_red;
         background-color: $dull_red;
+        @include desktop {
+            width: 100%;
+        }
     }
 
     .site-branding  {
