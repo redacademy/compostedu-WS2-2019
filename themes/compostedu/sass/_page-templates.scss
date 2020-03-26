@@ -3618,3 +3618,13 @@
         }
     }
 }
+
+
+// 404 page
+.error-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 10%;
+}
