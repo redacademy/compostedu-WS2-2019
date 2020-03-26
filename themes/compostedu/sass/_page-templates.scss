@@ -2949,4 +2949,122 @@
 }
 
 
+// About Healing City Soils
+.healing-city-soils-site-main {
+    .entry-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/healing-city-soils/about-healing-city-soils-hero-edited@2x.jpg) no-repeat top;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 320px;
 
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 15px;
+            color: $white;
+
+            .entry-title {
+                color: $white;
+            }
+        }
+    }
+
+    .entry-content {
+        padding: 20px 15px;
+
+        h2 {
+            color: $pine;
+            margin: 10px 0;
+        }
+
+        .apply-now {
+            padding: 30px;
+            border: solid 1px $mocha;
+            border-radius: 5px;
+            background-color: $mocha;
+            color: $white;
+
+            h2 {
+                color: $white;
+            }
+
+            .apply-now-button {
+                text-decoration: none;
+                color: $mocha;
+                padding: 10px 15px;
+                border: solid 1px $white;
+                border-radius: 5px;
+                background-color: $white;
+            }
+        }
+
+        .second-section {
+            background-color: #d3d3d3;
+            width: 100%;
+
+            .visit-website {
+                .wp-block-group__inner-container{
+                    border-bottom: solid 1px #d3d3d3;
+                    margin: 20px 0;
+                    margin-bottom: 4%;
+
+                    figure {
+                        margin: 0;
+                        width: 100%;
+                        
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        width: 60%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    a::after {
+                        content: '\f061';
+                        font-family: 'Font Awesome 5 free';
+                        font-weight: 900;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .third-section {
+            .test-results {
+                padding: 30px;
+                border: solid 1px $mocha;
+                border-radius: 5px;
+                background-color: $mocha;
+                color: $white;
+
+                h2 {
+                    color: $white;
+                }
+            }
+
+            .contact-us-form {
+                margin: 20px 0;
+                padding: 30px;
+                border: solid 1px $mocha;
+                border-radius: 5px;
+                background-color: $mocha;
+                color: $white;
+
+                h2 {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
